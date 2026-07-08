@@ -25,64 +25,79 @@ export function Feed({
 
   return (
     <div className="feed-list">
-      {logs.map((log) => (
-        <article className="log-card" key={`${log.network}-${log.id}`}>
-          <div className="log-head">
-            <span className="log-id">#{log.id}</span>
-            <span className="log-tag">{log.tag || "proof"}</span>
-          </div>
-          <h3>{log.summary}</h3>
-          <dl className="log-meta">
-            <div>
-              <dt>Publisher</dt>
-              <dd>{shortAddress(log.author)}</dd>
+      {logs.map((log) => {
+        const isPending = pendingApplauseId === log.id;
+
+        return (
+          <article className="log-card" key={`${log.network}-${log.id}`}>
+            <div className="log-head">
+              <span className="log-id">#{log.id}</span>
+              <span className="log-tag">{log.tag || "proof"}</span>
             </div>
-            <div>
-              <dt>Published</dt>
-              <dd>{formatPublished(log)}</dd>
+            <h3>{log.summary}</h3>
+            <dl className="log-meta">
+              <div>
+                <dt>Publisher</dt>
+                <dd>{shortAddress(log.author)}</dd>
+              </div>
+              <div>
+                <dt>Published</dt>
+                <dd>{formatPublished(log)}</dd>
+              </div>
+              <div>
+                <dt>Applause</dt>
+                <dd>{log.applause}</dd>
+              </div>
+            </dl>
+            <div className="log-actions">
+              {log.proofUri ? (
+                <a
+                  href={log.proofUri}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Open proof link for ${log.network} log #${log.id}`}
+                >
+                  Proof link <ExternalLink size={15} aria-hidden="true" />
+                </a>
+              ) : (
+                <span className="muted-link">No proof link</span>
+              )}
+              {log.txUrl ? (
+                <a
+                  href={log.txUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Open explorer receipt for ${log.network} log #${log.id}`}
+                >
+                  Explorer receipt <ExternalLink size={15} aria-hidden="true" />
+                </a>
+              ) : null}
+              {onApplaud ? (
+                <button
+                  type="button"
+                  className="icon-text-button secondary"
+                  onClick={() => onApplaud(log.id)}
+                  disabled={isPending}
+                  aria-busy={isPending}
+                  aria-label={
+                    isPending
+                      ? `Sending applause for ${log.summary}`
+                      : `Applaud ${log.summary}`
+                  }
+                >
+                  <Sparkles size={16} aria-hidden="true" />
+                  <span aria-hidden="true">{isPending ? "Sending..." : "Applaud"}</span>
+                  {isPending ? (
+                    <span className="sr-only" aria-live="polite">
+                      Sending applause now
+                    </span>
+                  ) : null}
+                </button>
+              ) : null}
             </div>
-            <div>
-              <dt>Applause</dt>
-              <dd>{log.applause}</dd>
-            </div>
-          </dl>
-          <div className="log-actions">
-            {log.proofUri ? (
-              <a
-                href={log.proofUri}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={`Open proof link for ${log.network} log #${log.id}`}
-              >
-                Proof link <ExternalLink size={15} aria-hidden="true" />
-              </a>
-            ) : (
-              <span className="muted-link">No proof link</span>
-            )}
-            {log.txUrl ? (
-              <a
-                href={log.txUrl}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={`Open explorer receipt for ${log.network} log #${log.id}`}
-              >
-                Explorer receipt <ExternalLink size={15} aria-hidden="true" />
-              </a>
-            ) : null}
-            {onApplaud ? (
-              <button
-                type="button"
-                className="icon-text-button secondary"
-                onClick={() => onApplaud(log.id)}
-                disabled={pendingApplauseId === log.id}
-              >
-                <Sparkles size={16} aria-hidden="true" />
-                {pendingApplauseId === log.id ? "Sending" : "Applaud"}
-              </button>
-            ) : null}
-          </div>
-        </article>
-      ))}
+          </article>
+        );
+      })}
     </div>
   );
 }
