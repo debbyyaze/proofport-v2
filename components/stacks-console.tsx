@@ -44,6 +44,7 @@ function getStacksContract(): StacksContractRef | null {
 }
 
 const configuredStacksContract = getStacksContract();
+const initialStacksLogs = configuredStacksContract ? [] : sampleStacksLogs;
 
 function getContractId(contract: StacksContractRef) {
   return `${contract.address}.${contract.name}` as `${string}.${string}`;
@@ -67,7 +68,7 @@ async function getConnectedAddress() {
 
 export function StacksConsole() {
   const [wallet, setWallet] = useState<StacksWalletState>(emptyWallet);
-  const [logs, setLogs] = useState<ShipLog[]>(sampleStacksLogs);
+  const [logs, setLogs] = useState<ShipLog[]>(initialStacksLogs);
   const [summary, setSummary] = useState("");
   const [proofUri, setProofUri] = useState("");
   const [tag, setTag] = useState("stacks");

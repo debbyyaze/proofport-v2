@@ -78,8 +78,17 @@ export function formatDate(timestamp: number) {
     month: "short",
     day: "numeric",
     hour: "2-digit",
-    minute: "2-digit"
+    minute: "2-digit",
+    timeZone: "UTC"
   }).format(new Date(timestamp * 1000));
+}
+
+export function formatPublished(log: ShipLog) {
+  if (log.network === "stacks") {
+    return log.createdAt ? `Block #${Math.trunc(log.createdAt)}` : "Pending";
+  }
+
+  return formatDate(log.createdAt);
 }
 
 export function safeTrim(value: string, maxLength: number) {

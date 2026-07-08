@@ -1,5 +1,5 @@
 import { ExternalLink, Sparkles } from "lucide-react";
-import { formatDate, shortAddress, type ShipLog } from "@/lib/proofport";
+import { formatPublished, shortAddress, type ShipLog } from "@/lib/proofport";
 
 type FeedProps = {
   logs: ShipLog[];
@@ -39,7 +39,7 @@ export function Feed({
             </div>
             <div>
               <dt>Published</dt>
-              <dd>{formatDate(log.createdAt)}</dd>
+              <dd>{formatPublished(log)}</dd>
             </div>
             <div>
               <dt>Applause</dt>

@@ -31,11 +31,11 @@ export function extractUint(value: unknown) {
 
 function extractTuple(value: unknown): Record<string, unknown> | null {
   const unwrapped = unwrapResponse(value) as ClarityJson;
-  const tuple = (unwrapped?.value ?? unwrapped) as {
+  const tuple = unwrapped as {
     value?: Record<string, unknown>;
     data?: Record<string, unknown>;
   };
-  const raw = tuple.value ?? tuple.data;
+  const raw = tuple.value ?? tuple.data ?? unwrapped;
   if (!raw || typeof raw !== "object") return null;
 
   return raw;
