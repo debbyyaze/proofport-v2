@@ -100,7 +100,10 @@ export default function HomePage() {
         </article>
       </section>
 
-      <section className="how-it-works" aria-label="How ProofPort works">
+      <section className="how-it-works" aria-labelledby="how-it-works-title">
+        <h2 className="sr-only" id="how-it-works-title">
+          How ProofPort works
+        </h2>
         <article>
           <FileText size={20} aria-hidden="true" />
           <h3>Write the entry</h3>
