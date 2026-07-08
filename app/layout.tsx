@@ -19,6 +19,13 @@ export const metadata: Metadata = {
       "Capture what shipped, attach a proof link, and publish a record people can verify.",
     type: "website",
     images: ["/og.svg"]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ProofPort",
+    description:
+      "Capture what shipped, attach a proof link, and publish a record people can verify.",
+    images: ["/og.svg"]
   }
 };
 
