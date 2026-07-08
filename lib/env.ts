@@ -6,8 +6,8 @@ export const CELO_SEPOLIA_CHAIN_ID = 11142220;
 export type CeloNetwork = "celo" | "celoSepolia";
 export type StacksNetwork = "mainnet" | "testnet";
 
-function readPublicVar(name: string, fallback = "") {
-  return process.env[name]?.trim() || fallback;
+function readPublicVar(value: string | undefined, fallback = "") {
+  return value?.trim() || fallback;
 }
 
 function normalizeCeloNetwork(value: string): CeloNetwork {
@@ -19,36 +19,45 @@ function normalizeStacksNetwork(value: string): StacksNetwork {
 }
 
 export const publicEnv = {
-  appUrl: readPublicVar("NEXT_PUBLIC_APP_URL", "http://localhost:3000"),
-  celoNetwork: normalizeCeloNetwork(
-    readPublicVar("NEXT_PUBLIC_CELO_NETWORK", "celoSepolia")
+  // Use direct process.env.NEXT_PUBLIC_* reads so Next can inline values
+  // into client bundles at build time.
+  appUrl: readPublicVar(
+    process.env.NEXT_PUBLIC_APP_URL,
+    "http://localhost:3000"
   ),
-  celoContractAddress: readPublicVar("NEXT_PUBLIC_CELO_CONTRACT_ADDRESS") as
-    | Hex
-    | "",
-  celoDeploymentBlock: readPublicVar("NEXT_PUBLIC_CELO_DEPLOYMENT_BLOCK"),
+  celoNetwork: normalizeCeloNetwork(
+    readPublicVar(process.env.NEXT_PUBLIC_CELO_NETWORK, "celoSepolia")
+  ),
+  celoContractAddress: readPublicVar(
+    process.env.NEXT_PUBLIC_CELO_CONTRACT_ADDRESS
+  ) as Hex | "",
+  celoDeploymentBlock: readPublicVar(
+    process.env.NEXT_PUBLIC_CELO_DEPLOYMENT_BLOCK
+  ),
   celoMainnetRpcUrl: readPublicVar(
-    "NEXT_PUBLIC_CELO_MAINNET_RPC_URL",
+    process.env.NEXT_PUBLIC_CELO_MAINNET_RPC_URL,
     "https://forno.celo.org"
   ),
   celoSepoliaRpcUrl: readPublicVar(
-    "NEXT_PUBLIC_CELO_SEPOLIA_RPC_URL",
+    process.env.NEXT_PUBLIC_CELO_SEPOLIA_RPC_URL,
     "https://forno.celo-sepolia.celo-testnet.org"
   ),
   stacksNetwork: normalizeStacksNetwork(
-    readPublicVar("NEXT_PUBLIC_STACKS_NETWORK", "testnet")
+    readPublicVar(process.env.NEXT_PUBLIC_STACKS_NETWORK, "testnet")
   ),
-  stacksContractAddress: readPublicVar("NEXT_PUBLIC_STACKS_CONTRACT_ADDRESS"),
+  stacksContractAddress: readPublicVar(
+    process.env.NEXT_PUBLIC_STACKS_CONTRACT_ADDRESS
+  ),
   stacksContractName: readPublicVar(
-    "NEXT_PUBLIC_STACKS_CONTRACT_NAME",
+    process.env.NEXT_PUBLIC_STACKS_CONTRACT_NAME,
     "proofport-log"
   ),
   stacksApiMainnet: readPublicVar(
-    "NEXT_PUBLIC_STACKS_API_MAINNET",
+    process.env.NEXT_PUBLIC_STACKS_API_MAINNET,
     "https://api.hiro.so"
   ),
   stacksApiTestnet: readPublicVar(
-    "NEXT_PUBLIC_STACKS_API_TESTNET",
+    process.env.NEXT_PUBLIC_STACKS_API_TESTNET,
     "https://api.testnet.hiro.so"
   )
 };
