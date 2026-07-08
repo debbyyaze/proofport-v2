@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="128 128 768 768" role="img" aria-label="ProofPort logo">
+  <defs>
+    <linearGradient id="proofport-bg" x1="160" y1="132" x2="864" y2="892" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#35d07f"/>
+      <stop offset=".58" stop-color="#f2b84b"/>
+      <stop offset="1" stop-color="#f05a28"/>
+    </linearGradient>
+  </defs>
+  <rect x="128" y="128" width="768" height="768" rx="188" fill="url(#proofport-bg)"/>
+  <rect x="129.5" y="129.5" width="765" height="765" rx="186.5" fill="none" stroke="#17211d" stroke-opacity=".16" stroke-width="3"/>
+  <g transform="translate(224 224) scale(24)" fill="none" stroke="#17211d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 6v16"/>
+    <path d="m19 13 2-1a9 9 0 0 1-18 0l2 1"/>
+    <path d="M9 11h6"/>
+    <circle cx="12" cy="4" r="2"/>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+[project]
+name = "proofport"
+description = "ProofPort public proof logs for wallet-signed shipped work."
+authors = ["Gelborn"]
+telemetry = false
+
+[contracts.proofport-log]
+path = "stacks/contracts/proofport-log.clar"
+clarity_version = 3
+epoch = 3.0
