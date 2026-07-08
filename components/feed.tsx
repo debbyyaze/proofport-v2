@@ -48,14 +48,24 @@ export function Feed({
           </dl>
           <div className="log-actions">
             {log.proofUri ? (
-              <a href={log.proofUri} target="_blank" rel="noreferrer">
+              <a
+                href={log.proofUri}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Open proof link for ${log.network} log #${log.id}`}
+              >
                 Proof link <ExternalLink size={15} aria-hidden="true" />
               </a>
             ) : (
               <span className="muted-link">No proof link</span>
             )}
             {log.txUrl ? (
-              <a href={log.txUrl} target="_blank" rel="noreferrer">
+              <a
+                href={log.txUrl}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Open explorer receipt for ${log.network} log #${log.id}`}
+              >
                 Explorer receipt <ExternalLink size={15} aria-hidden="true" />
               </a>
             ) : null}
