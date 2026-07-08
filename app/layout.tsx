@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"
   ),
+  alternates: {
+    canonical: "/"
+  },
   title: {
     default: "ProofPort",
     template: "%s | ProofPort"
@@ -14,6 +17,7 @@ export const metadata: Metadata = {
     "Public proof logs for shipped work, wallet-signed entries, and explorer-backed records.",
   applicationName: "ProofPort",
   openGraph: {
+    url: "/",
     title: "ProofPort",
     description:
       "Capture what shipped, attach a proof link, and publish a record people can verify.",
