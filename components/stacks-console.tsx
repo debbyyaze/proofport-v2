@@ -2,11 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { ExternalLink, RefreshCcw, Send, WalletCards } from "lucide-react";
-import {
-  getStacksApiUrl,
-  getStacksExplorerTxUrl,
-  publicEnv
-} from "@/lib/env";
+import { getStacksExplorerTxUrl, publicEnv } from "@/lib/env";
 import {
   buildProofHashInput,
   getFeedNotice,
@@ -16,6 +12,7 @@ import {
   shortAddress,
   type ShipLog
 } from "@/lib/proofport";
+import type { StacksContractRef } from "@/lib/stacks-log-parser";
 import { Feed } from "./feed";
 
 type StacksWalletState = {
@@ -23,17 +20,19 @@ type StacksWalletState = {
   connected: boolean;
 };
 
-type ClarityJson = {
-  type?: string;
-  value?: unknown;
-};
-
 const emptyWallet: StacksWalletState = {
   address: "",
   connected: false
 };
 
-function getStacksContract() {
+type StacksLogsResponse = {
+  configured: boolean;
+  logs: ShipLog[];
+  source: string;
+  error?: string;
+};
+
+function getStacksContract(): StacksContractRef | null {
   if (!publicEnv.stacksContractAddress || !publicEnv.stacksContractName) {
     return null;
   }
@@ -44,63 +43,10 @@ function getStacksContract() {
   };
 }
 
-function getContractId(contract: { address: string; name: string }) {
+const configuredStacksContract = getStacksContract();
+
+function getContractId(contract: StacksContractRef) {
   return `${contract.address}.${contract.name}` as `${string}.${string}`;
-}
-
-function unwrapResponse(value: unknown): unknown {
-  const json = value as ClarityJson;
-  if (json?.type?.toLowerCase().includes("response") && "value" in json) {
-    return json.value;
-  }
-  if (json?.type === "ok" && "value" in json) {
-    return json.value;
-  }
-  return value;
-}
-
-function extractUint(value: unknown) {
-  const unwrapped = unwrapResponse(value) as ClarityJson;
-  const nested = unwrapResponse(unwrapped?.value) as ClarityJson;
-  const candidate = nested?.value ?? unwrapped?.value ?? value;
-  const numeric = typeof candidate === "bigint" ? candidate : Number(candidate);
-  return Number.isFinite(numeric) ? Number(numeric) : 0;
-}
-
-function extractTuple(value: unknown): Record<string, unknown> | null {
-  const unwrapped = unwrapResponse(value) as ClarityJson;
-  const tuple = (unwrapped?.value ?? unwrapped) as {
-    value?: Record<string, unknown>;
-    data?: Record<string, unknown>;
-  };
-  const raw = tuple.value ?? tuple.data;
-  if (!raw || typeof raw !== "object") return null;
-
-  return raw;
-}
-
-function unwrapString(value: unknown) {
-  const json = value as ClarityJson;
-  if (typeof value === "string") return value;
-  if (typeof json?.value === "string") return json.value;
-  return "";
-}
-
-function mapStacksLog(json: unknown): ShipLog | null {
-  const tuple = extractTuple(json);
-  if (!tuple) return null;
-
-  return {
-    id: extractUint(tuple.id),
-    author: unwrapString(tuple.author),
-    summary: unwrapString(tuple.summary),
-    proofUri: unwrapString(tuple["proof-uri"]),
-    tag: unwrapString(tuple.tag),
-    contentHash: unwrapString(tuple["content-hash"]),
-    createdAt: extractUint(tuple["created-at"]),
-    applause: extractUint(tuple.applause),
-    network: "stacks"
-  };
 }
 
 async function getConnectedAddress() {
@@ -131,7 +77,7 @@ export function StacksConsole() {
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [pendingApplauseId, setPendingApplauseId] = useState<number | null>(null);
 
-  const contract = getStacksContract();
+  const contract = configuredStacksContract;
   const isConfigured = Boolean(contract);
 
   const canSubmit = useMemo(() => {
@@ -167,7 +113,7 @@ export function StacksConsole() {
     setWallet(emptyWallet);
   }, []);
 
-  const loadLogs = useCallback(async () => {
+  const loadLogs = useCallback(async (forceFresh = false) => {
     if (!contract) {
       setLogs(sampleStacksLogs);
       return;
@@ -175,45 +121,24 @@ export function StacksConsole() {
 
     setIsRefreshing(true);
     try {
-      const { Cl, cvToJSON, fetchCallReadOnlyFunction } = await import(
-        "@stacks/transactions"
-      );
-      const senderAddress =
-        wallet.address || contract.address || "ST000000000000000000002AMW42H";
-      const totalResponse = await fetchCallReadOnlyFunction({
-        contractAddress: contract.address,
-        contractName: contract.name,
-        functionName: "get-total-logs",
-        functionArgs: [],
-        senderAddress,
-        network: publicEnv.stacksNetwork
-      });
-      const total = extractUint(cvToJSON(totalResponse));
-      const ids = Array.from({ length: Math.min(total, 8) }, (_, index) => {
-        return total - index;
-      }).filter((logId) => logId > 0);
+      const params = new URLSearchParams();
+      if (wallet.address) params.set("sender", wallet.address);
+      if (forceFresh) params.set("refresh", Date.now().toString());
+      const query = params.toString();
+      const response = await fetch(`/api/stacks/logs${query ? `?${query}` : ""}`);
+      const body = (await response.json()) as StacksLogsResponse;
 
-      const nextLogs = await Promise.all(
-        ids.map(async (logId) => {
-          const response = await fetchCallReadOnlyFunction({
-            contractAddress: contract.address,
-            contractName: contract.name,
-            functionName: "get-log",
-            functionArgs: [Cl.uint(logId)],
-            senderAddress,
-            network: publicEnv.stacksNetwork
-          });
-          return mapStacksLog(cvToJSON(response));
-        })
-      );
+      if (!response.ok || body.error) {
+        throw new Error(body.error || "Could not load Stacks entries.");
+      }
 
-      setLogs(nextLogs.filter((log): log is ShipLog => Boolean(log)));
+      setLogs(body.logs);
       setMessage(getFeedNotice(true, "Stacks"));
     } catch (error) {
       setLogs(sampleStacksLogs);
       setMessage(
         error instanceof Error
-          ? `Could not load Stacks entries from ${getStacksApiUrl()}: ${error.message}`
+          ? `Could not load Stacks entries: ${error.message}`
           : "Could not load Stacks entries."
       );
     } finally {
@@ -288,7 +213,7 @@ export function StacksConsole() {
       setTag("stacks");
       setMessage("Stacks entry submitted.");
       await refreshWallet();
-      await loadLogs();
+      await loadLogs(true);
     } catch (error) {
       setMessage(
         error instanceof Error ? error.message : "Stacks transaction was rejected."
@@ -331,7 +256,7 @@ export function StacksConsole() {
           setTxUrl(getStacksExplorerTxUrl(txId));
         }
         setMessage(`Submitted applause for log #${logId}.`);
-        await loadLogs();
+        await loadLogs(true);
       } catch (error) {
         setMessage(
           error instanceof Error ? error.message : "Could not send applause."
