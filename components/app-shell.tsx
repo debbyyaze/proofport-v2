@@ -15,6 +15,9 @@ const routes = [
 export function AppShell({ children }: AppShellProps) {
   return (
     <div className="app-frame">
+      <a className="skip-link" href="#main-content">
+        Skip to main content
+      </a>
       <header className="topbar">
         <Link href="/" className="brand" aria-label="ProofPort overview">
           <span className="brand-mark" aria-hidden="true">
@@ -33,7 +36,9 @@ export function AppShell({ children }: AppShellProps) {
           ))}
         </nav>
       </header>
-      <main>{children}</main>
+      <main id="main-content" tabIndex={-1}>
+        {children}
+      </main>
       <footer className="footer-strip">
         <span>
           <BadgeCheck size={16} aria-hidden="true" /> Wallet-signed entries
