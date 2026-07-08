@@ -339,9 +339,13 @@ export function CeloConsole() {
           <label>
             <span>Proof URL</span>
             <input
+              type="url"
               value={proofUri}
               onChange={(event) => setProofUri(event.target.value)}
               inputMode="url"
+              autoCapitalize="off"
+              autoCorrect="off"
+              spellCheck={false}
               placeholder="https://github.com/you/proofport/pull/1"
             />
           </label>
@@ -351,6 +355,9 @@ export function CeloConsole() {
               value={tag}
               onChange={(event) => setTag(event.target.value)}
               maxLength={32}
+              autoCapitalize="off"
+              autoCorrect="off"
+              spellCheck={false}
               placeholder="minipay"
             />
           </label>

@@ -331,9 +331,13 @@ export function StacksConsole() {
           <label>
             <span>Proof URL</span>
             <input
+              type="url"
               value={proofUri}
               onChange={(event) => setProofUri(event.target.value)}
               inputMode="url"
+              autoCapitalize="off"
+              autoCorrect="off"
+              spellCheck={false}
               placeholder="https://github.com/you/proofport/commit/abc"
             />
           </label>
@@ -343,6 +347,9 @@ export function StacksConsole() {
               value={tag}
               onChange={(event) => setTag(event.target.value)}
               maxLength={32}
+              autoCapitalize="off"
+              autoCorrect="off"
+              spellCheck={false}
               placeholder="clarity"
             />
           </label>
