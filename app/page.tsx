@@ -49,7 +49,17 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-        <div className="signal-board proof-preview" aria-label="ProofPort preview">
+        <div
+          aria-describedby="proof-preview-description"
+          aria-labelledby="proof-preview-title"
+          className="signal-board proof-preview"
+        >
+          <h2 className="sr-only" id="proof-preview-title">
+            Latest proof preview
+          </h2>
+          <p className="sr-only" id="proof-preview-description">
+            Preview of a recent published proof entry with its verification status.
+          </p>
           <div className="proof-preview-head">
             <span>Latest proof</span>
             <strong>Verified</strong>
