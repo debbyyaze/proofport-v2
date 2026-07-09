@@ -5,16 +5,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: appUrl,
-      lastModified: new Date()
+      url: appUrl
     },
     {
-      url: `${appUrl}/celo`,
-      lastModified: new Date()
+      url: `${appUrl}/celo`
     },
     {
-      url: `${appUrl}/stacks`,
-      lastModified: new Date()
+      url: `${appUrl}/stacks`
     }
   ];
 }
