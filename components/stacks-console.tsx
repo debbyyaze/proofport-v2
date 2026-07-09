@@ -385,7 +385,9 @@ export function StacksConsole() {
           </button>
         </div>
         {isRefreshing ? (
-          <p className="loading-line">Refreshing Stacks entries...</p>
+          <p className="loading-line" role="status" aria-live="polite">
+            Refreshing Stacks entries...
+          </p>
         ) : null}
         <Feed
           logs={logs}

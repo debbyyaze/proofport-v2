@@ -392,7 +392,11 @@ export function CeloConsole() {
             <RefreshCcw size={18} aria-hidden="true" />
           </button>
         </div>
-        {isRefreshing ? <p className="loading-line">Refreshing Celo entries...</p> : null}
+        {isRefreshing ? (
+          <p className="loading-line" role="status" aria-live="polite">
+            Refreshing Celo entries...
+          </p>
+        ) : null}
         <Feed
           logs={logs}
           emptyLabel="No entries yet on this network."
