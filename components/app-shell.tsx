@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
 import { Anchor, BadgeCheck, RadioTower } from "lucide-react";
 
@@ -13,6 +16,8 @@ const routes = [
 ] as const;
 
 export function AppShell({ children }: AppShellProps) {
+  const pathname = usePathname();
+
   return (
     <div className="app-frame">
       <a className="skip-link" href="#main-content">
@@ -30,7 +35,11 @@ export function AppShell({ children }: AppShellProps) {
         </Link>
         <nav className="nav-pills" aria-label="Primary navigation">
           {routes.map((route) => (
-            <Link href={route.href} key={route.href}>
+            <Link
+              aria-current={pathname === route.href ? "page" : undefined}
+              href={route.href}
+              key={route.href}
+            >
               {route.label}
             </Link>
           ))}
