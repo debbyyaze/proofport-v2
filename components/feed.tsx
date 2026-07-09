@@ -16,7 +16,7 @@ export function Feed({
 }: FeedProps) {
   if (logs.length === 0) {
     return (
-      <div className="empty-state">
+      <div className="empty-state" role="status" aria-live="polite">
         <Sparkles size={24} aria-hidden="true" />
         <p>{emptyLabel}</p>
       </div>
