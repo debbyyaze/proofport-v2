@@ -9,6 +9,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/"
   },
+  keywords: [
+    "proof logs",
+    "shipping log",
+    "wallet-signed records",
+    "Celo",
+    "Stacks",
+    "public verification"
+  ],
   title: {
     default: "ProofPort",
     template: "%s | ProofPort"
@@ -16,6 +24,11 @@ export const metadata: Metadata = {
   description:
     "Public proof logs for shipped work, wallet-signed entries, and explorer-backed records.",
   applicationName: "ProofPort",
+  category: "developer tools",
+  icons: {
+    icon: "/icon.svg",
+    apple: "/icon.svg"
+  },
   openGraph: {
     url: "/",
     title: "ProofPort",
