@@ -55,9 +55,10 @@ export function Feed({
                   href={log.proofUri}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label={`Open proof link for ${log.network} log #${log.id}`}
                 >
-                  Proof link <ExternalLink size={15} aria-hidden="true" />
+                  Proof link
+                  <span className="sr-only">{` for ${log.network} log #${log.id} (opens in a new tab)`}</span>
+                  <ExternalLink size={15} aria-hidden="true" />
                 </a>
               ) : (
                 <span className="muted-link">No proof link</span>
@@ -67,9 +68,10 @@ export function Feed({
                   href={log.txUrl}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label={`Open explorer receipt for ${log.network} log #${log.id}`}
                 >
-                  Explorer receipt <ExternalLink size={15} aria-hidden="true" />
+                  Explorer receipt
+                  <span className="sr-only">{` for ${log.network} log #${log.id} (opens in a new tab)`}</span>
+                  <ExternalLink size={15} aria-hidden="true" />
                 </a>
               ) : null}
               {onApplaud ? (
