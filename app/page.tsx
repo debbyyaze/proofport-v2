@@ -33,18 +33,10 @@ export default function HomePage() {
             record people can verify.
           </p>
           <div className="hero-actions">
-            <Link
-              aria-label="Publish with Celo from the hero section"
-              className="primary-action"
-              href="/celo"
-            >
+            <Link className="primary-action" href="/celo">
               Publish with Celo <ArrowRight size={18} aria-hidden="true" />
             </Link>
-            <Link
-              aria-label="Publish with Stacks from the hero section"
-              className="primary-action alt"
-              href="/stacks"
-            >
+            <Link className="primary-action alt" href="/stacks">
               Publish with Stacks <ArrowRight size={18} aria-hidden="true" />
             </Link>
           </div>
@@ -96,11 +88,7 @@ export default function HomePage() {
               public proof entries.
             </p>
           </div>
-          <Link
-            aria-label="Publish with Celo from the network card"
-            className="primary-action"
-            href="/celo"
-          >
+          <Link className="primary-action" href="/celo">
             Publish with Celo <ArrowRight size={18} aria-hidden="true" />
           </Link>
         </article>
@@ -116,11 +104,7 @@ export default function HomePage() {
               explorer receipts.
             </p>
           </div>
-          <Link
-            aria-label="Publish with Stacks from the network card"
-            className="primary-action alt"
-            href="/stacks"
-          >
+          <Link className="primary-action alt" href="/stacks">
             Publish with Stacks <ArrowRight size={18} aria-hidden="true" />
           </Link>
         </article>
