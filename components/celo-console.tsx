@@ -103,6 +103,7 @@ export function CeloConsole() {
 
   const contractAddress = publicEnv.celoContractAddress;
   const isConfigured = Boolean(contractAddress);
+  const walletLabel = wallet.account ? shortAddress(wallet.account) : "Not connected";
 
   const canSubmit = useMemo(() => {
     return Boolean(summary.trim()) && !isSubmitting;
@@ -312,7 +313,7 @@ export function CeloConsole() {
         </p>
         <div className="wallet-strip">
           <span>{wallet.isMiniPay ? "MiniPay detected" : "Wallet"}</span>
-          <strong>{shortAddress(wallet.account)}</strong>
+          <strong>{walletLabel}</strong>
           {!wallet.isMiniPay ? (
             <button type="button" className="icon-text-button" onClick={connect}>
               Connect

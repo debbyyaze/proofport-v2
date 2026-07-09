@@ -80,6 +80,7 @@ export function StacksConsole() {
 
   const contract = configuredStacksContract;
   const isConfigured = Boolean(contract);
+  const walletLabel = wallet.address ? shortAddress(wallet.address) : "Not connected";
 
   const canSubmit = useMemo(() => {
     return Boolean(summary.trim()) && !isSubmitting;
@@ -292,7 +293,7 @@ export function StacksConsole() {
         </p>
         <div className="wallet-strip">
           <span>Stacks wallet</span>
-          <strong>{shortAddress(wallet.address)}</strong>
+          <strong>{walletLabel}</strong>
           {wallet.connected ? (
             <button
               type="button"
