@@ -32,14 +32,14 @@ export default function HomePage() {
             Capture what shipped, attach a proof link, and publish a wallet-signed
             record people can verify.
           </p>
-          <div className="hero-actions">
+          <nav aria-label="Choose a publishing network" className="hero-actions">
             <Link className="primary-action" href="/celo">
               Publish with Celo <ArrowRight size={18} aria-hidden="true" />
             </Link>
             <Link className="primary-action alt" href="/stacks">
               Publish with Stacks <ArrowRight size={18} aria-hidden="true" />
             </Link>
-          </div>
+          </nav>
         </div>
         <div
           aria-describedby="proof-preview-description"
