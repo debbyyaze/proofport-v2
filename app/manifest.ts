@@ -14,6 +14,20 @@ export default function manifest(): MetadataRoute.Manifest {
     lang: "en",
     dir: "ltr",
     categories: ["developer", "productivity", "utilities"],
+    shortcuts: [
+      {
+        name: "Publish with Celo",
+        short_name: "Celo",
+        description: "Open the Celo publisher.",
+        url: "/celo"
+      },
+      {
+        name: "Publish with Stacks",
+        short_name: "Stacks",
+        description: "Open the Stacks publisher.",
+        url: "/stacks"
+      }
+    ],
     icons: [
       {
         src: "/icon.svg",
