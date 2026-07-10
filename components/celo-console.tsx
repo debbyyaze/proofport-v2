@@ -388,9 +388,8 @@ export function CeloConsole() {
             type="button"
             className="icon-button"
             onClick={() => void loadLogs()}
-            aria-label="Refresh Celo entries"
-            title="Refresh Celo entries"
           >
+            <span className="sr-only">Refresh Celo entries</span>
             <RefreshCcw size={18} aria-hidden="true" />
           </button>
         </div>

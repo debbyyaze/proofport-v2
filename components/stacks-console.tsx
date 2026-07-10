@@ -380,9 +380,8 @@ export function StacksConsole() {
             type="button"
             className="icon-button"
             onClick={() => void loadLogs()}
-            aria-label="Refresh Stacks entries"
-            title="Refresh Stacks entries"
           >
+            <span className="sr-only">Refresh Stacks entries</span>
             <RefreshCcw size={18} aria-hidden="true" />
           </button>
         </div>
