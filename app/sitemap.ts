@@ -8,13 +8,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: appUrl
+      url: appUrl,
+      changeFrequency: "weekly",
+      priority: 1
     },
     {
-      url: `${appUrl}/celo`
+      url: `${appUrl}/celo`,
+      changeFrequency: "weekly",
+      priority: 0.8
     },
     {
-      url: `${appUrl}/stacks`
+      url: `${appUrl}/stacks`,
+      changeFrequency: "weekly",
+      priority: 0.8
     }
   ];
 }
