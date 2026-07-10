@@ -81,10 +81,14 @@ export function Feed({
                   onClick={() => onApplaud(log.id)}
                   disabled={isPending}
                   aria-busy={isPending}
+                  aria-label={
+                    isPending
+                      ? `Sending applause for ${log.summary}`
+                      : `Applaud ${log.summary}`
+                  }
                 >
                   <Sparkles size={16} aria-hidden="true" />
                   <span>{isPending ? "Sending..." : "Applaud"}</span>
-                  <span className="sr-only">{` for ${log.summary}`}</span>
                   {isPending ? (
                     <span className="sr-only" aria-live="polite">
                       Sending applause now
