@@ -270,6 +270,24 @@ main {
   box-shadow: none;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .skip-link,
+  .primary-action,
+  .icon-text-button,
+  .icon-button {
+    transition: none;
+  }
+
+  .primary-action:hover,
+  .primary-action:focus-visible,
+  .icon-text-button:hover,
+  .icon-text-button:focus-visible,
+  .icon-button:hover,
+  .icon-button:focus-visible {
+    transform: none;
+  }
+}
+
 .signal-board,
 .chain-panel,
 .readiness-card,
