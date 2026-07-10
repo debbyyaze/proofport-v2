@@ -10,6 +10,8 @@ npm install
 cp .env.example .env
 ```
 
+The local `.env` file will hold deployer keys. Keep it out of version control and never reuse it as a hosted runtime config.
+
 ## Celo Mainnet
 
 1. Set these values in `.env`:
