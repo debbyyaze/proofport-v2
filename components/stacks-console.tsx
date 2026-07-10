@@ -364,7 +364,9 @@ export function StacksConsole() {
         </div>
         {txUrl ? (
           <a className="tx-link" href={txUrl} target="_blank" rel="noreferrer">
-            Open explorer receipt <ExternalLink size={15} aria-hidden="true" />
+            Open explorer receipt
+            <span className="sr-only"> (opens in a new tab)</span>
+            <ExternalLink size={15} aria-hidden="true" />
           </a>
         ) : null}
       </div>
