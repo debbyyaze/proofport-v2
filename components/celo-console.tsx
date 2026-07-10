@@ -364,7 +364,7 @@ export function CeloConsole() {
           </label>
           <button type="submit" className="primary-action" disabled={!canSubmit}>
             <Send size={18} aria-hidden="true" />
-            {isSubmitting ? "Confirming" : "Publish Celo entry"}
+            {isSubmitting ? "Publishing..." : "Publish Celo entry"}
           </button>
         </form>
         <div className="message-line" role="status">
