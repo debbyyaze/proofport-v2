@@ -20,13 +20,27 @@ export default function manifest(): MetadataRoute.Manifest {
         name: "Publish with Celo",
         short_name: "Celo",
         description: "Open the Celo publisher.",
-        url: "/celo"
+        url: "/celo",
+        icons: [
+          {
+            src: "/icon.svg",
+            sizes: "any",
+            type: "image/svg+xml"
+          }
+        ]
       },
       {
         name: "Publish with Stacks",
         short_name: "Stacks",
         description: "Open the Stacks publisher.",
-        url: "/stacks"
+        url: "/stacks",
+        icons: [
+          {
+            src: "/icon.svg",
+            sizes: "any",
+            type: "image/svg+xml"
+          }
+        ]
       }
     ],
     icons: [
