@@ -368,7 +368,7 @@ export function StacksConsole() {
           </label>
           <button type="submit" className="primary-action" disabled={!canSubmit}>
             <Send size={18} aria-hidden="true" />
-            {isSubmitting ? "Submitting" : "Publish Stacks entry"}
+            {isSubmitting ? "Publishing..." : "Publish Stacks entry"}
           </button>
         </form>
         <div className="message-line" role="status">
