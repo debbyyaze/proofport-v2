@@ -368,7 +368,11 @@ export function CeloConsole() {
               autoCorrect="off"
               spellCheck={false}
               placeholder="minipay"
+              aria-describedby="celo-tag-hint"
             />
+            <small className="field-hint" id="celo-tag-hint">
+              Optional. Short labels only, up to 32 characters.
+            </small>
           </label>
           <button type="submit" className="primary-action" disabled={!canSubmit}>
             <Send size={18} aria-hidden="true" />

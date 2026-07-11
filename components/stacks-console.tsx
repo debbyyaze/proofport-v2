@@ -360,7 +360,11 @@ export function StacksConsole() {
               autoCorrect="off"
               spellCheck={false}
               placeholder="clarity"
+              aria-describedby="stacks-tag-hint"
             />
+            <small className="field-hint" id="stacks-tag-hint">
+              Optional. Short labels only, up to 32 characters.
+            </small>
           </label>
           <button type="submit" className="primary-action" disabled={!canSubmit}>
             <Send size={18} aria-hidden="true" />
