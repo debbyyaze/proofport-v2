@@ -335,7 +335,11 @@ export function CeloConsole() {
               maxLength={160}
               rows={4}
               placeholder="Published the mobile proof log."
+              aria-describedby="celo-summary-hint"
             />
+            <small className="field-hint" id="celo-summary-hint">
+              Keep it under 160 characters.
+            </small>
           </label>
           <label>
             <span>Proof URL</span>

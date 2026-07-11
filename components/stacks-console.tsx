@@ -327,7 +327,11 @@ export function StacksConsole() {
               maxLength={160}
               rows={4}
               placeholder="Published the Clarity-backed proof log."
+              aria-describedby="stacks-summary-hint"
             />
+            <small className="field-hint" id="stacks-summary-hint">
+              Keep it under 160 characters.
+            </small>
           </label>
           <label>
             <span>Proof URL</span>
