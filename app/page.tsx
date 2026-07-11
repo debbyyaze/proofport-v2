@@ -111,9 +111,10 @@ export default function HomePage() {
       </section>
 
       <section className="how-it-works" aria-labelledby="how-it-works-title">
-        <h2 className="sr-only" id="how-it-works-title">
-          How ProofPort works
-        </h2>
+        <div className="section-heading">
+          <span className="panel-kicker">How it works</span>
+          <h2 id="how-it-works-title">Turn shipped work into a public proof log.</h2>
+        </div>
         <article>
           <FileText size={20} aria-hidden="true" />
           <h3>Write the entry</h3>
