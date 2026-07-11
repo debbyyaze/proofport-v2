@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"
   ),
+  manifest: "/manifest.webmanifest",
   alternates: {
     canonical: "/"
   },
@@ -31,6 +32,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: "/",
+    siteName: "ProofPort",
     title: "ProofPort",
     description:
       "Capture what shipped, attach a proof link, and publish a record people can verify.",
