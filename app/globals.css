@@ -717,6 +717,21 @@ main {
   align-items: center;
   color: #5a42c5;
   font-weight: 740;
+  border-radius: 4px;
+}
+
+.tx-link:hover,
+.tx-link:focus-visible,
+.log-actions a:hover,
+.log-actions a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.tx-link:focus-visible,
+.log-actions a:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 3px;
 }
 
 .feed-toolbar {
@@ -812,6 +827,10 @@ main {
   color: #5a42c5;
   font-weight: 720;
   font-size: 0.9rem;
+}
+
+.log-actions a {
+  border-radius: 4px;
 }
 
 .muted-link {
