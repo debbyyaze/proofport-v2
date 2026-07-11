@@ -340,7 +340,11 @@ export function StacksConsole() {
               autoCorrect="off"
               spellCheck={false}
               placeholder="https://github.com/you/proofport/commit/abc"
+              aria-describedby="stacks-proof-url-hint"
             />
+            <small className="field-hint" id="stacks-proof-url-hint">
+              Optional. HTTPS links only.
+            </small>
           </label>
           <label>
             <span>Tag</span>

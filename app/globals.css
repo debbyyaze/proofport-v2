@@ -650,6 +650,12 @@ main {
   font-weight: 720;
 }
 
+.field-hint {
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
 .ship-form input,
 .ship-form textarea {
   width: 100%;
