@@ -371,7 +371,7 @@ export function StacksConsole() {
             {isSubmitting ? "Publishing..." : "Publish Stacks entry"}
           </button>
         </form>
-        <div className="message-line" role="status">
+        <div className="message-line" role="status" aria-live="polite" aria-atomic="true">
           {message || getFeedNotice(isConfigured, "Stacks")}
         </div>
         {txUrl ? (

@@ -379,7 +379,7 @@ export function CeloConsole() {
             {isSubmitting ? "Publishing..." : "Publish Celo entry"}
           </button>
         </form>
-        <div className="message-line" role="status">
+        <div className="message-line" role="status" aria-live="polite" aria-atomic="true">
           {message || getFeedNotice(isConfigured, "Celo")}
         </div>
         {txUrl ? (
