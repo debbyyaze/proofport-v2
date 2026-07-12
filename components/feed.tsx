@@ -61,7 +61,7 @@ export function Feed({
                   <ExternalLink size={15} aria-hidden="true" />
                 </a>
               ) : (
-                <span className="muted-link">No proof link</span>
+                <span className="muted-link">No proof link added</span>
               )}
               {log.txUrl ? (
                 <a
