@@ -4,7 +4,10 @@ import { CeloConsole } from "@/components/celo-console";
 export const metadata: Metadata = {
   title: "Publish with Celo",
   description:
-    "Create public ProofPort entries on Celo with MiniPay-compatible wallet handling."
+    "Create public ProofPort entries on Celo with MiniPay-compatible wallet handling.",
+  alternates: {
+    canonical: "/celo"
+  }
 };
 
 export default function CeloPage() {
