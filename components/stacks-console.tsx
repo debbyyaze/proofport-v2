@@ -339,6 +339,7 @@ export function StacksConsole() {
               type="url"
               value={proofUri}
               onChange={(event) => setProofUri(event.target.value)}
+              autoComplete="url"
               inputMode="url"
               autoCapitalize="off"
               autoCorrect="off"
