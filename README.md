@@ -18,9 +18,12 @@ Use Node `22.13.0` or newer.
 nvm install 22.13.0
 nvm use 22.13.0
 npm install
-cp .env.example .env
 npm run dev
 ```
+
+The app boots locally with built-in testnet and localhost defaults. Only set
+`NEXT_PUBLIC_*` values when you want to point the UI at a specific live
+deployment; see [docs/deploy.md](./docs/deploy.md) for the production values.
 
 Local routes:
 
