@@ -54,7 +54,7 @@ export default function HomePage() {
             <strong>Verification preview</strong>
           </div>
           <div className="ledger-preview">
-            <span className="ledger-dot" />
+            <span className="ledger-dot" aria-hidden="true" />
             <div>
               <strong>Published mobile release notes</strong>
               <p>Proof link attached. Explorer receipt ready to share.</p>
