@@ -300,7 +300,7 @@ export function StacksConsole() {
               className="icon-text-button secondary"
               onClick={() => void disconnectWallet()}
             >
-              Disconnect
+              Disconnect wallet
             </button>
           ) : (
             <button
@@ -308,7 +308,7 @@ export function StacksConsole() {
               className="icon-text-button"
               onClick={() => void connectWallet()}
             >
-              Connect
+              Connect wallet
             </button>
           )}
         </div>

@@ -316,7 +316,7 @@ export function CeloConsole() {
           <strong>{walletLabel}</strong>
           {!wallet.isMiniPay ? (
             <button type="button" className="icon-text-button" onClick={connect}>
-              Connect
+              Connect wallet
             </button>
           ) : null}
         </div>
