@@ -26,6 +26,11 @@ export const metadata: Metadata = {
     "Public proof logs for shipped work, wallet-signed entries, and explorer-backed records.",
   applicationName: "ProofPort",
   category: "developer tools",
+  formatDetection: {
+    telephone: false,
+    email: false,
+    address: false
+  },
   icons: {
     icon: "/icon.svg",
     apple: "/icon.svg"
