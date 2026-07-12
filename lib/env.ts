@@ -70,6 +70,10 @@ export function getCeloChainLabel(network = publicEnv.celoNetwork) {
   return network === "celo" ? "Celo Mainnet" : "Celo Sepolia";
 }
 
+export function getStacksChainLabel(network = publicEnv.stacksNetwork) {
+  return network === "mainnet" ? "Stacks Mainnet" : "Stacks Testnet";
+}
+
 export function getCeloRpcUrl(network = publicEnv.celoNetwork) {
   return network === "celo"
     ? publicEnv.celoMainnetRpcUrl

@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { ExternalLink, RefreshCcw, Send, WalletCards } from "lucide-react";
-import { getStacksExplorerTxUrl, publicEnv } from "@/lib/env";
+import { getStacksChainLabel, getStacksExplorerTxUrl, publicEnv } from "@/lib/env";
 import {
   buildProofHashInput,
   getFeedNotice,
@@ -284,7 +284,7 @@ export function StacksConsole() {
       <div className="chain-panel primary-panel">
         <div className="panel-kicker">
           <WalletCards size={18} aria-hidden="true" />
-          Stacks {publicEnv.stacksNetwork}
+          {getStacksChainLabel()}
         </div>
         <h1 id="stacks-title">Publish with Stacks</h1>
         <p>

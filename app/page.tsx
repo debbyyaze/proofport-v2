@@ -9,7 +9,7 @@ import {
   Smartphone,
   WalletCards
 } from "lucide-react";
-import { getCeloChainLabel, publicEnv } from "@/lib/env";
+import { getCeloChainLabel, getStacksChainLabel } from "@/lib/env";
 
 export const metadata: Metadata = {
   other: {
@@ -19,9 +19,6 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  const stacksNetworkLabel =
-    publicEnv.stacksNetwork === "mainnet" ? "Stacks Mainnet" : "Stacks Testnet";
-
   return (
     <div className="home-grid">
       <section className="hero-workbench" aria-labelledby="home-title">
@@ -97,7 +94,7 @@ export default function HomePage() {
             <WalletCards size={22} aria-hidden="true" />
           </div>
           <div>
-            <span>{stacksNetworkLabel}</span>
+            <span>{getStacksChainLabel()}</span>
             <h3>Stacks</h3>
             <p>
               A Bitcoin-aligned path for Stacks wallets, with public entries and
