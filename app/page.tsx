@@ -47,14 +47,14 @@ export default function HomePage() {
           className="signal-board proof-preview"
         >
           <h2 className="sr-only" id="proof-preview-title">
-            Latest proof preview
+            Example proof preview
           </h2>
           <p className="sr-only" id="proof-preview-description">
-            Preview of a recent published proof entry with its verification status.
+            Preview of an example published proof entry with its verification status.
           </p>
           <div className="proof-preview-head">
-            <span>Latest proof</span>
-            <strong>Verified</strong>
+            <span>Example proof</span>
+            <strong>Verification preview</strong>
           </div>
           <div className="ledger-preview">
             <span className="ledger-dot" />
