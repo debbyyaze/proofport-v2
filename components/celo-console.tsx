@@ -376,7 +376,12 @@ export function CeloConsole() {
               Optional. Short labels only, up to 32 characters.
             </small>
           </label>
-          <button type="submit" className="primary-action" disabled={!canSubmit}>
+          <button
+            type="submit"
+            className="primary-action"
+            disabled={!canSubmit}
+            aria-busy={isSubmitting}
+          >
             <Send size={18} aria-hidden="true" />
             {isSubmitting ? "Publishing..." : "Publish Celo entry"}
           </button>
