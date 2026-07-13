@@ -48,13 +48,15 @@ export function AppShell({ children }: AppShellProps) {
       <main id="main-content" tabIndex={-1}>
         {children}
       </main>
-      <footer className="footer-strip">
-        <span>
-          <BadgeCheck size={16} aria-hidden="true" /> Wallet-signed entries
-        </span>
-        <span>
-          <RadioTower size={16} aria-hidden="true" /> Explorer receipts
-        </span>
+      <footer aria-label="Proof features">
+        <ul className="footer-strip">
+          <li>
+            <BadgeCheck size={16} aria-hidden="true" /> Wallet-signed entries
+          </li>
+          <li>
+            <RadioTower size={16} aria-hidden="true" /> Explorer receipts
+          </li>
+        </ul>
       </footer>
     </div>
   );

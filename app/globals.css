@@ -857,12 +857,14 @@ main {
   gap: 16px;
   color: var(--muted);
   font-size: 0.86rem;
+  list-style: none;
 }
 
-.footer-strip span {
+.footer-strip li {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  padding: 0;
 }
 
 @media (max-width: 920px) {
