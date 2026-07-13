@@ -23,6 +23,7 @@ export function ReadinessGrid({ items }: { items: ReadinessItem[] }) {
             </div>
             <span
               className={item.ready ? "status-dot ready" : "status-dot pending"}
+              aria-label={`${item.label}: ${item.ready ? "Ready" : "Pending"}`}
             >
               <span className="sr-only">{item.ready ? "Ready" : "Pending"}</span>
               {item.ready ? (
