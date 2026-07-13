@@ -382,7 +382,13 @@ export function StacksConsole() {
           {message || getFeedNotice(isConfigured, "Stacks")}
         </div>
         {txUrl ? (
-          <a className="tx-link" href={txUrl} target="_blank" rel="noreferrer">
+          <a
+            className="tx-link"
+            href={txUrl}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Open Stacks explorer receipt in a new tab"
+          >
             Open explorer receipt
             <span className="sr-only"> (opens in a new tab)</span>
             <ExternalLink size={15} aria-hidden="true" />
