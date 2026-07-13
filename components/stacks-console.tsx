@@ -326,6 +326,7 @@ export function StacksConsole() {
               onChange={(event) => setSummary(event.target.value)}
               maxLength={160}
               rows={4}
+              required
               placeholder="Published the Clarity-backed proof log."
               aria-describedby="stacks-summary-hint"
             />

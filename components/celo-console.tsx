@@ -334,6 +334,7 @@ export function CeloConsole() {
               onChange={(event) => setSummary(event.target.value)}
               maxLength={160}
               rows={4}
+              required
               placeholder="Published the mobile proof log."
               aria-describedby="celo-summary-hint"
             />
