@@ -73,14 +73,18 @@ export default function HomePage() {
           <span className="panel-kicker">Choose a network</span>
           <h2 id="network-title">Publish where your wallet already lives.</h2>
         </div>
-        <article className="network-card network-card-celo">
+        <article
+          aria-describedby="network-celo-description"
+          aria-labelledby="network-celo-title"
+          className="network-card network-card-celo"
+        >
           <div className="network-icon">
             <Smartphone size={22} aria-hidden="true" />
           </div>
           <div>
             <span>{getCeloChainLabel()}</span>
-            <h3>Celo</h3>
-            <p>
+            <h3 id="network-celo-title">Celo</h3>
+            <p id="network-celo-description">
               A mobile-friendly path for MiniPay and Celo wallets, built for quick
               public proof entries.
             </p>
@@ -89,14 +93,18 @@ export default function HomePage() {
             Publish with Celo <ArrowRight size={18} aria-hidden="true" />
           </Link>
         </article>
-        <article className="network-card network-card-stacks">
+        <article
+          aria-describedby="network-stacks-description"
+          aria-labelledby="network-stacks-title"
+          className="network-card network-card-stacks"
+        >
           <div className="network-icon">
             <WalletCards size={22} aria-hidden="true" />
           </div>
           <div>
             <span>{getStacksChainLabel()}</span>
-            <h3>Stacks</h3>
-            <p>
+            <h3 id="network-stacks-title">Stacks</h3>
+            <p id="network-stacks-description">
               A Bitcoin-aligned path for Stacks wallets, with public entries and
               explorer receipts.
             </p>
