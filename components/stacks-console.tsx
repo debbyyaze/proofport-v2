@@ -113,6 +113,8 @@ export function StacksConsole() {
     const { disconnect } = await import("@stacks/connect");
     disconnect();
     setWallet(emptyWallet);
+    setMessage("");
+    setTxUrl("");
   }, []);
 
   const loadLogs = useCallback(async (forceFresh = false) => {
