@@ -7,6 +7,17 @@ export const metadata: Metadata = {
     "Create public ProofPort entries on Stacks with Stacks Connect wallet signing.",
   alternates: {
     canonical: "/stacks"
+  },
+  openGraph: {
+    title: "Publish with Stacks | ProofPort",
+    description:
+      "Create public ProofPort entries on Stacks with Stacks Connect wallet signing.",
+    url: "/stacks"
+  },
+  twitter: {
+    title: "Publish with Stacks | ProofPort",
+    description:
+      "Create public ProofPort entries on Stacks with Stacks Connect wallet signing."
   }
 };
 

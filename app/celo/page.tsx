@@ -7,6 +7,17 @@ export const metadata: Metadata = {
     "Create public ProofPort entries on Celo with MiniPay-compatible wallet handling.",
   alternates: {
     canonical: "/celo"
+  },
+  openGraph: {
+    title: "Publish with Celo | ProofPort",
+    description:
+      "Create public ProofPort entries on Celo with MiniPay-compatible wallet handling.",
+    url: "/celo"
+  },
+  twitter: {
+    title: "Publish with Celo | ProofPort",
+    description:
+      "Create public ProofPort entries on Celo with MiniPay-compatible wallet handling."
   }
 };
 
