@@ -8,7 +8,7 @@ ProofPort is a compact public proof log for shipped work. Builders can publish c
 - `/stacks`: Stacks Connect flow backed by `proofport-log.clar`
 - `/`: product landing page with network selection
 
-The app has no backend, no database, and no indexer. It reads the latest entries directly from the connected contracts, with sample entries shown until live contract environment values are set.
+The app has no persistent backend, no database, and no indexer. It uses wallet calls plus a lightweight Next route handler for live Stacks reads, with sample entries shown until live contract environment values are set.
 
 ## Quick Start
 
