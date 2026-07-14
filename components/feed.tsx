@@ -27,15 +27,23 @@ export function Feed({
     <div className="feed-list">
       {logs.map((log) => {
         const isPending = pendingApplauseId === log.id;
+        const articleId = `${log.network}-log-${log.id}`;
+        const titleId = `${articleId}-title`;
+        const metaId = `${articleId}-meta`;
 
         return (
-          <article className="log-card" key={`${log.network}-${log.id}`}>
+          <article
+            aria-describedby={metaId}
+            aria-labelledby={titleId}
+            className="log-card"
+            key={`${log.network}-${log.id}`}
+          >
             <div className="log-head">
               <span className="log-id">#{log.id}</span>
               <span className="log-tag">{log.tag || "proof"}</span>
             </div>
-            <h3>{log.summary}</h3>
-            <dl className="log-meta">
+            <h3 id={titleId}>{log.summary}</h3>
+            <dl className="log-meta" id={metaId}>
               <div>
                 <dt>Publisher</dt>
                 <dd>{shortAddress(log.author)}</dd>
