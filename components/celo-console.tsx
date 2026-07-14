@@ -313,7 +313,9 @@ export function CeloConsole() {
         </p>
         <div className="wallet-strip">
           <span>{wallet.isMiniPay ? "MiniPay detected" : "Wallet"}</span>
-          <strong>{walletLabel}</strong>
+          <strong aria-live="polite" aria-atomic="true">
+            {walletLabel}
+          </strong>
           {!wallet.isMiniPay ? (
             <button type="button" className="icon-text-button" onClick={connect}>
               Connect wallet

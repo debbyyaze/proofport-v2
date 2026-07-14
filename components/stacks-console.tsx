@@ -295,7 +295,9 @@ export function StacksConsole() {
         </p>
         <div className="wallet-strip">
           <span>Stacks wallet</span>
-          <strong>{walletLabel}</strong>
+          <strong aria-live="polite" aria-atomic="true">
+            {walletLabel}
+          </strong>
           {wallet.connected ? (
             <button
               type="button"
