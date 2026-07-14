@@ -313,7 +313,11 @@ export function CeloConsole() {
         </p>
         <div className="wallet-strip">
           <span>{wallet.isMiniPay ? "MiniPay detected" : "Wallet"}</span>
-          <strong aria-live="polite" aria-atomic="true">
+          <strong
+            aria-live="polite"
+            aria-atomic="true"
+            title={wallet.account || undefined}
+          >
             {walletLabel}
           </strong>
           {!wallet.isMiniPay ? (
