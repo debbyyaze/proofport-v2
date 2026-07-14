@@ -393,7 +393,7 @@ export function StacksConsole() {
             rel="noreferrer"
             aria-label="Open Stacks explorer receipt in a new tab"
           >
-            Open explorer receipt
+            Open Stacks explorer receipt
             <span className="sr-only"> (opens in a new tab)</span>
             <ExternalLink size={15} aria-hidden="true" />
           </a>

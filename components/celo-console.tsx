@@ -399,7 +399,7 @@ export function CeloConsole() {
             rel="noreferrer"
             aria-label="Open Celo explorer receipt in a new tab"
           >
-            Open explorer receipt
+            Open Celo explorer receipt
             <span className="sr-only"> (opens in a new tab)</span>
             <ExternalLink size={15} aria-hidden="true" />
           </a>
