@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "ProofPort",
     title: "ProofPort",
     description:
-      "Capture what shipped, attach a proof link, and publish a record people can verify.",
+      "Public proof logs for shipped work, wallet-signed entries, and explorer-backed records.",
     type: "website",
     images: [
       {
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ProofPort",
     description:
-      "Capture what shipped, attach a proof link, and publish a record people can verify.",
+      "Public proof logs for shipped work, wallet-signed entries, and explorer-backed records.",
     images: [
       {
         url: "/og.svg",
