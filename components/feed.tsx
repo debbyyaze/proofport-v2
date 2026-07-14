@@ -63,6 +63,7 @@ export function Feed({
                   href={log.proofUri}
                   target="_blank"
                   rel="noreferrer"
+                  title={log.proofUri}
                   aria-label={`Proof link for ${log.network} log #${log.id} (opens in a new tab)`}
                 >
                   Proof link
@@ -76,6 +77,7 @@ export function Feed({
                   href={log.txUrl}
                   target="_blank"
                   rel="noreferrer"
+                  title={log.txUrl}
                   aria-label={`Explorer receipt for ${log.network} log #${log.id} (opens in a new tab)`}
                 >
                   Explorer receipt
