@@ -430,7 +430,7 @@ export function StacksConsole() {
         ) : null}
         <Feed
           logs={logs}
-          emptyLabel="No entries yet on this network."
+          emptyLabel="No Stacks entries yet. Publish the first proof entry."
           onApplaud={applaud}
           pendingApplauseId={pendingApplauseId}
         />

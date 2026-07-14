@@ -434,7 +434,7 @@ export function CeloConsole() {
         ) : null}
         <Feed
           logs={logs}
-          emptyLabel="No entries yet on this network."
+          emptyLabel="No Celo entries yet. Publish the first proof entry."
           onApplaud={applaud}
           pendingApplauseId={pendingApplauseId}
         />
