@@ -59,6 +59,7 @@ See [docs/deploy.md](./docs/deploy.md) for precise deployment values and launch 
 ```bash
 npm run lint
 npm run typecheck
+npm run check:stacks
 npm run build
 ```
 
