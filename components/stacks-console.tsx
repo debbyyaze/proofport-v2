@@ -298,6 +298,11 @@ export function StacksConsole() {
           <strong
             aria-live="polite"
             aria-atomic="true"
+            aria-label={
+              wallet.address
+                ? `Connected Stacks wallet ${wallet.address}`
+                : "Stacks wallet not connected"
+            }
             title={wallet.address || undefined}
           >
             {walletLabel}

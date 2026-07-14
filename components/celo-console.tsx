@@ -316,6 +316,11 @@ export function CeloConsole() {
           <strong
             aria-live="polite"
             aria-atomic="true"
+            aria-label={
+              wallet.account
+                ? `Connected Celo wallet ${wallet.account}`
+                : "Celo wallet not connected"
+            }
             title={wallet.account || undefined}
           >
             {walletLabel}
