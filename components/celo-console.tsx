@@ -345,7 +345,7 @@ export function CeloConsole() {
             </small>
           </label>
           <label>
-            <span>Proof URL</span>
+            <span>Proof URL (optional)</span>
             <input
               type="url"
               value={proofUri}
@@ -363,7 +363,7 @@ export function CeloConsole() {
             </small>
           </label>
           <label>
-            <span>Tag</span>
+            <span>Tag (optional)</span>
             <input
               value={tag}
               onChange={(event) => setTag(event.target.value)}
