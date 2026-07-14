@@ -405,7 +405,7 @@ export function CeloConsole() {
             className="tx-link"
             href={txUrl}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             aria-label="Open Celo explorer receipt in a new tab"
           >
             Open Celo explorer receipt

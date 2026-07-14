@@ -399,7 +399,7 @@ export function StacksConsole() {
             className="tx-link"
             href={txUrl}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             aria-label="Open Stacks explorer receipt in a new tab"
           >
             Open Stacks explorer receipt
