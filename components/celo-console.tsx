@@ -368,7 +368,7 @@ export function CeloConsole() {
               aria-describedby="celo-proof-url-hint"
             />
             <small className="field-hint" id="celo-proof-url-hint">
-              Optional. HTTPS links only.
+              Optional. Add a PR, commit, release note, or live demo link. HTTPS only.
             </small>
           </label>
           <label>

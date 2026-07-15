@@ -362,7 +362,7 @@ export function StacksConsole() {
               aria-describedby="stacks-proof-url-hint"
             />
             <small className="field-hint" id="stacks-proof-url-hint">
-              Optional. HTTPS links only.
+              Optional. Add a PR, commit, release note, or live demo link. HTTPS only.
             </small>
           </label>
           <label>
