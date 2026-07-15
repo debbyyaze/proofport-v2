@@ -46,7 +46,9 @@ export function Feed({
             <dl className="log-meta" id={metaId}>
               <div>
                 <dt>Publisher</dt>
-                <dd title={log.author}>{shortAddress(log.author)}</dd>
+                <dd aria-label={log.author} title={log.author}>
+                  {shortAddress(log.author)}
+                </dd>
               </div>
               <div>
                 <dt>Published</dt>
