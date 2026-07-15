@@ -344,7 +344,7 @@ export function StacksConsole() {
               aria-describedby="stacks-summary-hint"
             />
             <small className="field-hint" id="stacks-summary-hint">
-              Keep it under 160 characters.
+              Describe one shipped change in 160 characters or less.
             </small>
           </label>
           <label>

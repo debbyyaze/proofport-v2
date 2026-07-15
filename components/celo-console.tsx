@@ -350,7 +350,7 @@ export function CeloConsole() {
               aria-describedby="celo-summary-hint"
             />
             <small className="field-hint" id="celo-summary-hint">
-              Keep it under 160 characters.
+              Describe one shipped change in 160 characters or less.
             </small>
           </label>
           <label>
