@@ -66,9 +66,9 @@ export function Feed({
                   target="_blank"
                   rel="noopener noreferrer"
                   title={log.proofUri}
-                  aria-label={`Proof link for ${log.network} log #${log.id} (opens in a new tab)`}
                 >
                   Proof link
+                  <span className="sr-only"> (opens in a new tab)</span>
                   <ExternalLink size={15} aria-hidden="true" />
                 </a>
               ) : (
@@ -80,9 +80,9 @@ export function Feed({
                   target="_blank"
                   rel="noopener noreferrer"
                   title={log.txUrl}
-                  aria-label={`Explorer receipt for ${log.network} log #${log.id} (opens in a new tab)`}
                 >
                   Explorer receipt
+                  <span className="sr-only"> (opens in a new tab)</span>
                   <ExternalLink size={15} aria-hidden="true" />
                 </a>
               ) : null}
