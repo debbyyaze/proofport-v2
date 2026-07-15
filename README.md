@@ -49,13 +49,14 @@ npm run deploy:celo:mainnet
 Stacks:
 
 ```bash
-brew install clarinet
 npm run check:stacks
 npm run test:stacks
 npm run deploy:stacks:mainnet
 ```
 
-`npm run check:stacks` uses the Clarinet SDK bundled through npm. Use `npm run check:stacks:clarinet` when the standalone Clarinet CLI is installed.
+`npm run check:stacks` uses the Clarinet SDK bundled through npm, so the
+standalone Clarinet CLI is optional. Install it only when you want to run
+`npm run check:stacks:clarinet`.
 
 See [docs/deploy.md](./docs/deploy.md) for precise deployment values and launch notes.
 
