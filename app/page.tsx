@@ -54,7 +54,7 @@ export default function HomePage() {
             </Link>
           </nav>
         </div>
-        <div
+        <section
           aria-describedby="proof-preview-description"
           aria-labelledby="proof-preview-title"
           className="signal-board proof-preview"
@@ -81,7 +81,7 @@ export default function HomePage() {
             <span />
             <span />
           </div>
-        </div>
+        </section>
       </section>
 
       <section className="network-selector" aria-labelledby="network-title">
