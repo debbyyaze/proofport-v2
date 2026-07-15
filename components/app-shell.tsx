@@ -10,7 +10,7 @@ type AppShellProps = {
 };
 
 const routes = [
-  { href: "/", label: "Overview" },
+  { href: "/", label: "Home" },
   { href: "/celo", label: "Celo" },
   { href: "/stacks", label: "Stacks" }
 ] as const;
