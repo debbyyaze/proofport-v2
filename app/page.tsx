@@ -46,10 +46,18 @@ export default function HomePage() {
             record people can verify.
           </p>
           <nav aria-label="Choose a publishing network" className="hero-actions">
-            <Link className="primary-action" href="/celo">
+            <Link
+              aria-label="Publish with Celo using the mobile-friendly wallet flow"
+              className="primary-action"
+              href="/celo"
+            >
               Publish with Celo <ArrowRight size={18} aria-hidden="true" />
             </Link>
-            <Link className="primary-action alt" href="/stacks">
+            <Link
+              aria-label="Publish with Stacks using the Bitcoin-aligned wallet flow"
+              className="primary-action alt"
+              href="/stacks"
+            >
               Publish with Stacks <ArrowRight size={18} aria-hidden="true" />
             </Link>
           </nav>
@@ -105,7 +113,11 @@ export default function HomePage() {
               public proof entries.
             </p>
           </div>
-          <Link className="primary-action" href="/celo">
+          <Link
+            aria-label="Publish with Celo from the Celo network card"
+            className="primary-action"
+            href="/celo"
+          >
             Publish with Celo <ArrowRight size={18} aria-hidden="true" />
           </Link>
         </article>
@@ -125,7 +137,11 @@ export default function HomePage() {
               explorer receipts.
             </p>
           </div>
-          <Link className="primary-action alt" href="/stacks">
+          <Link
+            aria-label="Publish with Stacks from the Stacks network card"
+            className="primary-action alt"
+            href="/stacks"
+          >
             Publish with Stacks <ArrowRight size={18} aria-hidden="true" />
           </Link>
         </article>
