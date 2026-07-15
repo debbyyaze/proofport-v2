@@ -23,7 +23,9 @@ npm run dev
 
 The app boots locally with built-in testnet and localhost defaults. Only set
 `NEXT_PUBLIC_*` values when you want to point the UI at a specific live
-deployment; see [docs/deploy.md](./docs/deploy.md) for the production values.
+deployment. Set `NEXT_PUBLIC_APP_URL` before production builds so canonical
+URLs, `robots.txt`, and the sitemap point at the live HTTPS origin; see
+[docs/deploy.md](./docs/deploy.md) for the production values.
 
 Local routes:
 
