@@ -51,10 +51,10 @@ export function AppShell({ children }: AppShellProps) {
       <footer aria-label="Site footer">
         <ul className="footer-strip">
           <li>
-            <BadgeCheck size={16} aria-hidden="true" /> Wallet-signed entries
+            <BadgeCheck size={16} aria-hidden="true" /> Wallet-signed proof entries
           </li>
           <li>
-            <RadioTower size={16} aria-hidden="true" /> Explorer receipts
+            <RadioTower size={16} aria-hidden="true" /> Shareable explorer receipts
           </li>
         </ul>
       </footer>
