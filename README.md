@@ -21,6 +21,9 @@ npm install
 npm run dev
 ```
 
+Use `npm run dev:mobile` when you need the Next dev server reachable from a
+phone on the same network, such as testing the Celo flow in MiniPay.
+
 The app boots locally with built-in testnet and localhost defaults. Only set
 `NEXT_PUBLIC_*` values when you want to point the UI at a specific live
 deployment. Set `NEXT_PUBLIC_APP_URL` before production builds so canonical
