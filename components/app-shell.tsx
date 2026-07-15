@@ -48,7 +48,7 @@ export function AppShell({ children }: AppShellProps) {
       <main id="main-content" tabIndex={-1}>
         {children}
       </main>
-      <footer aria-label="Proof features">
+      <footer aria-label="Site footer">
         <ul className="footer-strip">
           <li>
             <BadgeCheck size={16} aria-hidden="true" /> Wallet-signed entries
