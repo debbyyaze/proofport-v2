@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | ProofPort"
   },
   description:
-    "Public proof logs for shipped work, wallet-signed proof entries, and shareable explorer receipts.",
+    "Public proof logs for shipped work, wallet-signed proof entries, and shareable explorer receipts, with no account required.",
   applicationName: "ProofPort",
   appleWebApp: {
     capable: true,
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "ProofPort",
     title: "ProofPort",
     description:
-      "Public proof logs for shipped work, wallet-signed proof entries, and shareable explorer receipts.",
+      "Public proof logs for shipped work, wallet-signed proof entries, and shareable explorer receipts, with no account required.",
     type: "website",
     images: [
       {
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ProofPort",
     description:
-      "Public proof logs for shipped work, wallet-signed proof entries, and shareable explorer receipts.",
+      "Public proof logs for shipped work, wallet-signed proof entries, and shareable explorer receipts, with no account required.",
     images: [
       {
         url: "/og.svg",
