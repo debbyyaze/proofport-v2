@@ -10,9 +10,17 @@ type AppShellProps = {
 };
 
 const routes = [
-  { href: "/", label: "Home" },
-  { href: "/celo", label: "Celo" },
-  { href: "/stacks", label: "Stacks" }
+  { href: "/", label: "Home", ariaLabel: "Go to the ProofPort homepage" },
+  {
+    href: "/celo",
+    label: "Celo flow",
+    ariaLabel: "Open the Celo publishing flow"
+  },
+  {
+    href: "/stacks",
+    label: "Stacks flow",
+    ariaLabel: "Open the Stacks publishing flow"
+  }
 ] as const;
 
 export function AppShell({ children }: AppShellProps) {
@@ -37,6 +45,7 @@ export function AppShell({ children }: AppShellProps) {
           {routes.map((route) => (
             <Link
               aria-current={pathname === route.href ? "page" : undefined}
+              aria-label={route.ariaLabel}
               href={route.href}
               key={route.href}
             >
