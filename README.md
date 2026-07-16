@@ -29,6 +29,8 @@ The app boots locally with built-in testnet and localhost defaults. Only set
 deployment. Set `NEXT_PUBLIC_APP_URL` before production builds so canonical
 URLs, `robots.txt`, and the sitemap point at the live HTTPS origin; see
 [docs/deploy.md](./docs/deploy.md) for the production values.
+Skip copying `.env.example` for ordinary local UI work unless you are preparing
+to deploy or run contract scripts with real keys.
 
 Local routes:
 
