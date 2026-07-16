@@ -13,12 +13,12 @@ const routes = [
   { href: "/", label: "Home", ariaLabel: "Go to the ProofPort homepage" },
   {
     href: "/celo",
-    label: "Celo flow",
+    label: "Celo",
     ariaLabel: "Open the Celo publishing flow"
   },
   {
     href: "/stacks",
-    label: "Stacks flow",
+    label: "Stacks",
     ariaLabel: "Open the Stacks publishing flow"
   }
 ] as const;
