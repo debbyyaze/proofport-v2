@@ -43,7 +43,7 @@ export default function HomePage() {
           <h1 id="home-title">ProofPort</h1>
           <p>
             Capture what shipped, attach a proof link, and publish a wallet-signed
-            record people can verify.
+            record people can verify, with no account required.
           </p>
           <nav aria-label="Choose a publishing network" className="hero-actions">
             <Link
