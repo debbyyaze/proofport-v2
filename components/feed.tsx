@@ -30,6 +30,7 @@ export function Feed({
         const articleId = `${log.network}-log-${log.id}`;
         const titleId = `${articleId}-title`;
         const metaId = `${articleId}-meta`;
+        const applauseId = `${articleId}-applause`;
 
         return (
           <article
@@ -56,7 +57,7 @@ export function Feed({
               </div>
               <div>
                 <dt>Applause</dt>
-                <dd>{log.applause}</dd>
+                <dd id={applauseId}>{log.applause}</dd>
               </div>
             </dl>
             <div className="log-actions">
@@ -95,10 +96,11 @@ export function Feed({
                   onClick={() => onApplaud(log.id)}
                   disabled={isPending}
                   aria-busy={isPending}
+                  aria-describedby={applauseId}
                   aria-label={
                     isPending
-                      ? `Sending applause for ${log.summary}`
-                      : `Applaud ${log.summary}`
+                      ? `Sending applause for ${log.summary}. Current applause ${log.applause}`
+                      : `Applaud ${log.summary}. Current applause ${log.applause}`
                   }
                 >
                   <Sparkles size={16} aria-hidden="true" />
