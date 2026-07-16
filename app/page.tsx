@@ -13,20 +13,20 @@ import { getCeloChainLabel, getStacksChainLabel } from "@/lib/env";
 
 export const metadata: Metadata = {
   description:
-    "Capture what shipped, attach a proof link, and publish a wallet-signed record people can verify.",
+    "Capture what shipped, attach a proof link, and publish a wallet-signed record people can verify, with no account required.",
   alternates: {
     canonical: "/"
   },
   openGraph: {
     title: "ProofPort",
     description:
-      "Capture what shipped, attach a proof link, and publish a wallet-signed record people can verify.",
+      "Capture what shipped, attach a proof link, and publish a wallet-signed record people can verify, with no account required.",
     url: "/"
   },
   twitter: {
     title: "ProofPort",
     description:
-      "Capture what shipped, attach a proof link, and publish a wallet-signed record people can verify."
+      "Capture what shipped, attach a proof link, and publish a wallet-signed record people can verify, with no account required."
   },
   other: {
     "talentapp:project_verification":
