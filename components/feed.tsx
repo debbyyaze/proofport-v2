@@ -57,7 +57,9 @@ export function Feed({
               </div>
               <div>
                 <dt>Applause</dt>
-                <dd id={applauseId}>{log.applause}</dd>
+                <dd id={applauseId} aria-live="polite" aria-atomic="true">
+                  {log.applause}
+                </dd>
               </div>
             </dl>
             <div className="log-actions">
