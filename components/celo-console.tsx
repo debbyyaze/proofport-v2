@@ -349,8 +349,13 @@ export function CeloConsole() {
               placeholder="Published the mobile proof log."
               aria-describedby="celo-summary-hint"
             />
-            <small className="field-hint" id="celo-summary-hint">
-              Describe one shipped change in 160 characters or less.
+            <small
+              className="field-hint"
+              id="celo-summary-hint"
+              aria-live="polite"
+              aria-atomic="true"
+            >
+              {summary.length}/160 characters. Describe one shipped change.
             </small>
           </label>
           <label>

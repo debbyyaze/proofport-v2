@@ -343,8 +343,13 @@ export function StacksConsole() {
               placeholder="Published the Clarity-backed proof log."
               aria-describedby="stacks-summary-hint"
             />
-            <small className="field-hint" id="stacks-summary-hint">
-              Describe one shipped change in 160 characters or less.
+            <small
+              className="field-hint"
+              id="stacks-summary-hint"
+              aria-live="polite"
+              aria-atomic="true"
+            >
+              {summary.length}/160 characters. Describe one shipped change.
             </small>
           </label>
           <label>
