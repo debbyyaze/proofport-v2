@@ -391,6 +391,7 @@ export function CeloConsole() {
               value={tag}
               onChange={(event) => setTag(event.target.value)}
               maxLength={32}
+              autoComplete="off"
               autoCapitalize="off"
               autoCorrect="off"
               spellCheck={false}
