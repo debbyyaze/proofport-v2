@@ -312,6 +312,7 @@ export function StacksConsole() {
               type="button"
               className="icon-text-button secondary"
               onClick={() => void disconnectWallet()}
+              aria-label="Disconnect Stacks wallet"
             >
               Disconnect wallet
             </button>
@@ -320,6 +321,7 @@ export function StacksConsole() {
               type="button"
               className="icon-text-button"
               onClick={() => void connectWallet()}
+              aria-label="Connect Stacks wallet"
             >
               Connect wallet
             </button>
