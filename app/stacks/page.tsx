@@ -12,12 +12,24 @@ export const metadata: Metadata = {
     title: "Publish with Stacks | ProofPort",
     description:
       "Create public ProofPort entries on Stacks with Stacks Connect wallet signing.",
-    url: "/stacks"
+    url: "/stacks",
+    images: [
+      {
+        url: "/og.svg",
+        alt: "ProofPort preview showing public proof logs for shipped work"
+      }
+    ]
   },
   twitter: {
     title: "Publish with Stacks | ProofPort",
     description:
-      "Create public ProofPort entries on Stacks with Stacks Connect wallet signing."
+      "Create public ProofPort entries on Stacks with Stacks Connect wallet signing.",
+    images: [
+      {
+        url: "/og.svg",
+        alt: "ProofPort preview showing public proof logs for shipped work"
+      }
+    ]
   }
 };
 
