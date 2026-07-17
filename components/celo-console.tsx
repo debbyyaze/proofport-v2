@@ -349,7 +349,7 @@ export function CeloConsole() {
           }}
         >
           <label>
-            <span>Summary</span>
+            <span>Summary (required)</span>
             <textarea
               value={summary}
               onChange={(event) => setSummary(event.target.value)}
