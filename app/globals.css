@@ -787,6 +787,9 @@ main:focus-visible {
   color: #176039;
   font-size: 0.78rem;
   font-weight: 780;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  text-align: right;
 }
 
 .log-card h3 {
