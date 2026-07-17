@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     ]
   },
   twitter: {
+    card: "summary_large_image",
     title: "Publish with Celo | ProofPort",
     description:
       "Create public ProofPort entries on Celo with MiniPay-compatible wallet handling.",

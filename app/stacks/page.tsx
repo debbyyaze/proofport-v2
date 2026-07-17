@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     ]
   },
   twitter: {
+    card: "summary_large_image",
     title: "Publish with Stacks | ProofPort",
     description:
       "Create public ProofPort entries on Stacks with Stacks Connect wallet signing.",

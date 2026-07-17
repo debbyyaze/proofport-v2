@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     ]
   },
   twitter: {
+    card: "summary_large_image",
     title: "ProofPort",
     description:
       "Capture what shipped, attach a proof link, and publish a wallet-signed record people can verify, with no account required.",
