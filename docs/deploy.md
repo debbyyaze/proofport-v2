@@ -11,6 +11,7 @@ cp .env.example .env
 ```
 
 The local `.env` file will hold deployer keys. Keep it out of version control and never reuse it as a hosted runtime config.
+For ordinary local UI work, skip copying `.env.example` unless you are preparing to deploy or run contract scripts that need real keys.
 
 ## Celo Mainnet
 
