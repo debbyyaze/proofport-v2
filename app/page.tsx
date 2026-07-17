@@ -13,14 +13,14 @@ import { getCeloChainLabel, getStacksChainLabel } from "@/lib/env";
 
 export const metadata: Metadata = {
   description:
-    "Capture what shipped, attach a proof link, and publish a wallet-signed record people can verify, with no account required.",
+    "Public proof logs for shipped work, wallet-signed proof entries, and shareable explorer receipts, with no account required.",
   alternates: {
     canonical: "/"
   },
   openGraph: {
     title: "ProofPort",
     description:
-      "Capture what shipped, attach a proof link, and publish a wallet-signed record people can verify, with no account required.",
+      "Public proof logs for shipped work, wallet-signed proof entries, and shareable explorer receipts, with no account required.",
     url: "/",
     images: [
       {
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ProofPort",
     description:
-      "Capture what shipped, attach a proof link, and publish a wallet-signed record people can verify, with no account required.",
+      "Public proof logs for shipped work, wallet-signed proof entries, and shareable explorer receipts, with no account required.",
     images: [
       {
         url: "/og.svg",

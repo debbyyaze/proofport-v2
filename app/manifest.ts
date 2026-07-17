@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "ProofPort",
     short_name: "ProofPort",
     description:
-      "Capture what shipped, attach a proof link, and publish a wallet-signed record people can verify, with no account required.",
+      "Public proof logs for shipped work, wallet-signed proof entries, and shareable explorer receipts, with no account required.",
     start_url: "/",
     scope: "/",
     display: "standalone",
