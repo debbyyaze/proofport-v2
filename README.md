@@ -2,6 +2,9 @@
 
 ProofPort is a compact public proof log for shipped work. Builders can publish concise wallet-signed entries on Celo or Stacks, attach proof links, keep a public feed, and share explorer receipts.
 
+Proof links are optional. When included, the UI accepts HTTPS URLs only for
+PRs, commits, release notes, demos, or similar public evidence.
+
 ## Product
 
 - `/celo`: MiniPay-ready Celo flow backed by `ProofPortLog.sol`
@@ -29,6 +32,7 @@ The app boots locally with built-in testnet and localhost defaults. Only set
 deployment. Set `NEXT_PUBLIC_APP_URL` before production builds so canonical
 URLs, `robots.txt`, and the sitemap point at the live HTTPS origin; see
 [docs/deploy.md](./docs/deploy.md) for the production values.
+
 Skip copying `.env.example` for ordinary local UI work unless you are preparing
 to deploy or run contract scripts with real keys.
 
