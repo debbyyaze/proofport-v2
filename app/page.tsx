@@ -21,12 +21,24 @@ export const metadata: Metadata = {
     title: "ProofPort",
     description:
       "Capture what shipped, attach a proof link, and publish a wallet-signed record people can verify, with no account required.",
-    url: "/"
+    url: "/",
+    images: [
+      {
+        url: "/og.svg",
+        alt: "ProofPort preview showing public proof logs for shipped work"
+      }
+    ]
   },
   twitter: {
     title: "ProofPort",
     description:
-      "Capture what shipped, attach a proof link, and publish a wallet-signed record people can verify, with no account required."
+      "Capture what shipped, attach a proof link, and publish a wallet-signed record people can verify, with no account required.",
+    images: [
+      {
+        url: "/og.svg",
+        alt: "ProofPort preview showing public proof logs for shipped work"
+      }
+    ]
   },
   other: {
     "talentapp:project_verification":
