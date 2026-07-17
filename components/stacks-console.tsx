@@ -391,7 +391,8 @@ export function StacksConsole() {
               aria-live="polite"
               aria-atomic="true"
             >
-              {tag.length}/32 characters. Optional. Short labels only.
+              {tag.length}/32 characters. Keep the default network label or add a
+              short custom label.
             </small>
           </label>
           <button
