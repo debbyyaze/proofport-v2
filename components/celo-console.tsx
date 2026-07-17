@@ -90,6 +90,7 @@ async function ensureCeloChain() {
 }
 
 export function CeloConsole() {
+  const feedHeadingId = "celo-feed-title";
   const [wallet, setWallet] = useState<WalletState>(emptyWalletState);
   const [logs, setLogs] = useState<ShipLog[]>(sampleCeloLogs);
   const [summary, setSummary] = useState("");
@@ -441,7 +442,7 @@ export function CeloConsole() {
         <div className="feed-toolbar">
           <div>
             <span className="panel-kicker">Public feed</span>
-            <h2>Latest entries</h2>
+            <h2 id={feedHeadingId}>Latest entries</h2>
           </div>
           <button
             type="button"
@@ -463,6 +464,7 @@ export function CeloConsole() {
         <Feed
           logs={logs}
           emptyLabel="No Celo entries yet. Publish the first proof entry."
+          labelledBy={feedHeadingId}
           onApplaud={applaud}
           pendingApplauseId={pendingApplauseId}
         />

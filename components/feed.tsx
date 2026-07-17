@@ -9,6 +9,7 @@ import {
 type FeedProps = {
   logs: ShipLog[];
   emptyLabel: string;
+  labelledBy?: string;
   onApplaud?: (id: number) => void;
   pendingApplauseId?: number | null;
 };
@@ -16,6 +17,7 @@ type FeedProps = {
 export function Feed({
   logs,
   emptyLabel,
+  labelledBy,
   onApplaud,
   pendingApplauseId
 }: FeedProps) {
@@ -29,7 +31,7 @@ export function Feed({
   }
 
   return (
-    <div className="feed-list">
+    <div className="feed-list" role="list" aria-labelledby={labelledBy}>
       {logs.map((log) => {
         const isPending = pendingApplauseId === log.id;
         const articleId = `${log.network}-log-${log.id}`;
@@ -43,6 +45,7 @@ export function Feed({
             aria-labelledby={titleId}
             className="log-card"
             key={`${log.network}-${log.id}`}
+            role="listitem"
           >
             <div className="log-head">
               <span className="log-id">#{log.id}</span>

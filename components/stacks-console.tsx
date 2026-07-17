@@ -67,6 +67,7 @@ async function getConnectedAddress() {
 }
 
 export function StacksConsole() {
+  const feedHeadingId = "stacks-feed-title";
   const [wallet, setWallet] = useState<StacksWalletState>(emptyWallet);
   const [logs, setLogs] = useState<ShipLog[]>(initialStacksLogs);
   const [summary, setSummary] = useState("");
@@ -428,7 +429,7 @@ export function StacksConsole() {
         <div className="feed-toolbar">
           <div>
             <span className="panel-kicker">Public feed</span>
-            <h2>Latest entries</h2>
+            <h2 id={feedHeadingId}>Latest entries</h2>
           </div>
           <button
             type="button"
@@ -452,6 +453,7 @@ export function StacksConsole() {
         <Feed
           logs={logs}
           emptyLabel="No Stacks entries yet. Publish the first proof entry."
+          labelledBy={feedHeadingId}
           onApplaud={applaud}
           pendingApplauseId={pendingApplauseId}
         />
