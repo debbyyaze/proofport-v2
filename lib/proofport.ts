@@ -91,6 +91,20 @@ export function formatPublished(log: ShipLog) {
   return formatDate(log.createdAt);
 }
 
+export function describePublished(log: ShipLog) {
+  if (log.network === "stacks") {
+    return log.createdAt ? `Stacks anchor block ${Math.trunc(log.createdAt)}` : "Pending";
+  }
+
+  if (!log.createdAt) return "Pending";
+
+  return `${new Intl.DateTimeFormat("en", {
+    dateStyle: "medium",
+    timeStyle: "short",
+    timeZone: "UTC"
+  }).format(new Date(log.createdAt * 1000))} UTC`;
+}
+
 export function safeTrim(value: string, maxLength: number) {
   return value.trim().replace(/\s+/g, " ").slice(0, maxLength);
 }
