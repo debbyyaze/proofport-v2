@@ -360,6 +360,7 @@ export function StacksConsole() {
               type="url"
               value={proofUri}
               onChange={(event) => setProofUri(event.target.value)}
+              pattern="https://.+"
               autoComplete="url"
               inputMode="url"
               autoCapitalize="off"
@@ -367,6 +368,7 @@ export function StacksConsole() {
               spellCheck={false}
               placeholder="https://github.com/you/proofport/commit/abc"
               aria-describedby="stacks-proof-url-hint"
+              title="Use an HTTPS URL starting with https://"
             />
             <small className="field-hint" id="stacks-proof-url-hint">
               Optional. Add a PR, commit, release note, or live demo link. HTTPS only.
