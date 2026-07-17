@@ -385,8 +385,13 @@ export function StacksConsole() {
               placeholder="clarity"
               aria-describedby="stacks-tag-hint"
             />
-            <small className="field-hint" id="stacks-tag-hint">
-              Optional. Short labels only, up to 32 characters.
+            <small
+              className="field-hint"
+              id="stacks-tag-hint"
+              aria-live="polite"
+              aria-atomic="true"
+            >
+              {tag.length}/32 characters. Optional. Short labels only.
             </small>
           </label>
           <button

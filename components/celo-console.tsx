@@ -398,8 +398,13 @@ export function CeloConsole() {
               placeholder="minipay"
               aria-describedby="celo-tag-hint"
             />
-            <small className="field-hint" id="celo-tag-hint">
-              Optional. Short labels only, up to 32 characters.
+            <small
+              className="field-hint"
+              id="celo-tag-hint"
+              aria-live="polite"
+              aria-atomic="true"
+            >
+              {tag.length}/32 characters. Optional. Short labels only.
             </small>
           </label>
           <button
