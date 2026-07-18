@@ -409,8 +409,8 @@ export function CeloConsole() {
               aria-live="polite"
               aria-atomic="true"
             >
-              {tag.length}/32 characters. Keep the current label, replace it, or
-              clear it to fall back to the default proof tag.
+              {tag.length}/32 characters. Keep `celo`, replace it, or clear it to
+              fall back to the default `proof` tag.
             </small>
           </label>
           <button
