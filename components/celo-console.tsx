@@ -408,7 +408,7 @@ export function CeloConsole() {
               aria-atomic="true"
             >
               {tag.length}/32 characters. Keep the current label, replace it, or
-              clear it to fall back to proof.
+              clear it to fall back to the default proof tag.
             </small>
           </label>
           <button
