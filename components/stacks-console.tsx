@@ -82,10 +82,11 @@ export function StacksConsole() {
   const contract = configuredStacksContract;
   const isConfigured = Boolean(contract);
   const walletLabel = wallet.address ? shortAddress(wallet.address) : "Not connected";
+  const hasInvalidProofUrl = Boolean(proofUri.trim()) && !normalizeOptionalUrl(proofUri);
 
   const canSubmit = useMemo(() => {
-    return Boolean(summary.trim()) && !isSubmitting;
-  }, [isSubmitting, summary]);
+    return Boolean(summary.trim()) && !hasInvalidProofUrl && !isSubmitting;
+  }, [hasInvalidProofUrl, isSubmitting, summary]);
 
   const refreshWallet = useCallback(async () => {
     try {
@@ -369,10 +370,13 @@ export function StacksConsole() {
               spellCheck={false}
               placeholder="https://github.com/you/proofport/commit/abc"
               aria-describedby="stacks-proof-url-hint"
+              aria-invalid={hasInvalidProofUrl}
               title="Use an HTTPS URL starting with https://"
             />
             <small className="field-hint" id="stacks-proof-url-hint">
-              Optional. Add a PR, commit, release note, or live demo link. HTTPS only.
+              {hasInvalidProofUrl
+                ? "Enter a full HTTPS URL or leave this field empty."
+                : "Optional. Add a PR, commit, release note, or live demo link. HTTPS only."}
             </small>
           </label>
           <label>
