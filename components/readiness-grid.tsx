@@ -26,7 +26,6 @@ export function ReadinessGrid({ items }: { items: ReadinessItem[] }) {
               role="img"
               aria-label={`${item.label}: ${item.ready ? "Ready" : "Pending"}`}
             >
-              <span className="sr-only">{item.ready ? "Ready" : "Pending"}</span>
               {item.ready ? (
                 <CheckCircle2 size={18} aria-hidden="true" />
               ) : (
