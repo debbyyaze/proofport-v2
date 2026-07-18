@@ -105,6 +105,14 @@ export function describePublished(log: ShipLog) {
   }).format(new Date(log.createdAt * 1000))} UTC`;
 }
 
+export function getPublishedDateTime(log: ShipLog) {
+  if (log.network === "stacks" || !log.createdAt) {
+    return undefined;
+  }
+
+  return new Date(log.createdAt * 1000).toISOString();
+}
+
 export function safeTrim(value: string, maxLength: number) {
   return value.trim().replace(/\s+/g, " ").slice(0, maxLength);
 }

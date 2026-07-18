@@ -2,6 +2,7 @@ import { ExternalLink, Sparkles } from "lucide-react";
 import {
   describePublished,
   formatPublished,
+  getPublishedDateTime,
   shortAddress,
   type ShipLog
 } from "@/lib/proofport";
@@ -38,6 +39,7 @@ export function Feed({
         const titleId = `${articleId}-title`;
         const metaId = `${articleId}-meta`;
         const applauseId = `${articleId}-applause`;
+        const publishedDateTime = getPublishedDateTime(log);
 
         return (
           <article
@@ -61,7 +63,13 @@ export function Feed({
               </div>
               <div>
                 <dt>Published</dt>
-                <dd title={describePublished(log)}>{formatPublished(log)}</dd>
+                <dd title={describePublished(log)}>
+                  {publishedDateTime ? (
+                    <time dateTime={publishedDateTime}>{formatPublished(log)}</time>
+                  ) : (
+                    formatPublished(log)
+                  )}
+                </dd>
               </div>
               <div>
                 <dt>Applause</dt>
