@@ -17,6 +17,20 @@ export default function manifest(): MetadataRoute.Manifest {
     categories: ["developer", "productivity", "utilities"],
     shortcuts: [
       {
+        name: "View proof log",
+        short_name: "Proof log",
+        description:
+          "Open the public ProofPort log to review recent proof entries and explorer receipts.",
+        url: "/",
+        icons: [
+          {
+            src: "/icon.svg",
+            sizes: "any",
+            type: "image/svg+xml"
+          }
+        ]
+      },
+      {
         name: "Publish with Celo",
         short_name: "Celo",
         description:
