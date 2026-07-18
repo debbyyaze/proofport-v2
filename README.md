@@ -5,6 +5,9 @@ ProofPort is a compact public proof log for shipped work. Builders can publish c
 Proof links are optional. When included, the UI accepts HTTPS URLs only for
 PRs, commits, release notes, demos, or similar public evidence.
 
+Tags are optional too. The Celo and Stacks forms start with network-specific
+defaults, and clearing the field falls back to the shared `proof` tag.
+
 ## Product
 
 - `/celo`: MiniPay-ready Celo flow backed by `ProofPortLog.sol`
