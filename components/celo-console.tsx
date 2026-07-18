@@ -326,7 +326,7 @@ export function CeloConsole() {
           >
             {walletLabel}
           </strong>
-          {!wallet.isMiniPay ? (
+          {!wallet.isMiniPay || !wallet.account ? (
             <button
               type="button"
               className="icon-text-button"
@@ -334,7 +334,9 @@ export function CeloConsole() {
               aria-label={
                 wallet.account
                   ? "Switch connected Celo wallet"
-                  : "Connect Celo wallet"
+                  : wallet.isMiniPay
+                    ? "Connect MiniPay wallet"
+                    : "Connect Celo wallet"
               }
             >
               {wallet.account ? "Switch wallet" : "Connect wallet"}
