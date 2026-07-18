@@ -19,7 +19,8 @@ export default function manifest(): MetadataRoute.Manifest {
       {
         name: "Publish with Celo",
         short_name: "Celo",
-        description: "Open the Celo wallet flow to publish a proof entry.",
+        description:
+          "Open the Celo wallet flow to publish a proof entry with no account required.",
         url: "/celo",
         icons: [
           {
@@ -32,7 +33,8 @@ export default function manifest(): MetadataRoute.Manifest {
       {
         name: "Publish with Stacks",
         short_name: "Stacks",
-        description: "Open the Stacks wallet flow to publish a proof entry.",
+        description:
+          "Open the Stacks wallet flow to publish a proof entry with no account required.",
         url: "/stacks",
         icons: [
           {
