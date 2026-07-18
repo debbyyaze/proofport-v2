@@ -79,7 +79,7 @@ export function Feed({
                   rel="noopener noreferrer"
                   title={log.proofUri}
                 >
-                  Proof link
+                  Open proof link
                   <span className="sr-only"> (opens in a new tab)</span>
                   <ExternalLink size={15} aria-hidden="true" />
                 </a>
@@ -94,7 +94,7 @@ export function Feed({
                   rel="noopener noreferrer"
                   title={log.txUrl}
                 >
-                  Explorer receipt
+                  Open explorer receipt
                   <span className="sr-only"> (opens in a new tab)</span>
                   <ExternalLink size={15} aria-hidden="true" />
                 </a>
