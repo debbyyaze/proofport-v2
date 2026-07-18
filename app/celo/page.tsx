@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og.svg",
-        alt: "ProofPort preview showing public proof logs for shipped work"
+        alt: "ProofPort preview of the Celo publishing flow"
       }
     ]
   },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og.svg",
-        alt: "ProofPort preview showing public proof logs for shipped work"
+        alt: "ProofPort preview of the Celo publishing flow"
       }
     ]
   }
