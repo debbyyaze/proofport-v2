@@ -292,7 +292,7 @@ export function StacksConsole() {
         <h1 id="stacks-title">Publish with Stacks</h1>
         <p>
           Use Stacks Connect to sign a public proof entry and keep an explorer
-          receipt ready to share.
+          receipt ready to share. No ProofPort account required.
         </p>
         <div className="wallet-strip">
           <span>Stacks wallet</span>
