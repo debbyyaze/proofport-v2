@@ -313,7 +313,7 @@ export function CeloConsole() {
           its explorer receipt.
         </p>
         <div className="wallet-strip">
-          <span>{wallet.isMiniPay ? "MiniPay detected" : "Wallet"}</span>
+          <span>{wallet.isMiniPay ? "MiniPay detected" : "Celo wallet"}</span>
           <strong
             aria-live="polite"
             aria-atomic="true"
