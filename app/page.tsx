@@ -55,8 +55,8 @@ export default function HomePage() {
           <span className="panel-kicker">Public proof logs</span>
           <h1 id="home-title">ProofPort</h1>
           <p>
-            Capture what shipped, attach a proof link, and publish a wallet-signed
-            record people can verify, with no account required.
+            Capture what shipped, optionally attach a proof link, and publish a
+            wallet-signed record people can verify, with no account required.
           </p>
           <nav aria-label="Choose a publishing network" className="hero-actions">
             <Link
@@ -168,7 +168,7 @@ export default function HomePage() {
         <article>
           <FileText size={20} aria-hidden="true" />
           <h3>Write the entry</h3>
-          <p>Summarize what changed and attach the best proof link.</p>
+          <p>Summarize what changed and add a proof link when you have one.</p>
         </article>
         <article>
           <ShieldCheck size={20} aria-hidden="true" />
