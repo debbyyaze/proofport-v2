@@ -375,8 +375,7 @@ export function StacksConsole() {
             <small
               className="field-hint"
               id="stacks-proof-url-hint"
-              aria-live="polite"
-              aria-atomic="true"
+              role={hasInvalidProofUrl ? "alert" : undefined}
             >
               {hasInvalidProofUrl
                 ? "Enter a full HTTPS URL or leave this field empty."
