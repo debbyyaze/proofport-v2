@@ -568,16 +568,31 @@ main:focus-visible {
   overflow-wrap: anywhere;
 }
 
-.status-dot {
+.status-badge {
   align-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 30px;
+  padding: 0 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.8rem;
+  font-weight: 760;
+  line-height: 1;
+  white-space: nowrap;
 }
 
-.status-dot.ready {
-  color: #238c54;
+.status-badge.ready {
+  color: #1f7d4c;
+  background: #ebf7ef;
+  border-color: rgba(35, 140, 84, 0.18);
 }
 
-.status-dot.pending {
-  color: #b2771d;
+.status-badge.pending {
+  color: #9a6617;
+  background: #fff3de;
+  border-color: rgba(178, 119, 29, 0.18);
 }
 
 .entry-layout {

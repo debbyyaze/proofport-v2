@@ -12,6 +12,7 @@ export function ReadinessGrid({ items }: { items: ReadinessItem[] }) {
     <section className="readiness-grid" aria-label="Project readiness">
       {items.map((item) => {
         const Icon = item.icon;
+        const statusLabel = item.ready ? "Ready" : "Pending";
         return (
           <article className="readiness-card" key={item.label}>
             <div className="readiness-icon">
@@ -21,16 +22,13 @@ export function ReadinessGrid({ items }: { items: ReadinessItem[] }) {
               <h3>{item.label}</h3>
               <p>{item.detail}</p>
             </div>
-            <span
-              className={item.ready ? "status-dot ready" : "status-dot pending"}
-              role="img"
-              aria-label={`${item.label}: ${item.ready ? "Ready" : "Pending"}`}
-            >
+            <span className={item.ready ? "status-badge ready" : "status-badge pending"}>
               {item.ready ? (
                 <CheckCircle2 size={18} aria-hidden="true" />
               ) : (
                 <CircleDashed size={18} aria-hidden="true" />
               )}
+              <span>{statusLabel}</span>
             </span>
           </article>
         );
