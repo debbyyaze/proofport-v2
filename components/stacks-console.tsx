@@ -373,7 +373,12 @@ export function StacksConsole() {
               aria-invalid={hasInvalidProofUrl}
               title="Use an HTTPS URL starting with https://"
             />
-            <small className="field-hint" id="stacks-proof-url-hint">
+            <small
+              className="field-hint"
+              id="stacks-proof-url-hint"
+              aria-live="polite"
+              aria-atomic="true"
+            >
               {hasInvalidProofUrl
                 ? "Enter a full HTTPS URL or leave this field empty."
                 : "Optional. Add a PR, commit, release note, or live demo link. HTTPS only."}
