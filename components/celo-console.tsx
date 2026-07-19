@@ -396,7 +396,7 @@ export function CeloConsole() {
             >
               {hasInvalidProofUrl
                 ? "Enter a full HTTPS URL or leave this field empty."
-                : "Optional. Add a PR, commit, release note, or live demo link. HTTPS only."}
+                : "Optional. Leave this empty to publish without a proof link, or add a PR, commit, release note, or live demo link. HTTPS only."}
             </small>
           </label>
           <label>
