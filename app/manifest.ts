@@ -17,10 +17,10 @@ export default function manifest(): MetadataRoute.Manifest {
     categories: ["developer", "productivity", "utilities"],
     shortcuts: [
       {
-        name: "View proof log",
-        short_name: "Proof log",
+        name: "Open homepage",
+        short_name: "Home",
         description:
-          "Open the public ProofPort log to review recent proof entries and explorer receipts.",
+          "Open the ProofPort homepage to choose a network and review how public proof entries work.",
         url: "/",
         icons: [
           {
