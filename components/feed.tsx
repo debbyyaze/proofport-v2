@@ -92,7 +92,11 @@ export function Feed({
                   <ExternalLink size={15} aria-hidden="true" />
                 </a>
               ) : (
-                <span className="muted-link">Published without proof link</span>
+                <span className="muted-link">
+                  {log.txUrl
+                    ? "No proof link attached. Use the explorer receipt below to verify."
+                    : "No proof link attached."}
+                </span>
               )}
               {log.txUrl ? (
                 <a
