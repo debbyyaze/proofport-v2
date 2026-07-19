@@ -83,6 +83,7 @@ export function StacksConsole() {
   const isConfigured = Boolean(contract);
   const walletLabel = wallet.address ? shortAddress(wallet.address) : "Not connected";
   const hasInvalidProofUrl = Boolean(proofUri.trim()) && !normalizeOptionalUrl(proofUri);
+  const defaultNotice = getFeedNotice(isConfigured, "Stacks");
 
   const canSubmit = useMemo(() => {
     return Boolean(summary.trim()) && !hasInvalidProofUrl && !isSubmitting;
@@ -417,9 +418,18 @@ export function StacksConsole() {
             {isSubmitting ? "Publishing..." : "Publish Stacks entry"}
           </button>
         </form>
-        <div className="message-line" role="status" aria-live="polite" aria-atomic="true">
-          {message || getFeedNotice(isConfigured, "Stacks")}
-        </div>
+        {message ? (
+          <div
+            className="message-line"
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            {message}
+          </div>
+        ) : (
+          <p className="message-line">{defaultNotice}</p>
+        )}
         {txUrl ? (
           <a
             className="tx-link"

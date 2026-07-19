@@ -106,6 +106,7 @@ export function CeloConsole() {
   const isConfigured = Boolean(contractAddress);
   const walletLabel = wallet.account ? shortAddress(wallet.account) : "Not connected";
   const hasInvalidProofUrl = Boolean(proofUri.trim()) && !normalizeOptionalUrl(proofUri);
+  const defaultNotice = getFeedNotice(isConfigured, "Celo");
 
   const canSubmit = useMemo(() => {
     return Boolean(summary.trim()) && !hasInvalidProofUrl && !isSubmitting;
@@ -432,9 +433,18 @@ export function CeloConsole() {
             {isSubmitting ? "Publishing..." : "Publish Celo entry"}
           </button>
         </form>
-        <div className="message-line" role="status" aria-live="polite" aria-atomic="true">
-          {message || getFeedNotice(isConfigured, "Celo")}
-        </div>
+        {message ? (
+          <div
+            className="message-line"
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            {message}
+          </div>
+        ) : (
+          <p className="message-line">{defaultNotice}</p>
+        )}
         {txUrl ? (
           <a
             className="tx-link"
