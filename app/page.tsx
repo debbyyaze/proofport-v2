@@ -95,7 +95,7 @@ export default function HomePage() {
             <span className="ledger-dot" aria-hidden="true" />
             <div>
               <strong>Published mobile release notes</strong>
-              <p>Proof link attached. Explorer receipt ready to share.</p>
+              <p>Proof link attached when available. Explorer receipt ready to share either way.</p>
             </div>
           </div>
           <div className="mini-route-map" aria-hidden="true">
