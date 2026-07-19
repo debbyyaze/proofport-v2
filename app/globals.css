@@ -678,6 +678,10 @@ main:focus-visible {
   line-height: 1.4;
 }
 
+.field-hint[role="alert"] {
+  color: #8f3d2b;
+}
+
 .ship-form input,
 .ship-form textarea {
   width: 100%;
@@ -693,6 +697,18 @@ main:focus-visible {
 .ship-form textarea:focus {
   outline: 2px solid rgba(111, 89, 217, 0.35);
   border-color: var(--violet);
+}
+
+.ship-form input[aria-invalid="true"],
+.ship-form textarea[aria-invalid="true"] {
+  border-color: var(--stacks);
+  background: #fff4ee;
+}
+
+.ship-form input[aria-invalid="true"]:focus,
+.ship-form textarea[aria-invalid="true"]:focus {
+  outline: 2px solid rgba(240, 90, 40, 0.24);
+  border-color: var(--stacks);
 }
 
 .icon-text-button {
