@@ -360,14 +360,14 @@ export function CeloConsole() {
               maxLength={160}
               rows={4}
               required
-              placeholder="Published the mobile proof log."
+              placeholder="Shipped the mobile release notes."
               aria-describedby="celo-summary-hint"
             />
             <small
               className="field-hint"
               id="celo-summary-hint"
             >
-              {summary.length}/160 characters. Describe one shipped change.
+              {summary.length}/160 characters. Describe one shipped change people can verify.
             </small>
           </label>
           <label>

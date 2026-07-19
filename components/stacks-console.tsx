@@ -345,14 +345,14 @@ export function StacksConsole() {
               maxLength={160}
               rows={4}
               required
-              placeholder="Published the Clarity-backed proof log."
+              placeholder="Shipped the latest contract release notes."
               aria-describedby="stacks-summary-hint"
             />
             <small
               className="field-hint"
               id="stacks-summary-hint"
             >
-              {summary.length}/160 characters. Describe one shipped change.
+              {summary.length}/160 characters. Describe one shipped change people can verify.
             </small>
           </label>
           <label>
