@@ -101,7 +101,7 @@ export function Feed({
               ) : (
                 <span className="muted-link">
                   {log.txUrl
-                    ? "No proof link attached. Use the explorer receipt below to verify."
+                    ? "No proof link attached. Use the explorer receipt to verify."
                     : "No proof link attached."}
                 </span>
               )}
