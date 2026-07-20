@@ -50,8 +50,15 @@ export function Feed({
             role="listitem"
           >
             <div className="log-head">
-              <span className="log-id">#{log.id}</span>
-              <span className="log-tag">{log.tag || "proof"}</span>
+              <span aria-label={`Entry number ${log.id}`} className="log-id">
+                #{log.id}
+              </span>
+              <span
+                aria-label={`Tag ${log.tag || "proof"}`}
+                className="log-tag"
+              >
+                {log.tag || "proof"}
+              </span>
             </div>
             <h3 id={titleId}>{log.summary}</h3>
             <dl className="log-meta" id={metaId}>
