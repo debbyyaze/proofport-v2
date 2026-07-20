@@ -367,7 +367,8 @@ export function CeloConsole() {
               className="field-hint"
               id="celo-summary-hint"
             >
-              {summary.length}/160 characters. Name one shipped change people can verify.
+              {summary.length}/160 characters. Name one shipped change people can
+              verify, and keep private details out because this summary is public.
             </small>
           </label>
           <label>
