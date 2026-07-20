@@ -345,14 +345,14 @@ export function StacksConsole() {
               maxLength={160}
               rows={4}
               required
-              placeholder="Shipped the latest contract release notes."
+              placeholder="Shipped the wallet connect fallback fix."
               aria-describedby="stacks-summary-hint"
             />
             <small
               className="field-hint"
               id="stacks-summary-hint"
             >
-              {summary.length}/160 characters. Describe one shipped change people can verify.
+              {summary.length}/160 characters. Name one shipped change people can verify.
             </small>
           </label>
           <label>
