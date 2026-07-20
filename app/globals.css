@@ -56,6 +56,12 @@ a {
   text-decoration: none;
 }
 
+a:focus-visible {
+  border-radius: 4px;
+  outline: 2px solid var(--amber);
+  outline-offset: 3px;
+}
+
 .app-frame {
   min-height: 100vh;
   display: flex;
