@@ -63,7 +63,7 @@ export function AppShell({ children }: AppShellProps) {
             <BadgeCheck size={16} aria-hidden="true" /> Wallet-signed proof entries
           </li>
           <li>
-            <Link2 size={16} aria-hidden="true" /> Optional proof links
+            <Link2 size={16} aria-hidden="true" /> Optional HTTPS proof links
           </li>
           <li>
             <RadioTower size={16} aria-hidden="true" /> Shareable explorer receipts
