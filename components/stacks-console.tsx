@@ -369,6 +369,9 @@ export function StacksConsole() {
               spellCheck={false}
               placeholder="https://github.com/you/proofport/commit/abc"
               aria-describedby="stacks-proof-url-hint"
+              aria-errormessage={
+                hasInvalidProofUrl ? "stacks-proof-url-hint" : undefined
+              }
               aria-invalid={hasInvalidProofUrl}
               title="Use an HTTPS URL starting with https://"
             />

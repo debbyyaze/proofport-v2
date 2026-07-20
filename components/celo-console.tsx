@@ -384,6 +384,9 @@ export function CeloConsole() {
               spellCheck={false}
               placeholder="https://github.com/you/proofport/pull/1"
               aria-describedby="celo-proof-url-hint"
+              aria-errormessage={
+                hasInvalidProofUrl ? "celo-proof-url-hint" : undefined
+              }
               aria-invalid={hasInvalidProofUrl}
               title="Use an HTTPS URL starting with https://"
             />
