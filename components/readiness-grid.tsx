@@ -22,7 +22,10 @@ export function ReadinessGrid({ items }: { items: ReadinessItem[] }) {
               <h3>{item.label}</h3>
               <p>{item.detail}</p>
             </div>
-            <span className={item.ready ? "status-badge ready" : "status-badge pending"}>
+            <span
+              aria-label={`${item.label} status: ${statusLabel}`}
+              className={item.ready ? "status-badge ready" : "status-badge pending"}
+            >
               {item.ready ? (
                 <CheckCircle2 size={18} aria-hidden="true" />
               ) : (
