@@ -4,7 +4,7 @@
 - Save the Celo contract address, deployment block, deployment transaction hash, and explorer URL.
 - Deploy `proofport-log.clar` on Stacks mainnet.
 - Save the Stacks contract id, deployment transaction id, and explorer URL.
-- Set the production `NEXT_PUBLIC_*` contract values before building the website.
+- Set the production `NEXT_PUBLIC_*` app URL, network, contract, and RPC/API values before building the website.
 - Confirm `NEXT_PUBLIC_APP_URL` matches the deployed HTTPS origin so canonical, robots, and sitemap metadata point to production.
 - Run `npm run lint`, `npm run typecheck`, `npm test`, `npm run check:stacks`, and `npm run build`.
 - Open `/`, `/celo`, and `/stacks` on the deployed HTTPS origin.
