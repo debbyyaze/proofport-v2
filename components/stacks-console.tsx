@@ -351,6 +351,7 @@ export function StacksConsole() {
             <small
               className="field-hint"
               id="stacks-summary-hint"
+              aria-live="polite"
             >
               {summary.length}/160 characters. Name one shipped change people can
               verify, and keep private details out because this summary is public.
@@ -379,6 +380,7 @@ export function StacksConsole() {
             <small
               className="field-hint"
               id="stacks-proof-url-hint"
+              aria-live="polite"
               role={hasInvalidProofUrl ? "alert" : undefined}
             >
               {hasInvalidProofUrl
@@ -402,6 +404,7 @@ export function StacksConsole() {
             <small
               className="field-hint"
               id="stacks-tag-hint"
+              aria-live="polite"
             >
               {tag.length}/32 characters. Keep `stacks`, replace it, or clear it
               to fall back to the default `proof` tag.
