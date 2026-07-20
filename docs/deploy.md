@@ -99,4 +99,6 @@ npm test
 npm run check:stacks
 ```
 
+Open the deployed HTTPS origin and confirm `/manifest.webmanifest`, `/robots.txt`, and `/sitemap.xml` all resolve with production URLs before announcing the release.
+
 Create one live entry from `/celo` and one live entry from `/stacks`, then save both explorer receipts with the release notes.
