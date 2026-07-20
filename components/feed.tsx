@@ -72,9 +72,16 @@ export function Feed({
                 <dt>Published</dt>
                 <dd title={describePublished(log)}>
                   {publishedDateTime ? (
-                    <time dateTime={publishedDateTime}>{formatPublished(log)}</time>
+                    <time
+                      dateTime={publishedDateTime}
+                      aria-label={describePublished(log)}
+                    >
+                      {formatPublished(log)}
+                    </time>
                   ) : (
-                    formatPublished(log)
+                    <span aria-label={describePublished(log)}>
+                      {formatPublished(log)}
+                    </span>
                   )}
                 </dd>
               </div>
