@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
-import { Anchor, BadgeCheck, RadioTower } from "lucide-react";
+import { Anchor, BadgeCheck, Link2, RadioTower } from "lucide-react";
 
 type AppShellProps = {
   children: ReactNode;
@@ -61,6 +61,9 @@ export function AppShell({ children }: AppShellProps) {
         <ul className="footer-strip">
           <li>
             <BadgeCheck size={16} aria-hidden="true" /> Wallet-signed proof entries
+          </li>
+          <li>
+            <Link2 size={16} aria-hidden="true" /> Optional proof links
           </li>
           <li>
             <RadioTower size={16} aria-hidden="true" /> Shareable explorer receipts
