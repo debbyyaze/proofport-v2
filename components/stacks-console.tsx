@@ -69,6 +69,7 @@ async function getConnectedAddress() {
 export function StacksConsole() {
   const feedHeadingId = "stacks-feed-title";
   const publishNoticeId = "stacks-publish-notice";
+  const walletStatusId = "stacks-wallet-status";
   const [wallet, setWallet] = useState<StacksWalletState>(emptyWallet);
   const [logs, setLogs] = useState<ShipLog[]>(initialStacksLogs);
   const [summary, setSummary] = useState("");
@@ -300,6 +301,7 @@ export function StacksConsole() {
         <div className="wallet-strip">
           <span>Stacks wallet</span>
           <strong
+            id={walletStatusId}
             aria-live="polite"
             aria-atomic="true"
             aria-label={
@@ -316,6 +318,7 @@ export function StacksConsole() {
               type="button"
               className="icon-text-button secondary"
               onClick={() => void disconnectWallet()}
+              aria-describedby={walletStatusId}
               aria-label="Disconnect Stacks wallet"
             >
               Disconnect wallet
@@ -325,6 +328,7 @@ export function StacksConsole() {
               type="button"
               className="icon-text-button"
               onClick={() => void connectWallet()}
+              aria-describedby={walletStatusId}
               aria-label="Connect Stacks wallet"
             >
               Connect wallet

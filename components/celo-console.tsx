@@ -92,6 +92,7 @@ async function ensureCeloChain() {
 export function CeloConsole() {
   const feedHeadingId = "celo-feed-title";
   const publishNoticeId = "celo-publish-notice";
+  const walletStatusId = "celo-wallet-status";
   const [wallet, setWallet] = useState<WalletState>(emptyWalletState);
   const [logs, setLogs] = useState<ShipLog[]>(sampleCeloLogs);
   const [summary, setSummary] = useState("");
@@ -318,6 +319,7 @@ export function CeloConsole() {
         <div className="wallet-strip">
           <span>{wallet.isMiniPay ? "MiniPay detected" : "Celo wallet"}</span>
           <strong
+            id={walletStatusId}
             aria-live="polite"
             aria-atomic="true"
             aria-label={
@@ -334,6 +336,7 @@ export function CeloConsole() {
               type="button"
               className="icon-text-button"
               onClick={connect}
+              aria-describedby={walletStatusId}
               aria-label={
                 wallet.account
                   ? "Switch connected Celo wallet"
