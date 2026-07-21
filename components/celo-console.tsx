@@ -91,6 +91,7 @@ async function ensureCeloChain() {
 
 export function CeloConsole() {
   const feedHeadingId = "celo-feed-title";
+  const publishNoticeId = "celo-publish-notice";
   const [wallet, setWallet] = useState<WalletState>(emptyWalletState);
   const [logs, setLogs] = useState<ShipLog[]>(sampleCeloLogs);
   const [summary, setSummary] = useState("");
@@ -428,6 +429,7 @@ export function CeloConsole() {
             className="primary-action"
             disabled={!canSubmit}
             aria-busy={isSubmitting}
+            aria-describedby={publishNoticeId}
           >
             <Send size={18} aria-hidden="true" />
             {isSubmitting ? "Publishing..." : "Publish Celo entry"}
@@ -435,6 +437,7 @@ export function CeloConsole() {
         </form>
         {message ? (
           <div
+            id={publishNoticeId}
             className="message-line"
             role="status"
             aria-live="polite"
@@ -443,7 +446,9 @@ export function CeloConsole() {
             {message}
           </div>
         ) : (
-          <p className="message-line">{defaultNotice}</p>
+          <p className="message-line" id={publishNoticeId}>
+            {defaultNotice}
+          </p>
         )}
         {txUrl ? (
           <a

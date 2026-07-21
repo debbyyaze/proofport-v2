@@ -68,6 +68,7 @@ async function getConnectedAddress() {
 
 export function StacksConsole() {
   const feedHeadingId = "stacks-feed-title";
+  const publishNoticeId = "stacks-publish-notice";
   const [wallet, setWallet] = useState<StacksWalletState>(emptyWallet);
   const [logs, setLogs] = useState<ShipLog[]>(initialStacksLogs);
   const [summary, setSummary] = useState("");
@@ -413,6 +414,7 @@ export function StacksConsole() {
             className="primary-action"
             disabled={!canSubmit}
             aria-busy={isSubmitting}
+            aria-describedby={publishNoticeId}
           >
             <Send size={18} aria-hidden="true" />
             {isSubmitting ? "Publishing..." : "Publish Stacks entry"}
@@ -420,6 +422,7 @@ export function StacksConsole() {
         </form>
         {message ? (
           <div
+            id={publishNoticeId}
             className="message-line"
             role="status"
             aria-live="polite"
@@ -428,7 +431,9 @@ export function StacksConsole() {
             {message}
           </div>
         ) : (
-          <p className="message-line">{defaultNotice}</p>
+          <p className="message-line" id={publishNoticeId}>
+            {defaultNotice}
+          </p>
         )}
         {txUrl ? (
           <a
