@@ -102,7 +102,7 @@ export function Feed({
                   title={log.proofUri}
                   aria-label={`Open proof link for ${log.summary}`}
                 >
-                  Open proof link
+                  Open public proof link
                   <span className="sr-only"> (opens in a new tab)</span>
                   <ExternalLink size={15} aria-hidden="true" />
                 </a>
