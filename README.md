@@ -79,4 +79,8 @@ npm run check:stacks
 npm run build
 ```
 
+Open the deployed HTTPS origin and verify `/manifest.webmanifest`,
+`/robots.txt`, and `/sitemap.xml` all resolve with production URLs before
+announcing the release.
+
 For production launch, create and save one live Celo mainnet entry transaction and one live Stacks mainnet entry transaction.
