@@ -24,7 +24,7 @@ export function AppShell({ children }: AppShellProps) {
         Skip to main content
       </a>
       <header className="topbar">
-        <Link href="/" className="brand">
+        <Link aria-label="ProofPort home" href="/" className="brand">
           <span className="brand-mark" aria-hidden="true">
             <Anchor size={22} strokeWidth={2.2} />
           </span>
@@ -49,7 +49,10 @@ export function AppShell({ children }: AppShellProps) {
         {children}
       </main>
       <footer aria-label="Site footer">
-        <ul className="footer-strip">
+        <h2 className="sr-only" id="footer-strip-title">
+          ProofPort publishing basics
+        </h2>
+        <ul className="footer-strip" aria-labelledby="footer-strip-title">
           <li>
             <BadgeCheck size={16} aria-hidden="true" /> Wallet-signed proof entries
           </li>
