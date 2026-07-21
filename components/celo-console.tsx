@@ -453,7 +453,6 @@ export function CeloConsole() {
             href={txUrl}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Open Celo explorer receipt in a new tab"
           >
             Open Celo explorer receipt
             <span className="sr-only"> (opens in a new tab)</span>

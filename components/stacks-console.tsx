@@ -438,7 +438,6 @@ export function StacksConsole() {
             href={txUrl}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Open Stacks explorer receipt in a new tab"
           >
             Open Stacks explorer receipt
             <span className="sr-only"> (opens in a new tab)</span>

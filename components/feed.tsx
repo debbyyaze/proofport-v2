@@ -95,7 +95,6 @@ export function Feed({
             <div className="log-actions">
               {log.proofUri ? (
                 <a
-                  aria-label={`Open proof link for ${log.summary} in a new tab`}
                   href={log.proofUri}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -114,7 +113,6 @@ export function Feed({
               )}
               {log.txUrl ? (
                 <a
-                  aria-label={`Open explorer receipt for ${log.summary} in a new tab`}
                   href={log.txUrl}
                   target="_blank"
                   rel="noopener noreferrer"
