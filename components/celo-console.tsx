@@ -366,7 +366,6 @@ export function CeloConsole() {
             <small
               className="field-hint"
               id="celo-summary-hint"
-              aria-live="polite"
             >
               {summary.length}/160 characters. Name one shipped change people can
               verify, and keep private details out because this summary is public.
@@ -419,7 +418,6 @@ export function CeloConsole() {
             <small
               className="field-hint"
               id="celo-tag-hint"
-              aria-live="polite"
             >
               {tag.length}/32 characters. Keep `celo`, replace it, or clear it to
               fall back to the default `proof` tag.
