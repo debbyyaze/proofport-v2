@@ -2,6 +2,13 @@
   "name": "proofport",
   "version": "0.1.0",
   "description": "Public proof logs for shipped work with wallet-signed entries and explorer receipts.",
+  "keywords": [
+    "proofport",
+    "proof-log",
+    "celo",
+    "stacks",
+    "wallet-signed"
+  ],
   "homepage": "https://github.com/debbyyaze/proofport-v2#readme",
   "repository": {
     "type": "git",
