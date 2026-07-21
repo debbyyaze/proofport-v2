@@ -88,7 +88,8 @@ export function Feed({
               <div>
                 <dt>Applause</dt>
                 <dd id={applauseId} aria-live="polite" aria-atomic="true">
-                  {log.applause}
+                  <span aria-hidden="true">{log.applause}</span>
+                  <span className="sr-only">{`${log.applause} applause`}</span>
                 </dd>
               </div>
             </dl>
