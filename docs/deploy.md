@@ -87,6 +87,8 @@ NEXT_PUBLIC_STACKS_CONTRACT_NAME=proofport-log
 NEXT_PUBLIC_STACKS_API_MAINNET=https://api.hiro.so
 ```
 
+Set `NEXT_PUBLIC_APP_URL` to the canonical production HTTPS origin, not a preview deployment URL, so canonical tags, `robots.txt`, and `sitemap.xml` all point at the released site.
+
 Do not put deployer private keys in Vercel for normal app hosting.
 
 ## Final Checks
