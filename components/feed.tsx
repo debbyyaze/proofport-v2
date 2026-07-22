@@ -15,6 +15,10 @@ type FeedProps = {
   pendingApplauseId?: number | null;
 };
 
+function formatApplauseLabel(applause: number) {
+  return `${applause} applause ${applause === 1 ? "reaction" : "reactions"}`;
+}
+
 export function Feed({
   logs,
   emptyLabel,
@@ -40,6 +44,7 @@ export function Feed({
         const metaId = `${articleId}-meta`;
         const applauseId = `${articleId}-applause`;
         const publishedDateTime = getPublishedDateTime(log);
+        const applauseLabel = formatApplauseLabel(log.applause);
 
         return (
           <article
@@ -89,7 +94,7 @@ export function Feed({
                 <dt>Applause</dt>
                 <dd id={applauseId} aria-live="polite" aria-atomic="true">
                   <span aria-hidden="true">{log.applause}</span>
-                  <span className="sr-only">{`${log.applause} applause`}</span>
+                  <span className="sr-only">{applauseLabel}</span>
                 </dd>
               </div>
             </dl>
@@ -136,8 +141,8 @@ export function Feed({
                   aria-describedby={applauseId}
                   aria-label={
                     isPending
-                      ? `Sending applause for ${log.summary}. Current applause ${log.applause}`
-                      : `Applaud ${log.summary}. Current applause ${log.applause}`
+                      ? `Sending applause for ${log.summary}. Current count ${applauseLabel}`
+                      : `Applaud ${log.summary}. Current count ${applauseLabel}`
                   }
                 >
                   <Sparkles size={16} aria-hidden="true" />
