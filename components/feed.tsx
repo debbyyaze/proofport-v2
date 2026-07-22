@@ -16,6 +16,10 @@ type FeedProps = {
 };
 
 function formatApplauseLabel(applause: number) {
+  if (applause === 0) {
+    return "No applause yet";
+  }
+
   return `${applause} applause ${applause === 1 ? "reaction" : "reactions"}`;
 }
 
