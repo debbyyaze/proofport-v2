@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="ProofPort preview">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="og-title og-desc">
+  <title id="og-title">ProofPort social preview</title>
+  <desc id="og-desc">Preview card showing the ProofPort name and the message Public proof logs, no account required.</desc>
   <rect width="1200" height="630" fill="#f6f2e8"/>
   <rect x="84" y="78" width="1032" height="474" rx="18" fill="#fffaf0" stroke="#d8d1c0" stroke-width="3"/>
   <text x="130" y="188" fill="#17211d" font-family="Arial, sans-serif" font-size="92" font-weight="700">ProofPort</text>
