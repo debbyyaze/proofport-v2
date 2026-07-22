@@ -362,7 +362,7 @@ export function StacksConsole() {
             </small>
           </label>
           <label>
-            <span>Public proof URL (optional)</span>
+            <span>Public HTTPS proof URL (optional)</span>
             <input
               type="url"
               value={proofUri}
