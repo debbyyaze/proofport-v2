@@ -1,6 +1,6 @@
 # ProofPort
 
-ProofPort is a compact public proof log for shipped work. Builders can publish concise wallet-signed entries on Celo or Stacks, attach proof links, keep a public feed, and share explorer receipts.
+ProofPort is a compact public proof log for shipped work. Builders can publish concise wallet-signed entries on Celo or Stacks, attach optional public HTTPS proof links, keep a public feed, and share explorer receipts.
 
 Proof links are optional. When included, the UI accepts HTTPS URLs only for
 PRs, commits, release notes, demos, or similar public evidence.
