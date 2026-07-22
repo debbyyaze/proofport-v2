@@ -139,8 +139,8 @@ export default function HomePage() {
             <span>{getStacksChainLabel()}</span>
             <h3 id="network-stacks-title">Stacks</h3>
             <p id="network-stacks-description">
-              A Bitcoin-aligned path for Stacks wallets, with public entries and
-              explorer receipts.
+              A Bitcoin-linked path for Stacks wallets, with public entries and
+              shareable explorer receipts.
             </p>
           </div>
           <Link className="primary-action alt" href="/stacks">
