@@ -53,8 +53,8 @@ export default function HomePage() {
     <div className="home-grid">
       <section className="hero-workbench" aria-labelledby="home-title">
         <div className="hero-copy">
-          <span className="panel-kicker">Public proof logs</span>
-          <h1 id="home-title">ProofPort</h1>
+          <span className="panel-kicker">ProofPort</span>
+          <h1 id="home-title">Public proof logs for shipped work</h1>
           <p>
             Capture what shipped, optionally attach a public HTTPS proof link,
             and publish a wallet-signed record people can verify, with no
