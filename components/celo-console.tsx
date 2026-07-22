@@ -470,7 +470,7 @@ export function CeloConsole() {
         <div className="feed-toolbar">
           <div>
             <span className="panel-kicker">Public feed</span>
-            <h2 id={feedHeadingId}>Latest entries</h2>
+            <h2 id={feedHeadingId}>Latest Celo entries</h2>
           </div>
           <button
             type="button"

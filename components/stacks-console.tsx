@@ -456,7 +456,7 @@ export function StacksConsole() {
         <div className="feed-toolbar">
           <div>
             <span className="panel-kicker">Public feed</span>
-            <h2 id={feedHeadingId}>Latest entries</h2>
+            <h2 id={feedHeadingId}>Latest Stacks entries</h2>
           </div>
           <button
             type="button"
