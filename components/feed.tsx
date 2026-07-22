@@ -119,7 +119,7 @@ export function Feed({
                 <span className="muted-link">
                   {log.txUrl
                     ? "No public proof link attached. Use the explorer receipt to verify."
-                    : "No public proof link attached to this entry."}
+                    : "No public proof link or explorer receipt attached to this entry yet."}
                 </span>
               )}
               {log.txUrl ? (
