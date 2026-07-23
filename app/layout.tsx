@@ -25,6 +25,8 @@ export const metadata: Metadata = {
   description:
     "Public proof logs for shipped work, wallet-signed proof entries, and shareable explorer receipts, with no account required.",
   applicationName: "ProofPort",
+  creator: "ProofPort",
+  publisher: "ProofPort",
   appleWebApp: {
     capable: true,
     title: "ProofPort",
@@ -43,6 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     url: "/",
     siteName: "ProofPort",
+    locale: "en_US",
     title: "ProofPort",
     description:
       "Public proof logs for shipped work, wallet-signed proof entries, and shareable explorer receipts, with no account required.",
