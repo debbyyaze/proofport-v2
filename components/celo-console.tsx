@@ -92,6 +92,7 @@ async function ensureCeloChain() {
 export function CeloConsole() {
   const feedHeadingId = "celo-feed-title";
   const publishNoticeId = "celo-publish-notice";
+  const publishHintId = "celo-publish-hint";
   const walletStatusId = "celo-wallet-status";
   const [wallet, setWallet] = useState<WalletState>(emptyWalletState);
   const [logs, setLogs] = useState<ShipLog[]>(sampleCeloLogs);
@@ -113,6 +114,7 @@ export function CeloConsole() {
   const canSubmit = useMemo(() => {
     return Boolean(summary.trim()) && !hasInvalidProofUrl && !isSubmitting;
   }, [hasInvalidProofUrl, isSubmitting, summary]);
+  const canPublish = canSubmit && isConfigured;
 
   const refreshWallet = useCallback(async () => {
     if (!window.ethereum) {
@@ -434,13 +436,18 @@ export function CeloConsole() {
           <button
             type="submit"
             className="primary-action"
-            disabled={!canSubmit}
+            disabled={!canPublish}
             aria-busy={isSubmitting}
-            aria-describedby={publishNoticeId}
+            aria-describedby={`${publishHintId} ${publishNoticeId}`}
           >
             <Send size={18} aria-hidden="true" />
             {isSubmitting ? "Publishing..." : "Publish Celo entry"}
           </button>
+          <small className="field-hint" id={publishHintId}>
+            {isConfigured
+              ? "Publishing stays available once you add a summary and keep the proof URL valid."
+              : "Live Celo publishing stays disabled until a contract address is configured."}
+          </small>
         </form>
         {message ? (
           <div

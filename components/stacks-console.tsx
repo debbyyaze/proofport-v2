@@ -69,6 +69,7 @@ async function getConnectedAddress() {
 export function StacksConsole() {
   const feedHeadingId = "stacks-feed-title";
   const publishNoticeId = "stacks-publish-notice";
+  const publishHintId = "stacks-publish-hint";
   const walletStatusId = "stacks-wallet-status";
   const [wallet, setWallet] = useState<StacksWalletState>(emptyWallet);
   const [logs, setLogs] = useState<ShipLog[]>(initialStacksLogs);
@@ -90,6 +91,7 @@ export function StacksConsole() {
   const canSubmit = useMemo(() => {
     return Boolean(summary.trim()) && !hasInvalidProofUrl && !isSubmitting;
   }, [hasInvalidProofUrl, isSubmitting, summary]);
+  const canPublish = canSubmit && isConfigured;
 
   const refreshWallet = useCallback(async () => {
     try {
@@ -420,13 +422,18 @@ export function StacksConsole() {
           <button
             type="submit"
             className="primary-action"
-            disabled={!canSubmit}
+            disabled={!canPublish}
             aria-busy={isSubmitting}
-            aria-describedby={publishNoticeId}
+            aria-describedby={`${publishHintId} ${publishNoticeId}`}
           >
             <Send size={18} aria-hidden="true" />
             {isSubmitting ? "Publishing..." : "Publish Stacks entry"}
           </button>
+          <small className="field-hint" id={publishHintId}>
+            {isConfigured
+              ? "Publishing stays available once you add a summary and keep the proof URL valid."
+              : "Live Stacks publishing stays disabled until a contract address is configured."}
+          </small>
         </form>
         {message ? (
           <div
