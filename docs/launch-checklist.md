@@ -8,6 +8,7 @@
 - Confirm `NEXT_PUBLIC_APP_URL` matches the deployed HTTPS origin so canonical, robots, and sitemap metadata point to production.
 - Run `npm run lint`, `npm run typecheck`, `npm test`, `npm run check:stacks`, and `npm run build`.
 - Open `/`, `/celo`, and `/stacks` on the deployed HTTPS origin.
+- Confirm keyboard-only navigation reaches the primary actions on `/`, `/celo`, and `/stacks`, and that the skip link moves focus to the main content.
 - Open `/manifest.webmanifest`, `/robots.txt`, and `/sitemap.xml` on the deployed HTTPS origin to confirm generated metadata points to production.
 - Share the deployed homepage URL in a social preview debugger and confirm the title, description, and preview image match production.
 - Create one live Celo entry from `/celo` and save the explorer receipt.
