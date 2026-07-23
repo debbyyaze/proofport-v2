@@ -445,7 +445,7 @@ export function CeloConsole() {
           </button>
           <small className="field-hint" id={publishHintId}>
             {isConfigured
-              ? "Publishing stays available once you add a summary and keep the proof URL valid."
+              ? "Add a summary and keep the proof URL valid to enable publishing."
               : "Live Celo publishing stays disabled until a contract address is configured."}
           </small>
         </form>
