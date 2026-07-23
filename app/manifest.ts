@@ -20,7 +20,7 @@ export default function manifest(): MetadataRoute.Manifest {
         name: "Open homepage",
         short_name: "Home",
         description:
-          "Open the ProofPort homepage to choose a network and review how public proof entries work.",
+          "Open the ProofPort homepage to choose a network and review how wallet-signed proof publishing works.",
         url: "/",
         icons: [
           {
@@ -34,7 +34,7 @@ export default function manifest(): MetadataRoute.Manifest {
         name: "Publish with Celo",
         short_name: "Celo",
         description:
-          "Open the Celo wallet flow to publish a proof entry with no account required.",
+          "Open the Celo wallet flow to publish a proof entry and get a shareable explorer receipt.",
         url: "/celo",
         icons: [
           {
@@ -48,7 +48,7 @@ export default function manifest(): MetadataRoute.Manifest {
         name: "Publish with Stacks",
         short_name: "Stacks",
         description:
-          "Open the Stacks wallet flow to publish a proof entry with no account required.",
+          "Open the Stacks wallet flow to publish a proof entry and get a shareable explorer receipt.",
         url: "/stacks",
         icons: [
           {
