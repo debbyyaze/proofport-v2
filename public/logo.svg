@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="128 128 768 768" role="img" aria-label="ProofPort logo">
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="128 128 768 768" role="img" aria-labelledby="proofport-logo-title proofport-logo-desc">
+  <title id="proofport-logo-title">ProofPort logo</title>
+  <desc id="proofport-logo-desc">Rounded square ProofPort logo with a warm gradient background and a dark anchor mark centered inside.</desc>
   <defs>
     <linearGradient id="proofport-bg" x1="160" y1="132" x2="864" y2="892" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#35d07f"/>
