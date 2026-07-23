@@ -14,9 +14,11 @@ export const metadata: Metadata = {
     "proof logs",
     "shipping log",
     "wallet-signed records",
+    "explorer receipts",
     "Celo",
     "Stacks",
-    "public verification"
+    "public verification",
+    "no account required"
   ],
   title: {
     default: "ProofPort",
