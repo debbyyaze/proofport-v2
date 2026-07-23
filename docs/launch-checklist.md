@@ -9,6 +9,7 @@
 - Run `npm run lint`, `npm run typecheck`, `npm test`, `npm run check:stacks`, and `npm run build`.
 - Open `/`, `/celo`, and `/stacks` on the deployed HTTPS origin.
 - Open `/manifest.webmanifest`, `/robots.txt`, and `/sitemap.xml` on the deployed HTTPS origin to confirm generated metadata points to production.
+- Share the deployed homepage URL in a social preview debugger and confirm the title, description, and preview image match production.
 - Create one live Celo entry from `/celo` and save the explorer receipt.
 - Create one live Stacks entry from `/stacks` and save the explorer receipt.
 - Verify the public project website points to the deployed production origin.
