@@ -20,7 +20,11 @@ function formatApplauseLabel(applause: number) {
     return "No applause yet";
   }
 
-  return `${applause} applause ${applause === 1 ? "reaction" : "reactions"}`;
+  if (applause === 1) {
+    return "1 applause reaction received";
+  }
+
+  return `${applause} applause reactions received`;
 }
 
 export function Feed({
@@ -145,8 +149,8 @@ export function Feed({
                   aria-describedby={applauseId}
                   aria-label={
                     isPending
-                      ? `Sending applause for ${log.summary}. Current count ${applauseLabel}`
-                      : `Applaud ${log.summary}. Current count ${applauseLabel}`
+                      ? `Sending applause for ${log.summary}. ${applauseLabel}.`
+                      : `Applaud ${log.summary}. ${applauseLabel}.`
                   }
                 >
                   <Sparkles size={16} aria-hidden="true" />
