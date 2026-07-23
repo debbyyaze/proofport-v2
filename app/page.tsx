@@ -57,8 +57,8 @@ export default function HomePage() {
           <h1 id="home-title">Public proof logs for shipped work</h1>
           <p>
             Capture what shipped, optionally attach a public HTTPS proof link,
-            and publish a wallet-signed record people can verify, with no
-            account required.
+            and publish a wallet-signed record with a shareable explorer
+            receipt people can verify, with no account required.
           </p>
           <nav aria-label="Choose a publishing network" className="hero-actions">
             <Link
