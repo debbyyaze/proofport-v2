@@ -15,6 +15,14 @@ const routes = [
   { href: "/stacks", label: "Stacks" }
 ] as const;
 
+function isActiveRoute(pathname: string, href: (typeof routes)[number]["href"]) {
+  if (href === "/") {
+    return pathname === href;
+  }
+
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
 export function AppShell({ children }: AppShellProps) {
   const pathname = usePathname();
 
@@ -36,7 +44,7 @@ export function AppShell({ children }: AppShellProps) {
         <nav className="nav-pills" aria-label="Primary navigation">
           {routes.map((route) => (
             <Link
-              aria-current={pathname === route.href ? "page" : undefined}
+              aria-current={isActiveRoute(pathname, route.href) ? "page" : undefined}
               href={route.href}
               key={route.href}
             >
