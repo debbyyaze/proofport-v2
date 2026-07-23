@@ -12,19 +12,31 @@ export function ReadinessGrid({ items }: { items: ReadinessItem[] }) {
     <section className="readiness-grid" aria-label="Project readiness">
       {items.map((item) => {
         const Icon = item.icon;
+        const itemId = item.label
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/(^-|-$)/g, "");
         const statusLabel = item.ready ? "Ready" : "Pending";
+        const labelId = `${itemId}-label`;
+        const detailId = `${itemId}-detail`;
+        const statusId = `${itemId}-status`;
         return (
-          <article className="readiness-card" key={item.label}>
+          <article
+            aria-describedby={`${detailId} ${statusId}`}
+            aria-labelledby={labelId}
+            className="readiness-card"
+            key={item.label}
+          >
             <div className="readiness-icon">
               <Icon size={20} aria-hidden="true" />
             </div>
             <div>
-              <h3>{item.label}</h3>
-              <p>{item.detail}</p>
+              <h3 id={labelId}>{item.label}</h3>
+              <p id={detailId}>{item.detail}</p>
             </div>
             <span
-              aria-label={`${item.label} status: ${statusLabel}`}
               className={item.ready ? "status-badge ready" : "status-badge pending"}
+              id={statusId}
             >
               {item.ready ? (
                 <CheckCircle2 size={18} aria-hidden="true" />
