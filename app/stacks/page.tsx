@@ -4,14 +4,14 @@ import { StacksConsole } from "@/components/stacks-console";
 export const metadata: Metadata = {
   title: "Publish with Stacks",
   description:
-    "Create public ProofPort entries on Stacks with Stacks Connect wallet signing and no account required.",
+    "Create public ProofPort entries on Stacks with Stacks Connect wallet signing, shareable explorer receipts, and no account required.",
   alternates: {
     canonical: "/stacks"
   },
   openGraph: {
     title: "Publish with Stacks | ProofPort",
     description:
-      "Create public ProofPort entries on Stacks with Stacks Connect wallet signing and no account required.",
+      "Create public ProofPort entries on Stacks with Stacks Connect wallet signing, shareable explorer receipts, and no account required.",
     url: "/stacks",
     images: [
       {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Publish with Stacks | ProofPort",
     description:
-      "Create public ProofPort entries on Stacks with Stacks Connect wallet signing and no account required.",
+      "Create public ProofPort entries on Stacks with Stacks Connect wallet signing, shareable explorer receipts, and no account required.",
     images: [
       {
         url: "/og.svg",
