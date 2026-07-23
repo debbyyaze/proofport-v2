@@ -495,7 +495,7 @@ export function CeloConsole() {
         ) : null}
         <Feed
           logs={logs}
-          emptyLabel="No Celo entries yet. Publish the first proof entry."
+          emptyLabel="No Celo entries yet. Publish the first proof entry to generate a shareable explorer receipt."
           labelledBy={feedHeadingId}
           onApplaud={applaud}
           pendingApplauseId={pendingApplauseId}

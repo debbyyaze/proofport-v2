@@ -483,7 +483,7 @@ export function StacksConsole() {
         ) : null}
         <Feed
           logs={logs}
-          emptyLabel="No Stacks entries yet. Publish the first proof entry."
+          emptyLabel="No Stacks entries yet. Publish the first proof entry to generate a shareable explorer receipt."
           labelledBy={feedHeadingId}
           onApplaud={applaud}
           pendingApplauseId={pendingApplauseId}
