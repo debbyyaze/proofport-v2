@@ -710,8 +710,8 @@ main:focus-visible {
   resize: vertical;
 }
 
-.ship-form input:focus,
-.ship-form textarea:focus {
+.ship-form input:focus-visible,
+.ship-form textarea:focus-visible {
   outline: 2px solid rgba(111, 89, 217, 0.35);
   border-color: var(--violet);
 }
@@ -722,8 +722,8 @@ main:focus-visible {
   background: #fff4ee;
 }
 
-.ship-form input[aria-invalid="true"]:focus,
-.ship-form textarea[aria-invalid="true"]:focus {
+.ship-form input[aria-invalid="true"]:focus-visible,
+.ship-form textarea[aria-invalid="true"]:focus-visible {
   outline: 2px solid rgba(240, 90, 40, 0.24);
   border-color: var(--stacks);
 }
