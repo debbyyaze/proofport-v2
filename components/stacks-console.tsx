@@ -380,20 +380,23 @@ export function StacksConsole() {
               placeholder="https://github.com/you/proofport/commit/abc"
               aria-describedby="stacks-proof-url-hint"
               aria-errormessage={
-                hasInvalidProofUrl ? "stacks-proof-url-hint" : undefined
+                hasInvalidProofUrl ? "stacks-proof-url-error" : undefined
               }
               aria-invalid={hasInvalidProofUrl}
               title="Use an HTTPS URL starting with https://"
             />
+            {hasInvalidProofUrl ? (
+              <small className="field-hint" id="stacks-proof-url-error" role="alert">
+                Enter a full HTTPS URL or leave this field empty.
+              </small>
+            ) : null}
             <small
               className="field-hint"
               id="stacks-proof-url-hint"
-              aria-live="polite"
-              role={hasInvalidProofUrl ? "alert" : undefined}
             >
-              {hasInvalidProofUrl
-                ? "Enter a full HTTPS URL or leave this field empty."
-                : "Optional. Leave this empty to publish without a public proof link, or add a public PR, commit, release note, or live demo link. HTTPS only."}
+              Optional. Leave this empty to publish without a public proof link,
+              or add a public PR, commit, release note, or live demo link.
+              HTTPS only.
             </small>
           </label>
           <label>
