@@ -111,7 +111,7 @@ export function Feed({
                 <a
                   href={log.proofUri}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="ugc nofollow noopener noreferrer"
                   title={log.proofUri}
                   aria-label={`Open proof link for ${log.summary}`}
                 >
