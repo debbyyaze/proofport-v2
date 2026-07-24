@@ -128,7 +128,7 @@ export default function HomePage() {
             <h3 id="network-celo-title">Celo</h3>
             <p id="network-celo-description">
               A mobile-friendly path for MiniPay and Celo wallets, built for quick
-              public proof entries.
+              public proof entries without creating an account.
             </p>
           </div>
           <Link
@@ -151,8 +151,8 @@ export default function HomePage() {
             <span>{getStacksChainLabel()}</span>
             <h3 id="network-stacks-title">Stacks</h3>
             <p id="network-stacks-description">
-              A Bitcoin-linked path for Stacks wallets, with public entries and
-              shareable explorer receipts.
+              A Bitcoin-linked path for Stacks wallets, with public entries,
+              shareable explorer receipts, and no account required.
             </p>
           </div>
           <Link
