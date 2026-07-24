@@ -16,6 +16,15 @@ defaults, and clearing the field falls back to the shared `proof` tag.
 
 The app has no persistent backend, no database, and no indexer. It uses wallet calls plus a lightweight Next route handler for live Stacks reads, with sample entries shown until live contract environment values are set.
 
+## Publishing Hygiene
+
+Everything you publish through ProofPort is public, including the summary, tag,
+proof link, wallet address, and explorer receipt.
+
+- Keep secrets, internal URLs, and private ticket names out of entry summaries.
+- Use only public HTTPS proof links such as PRs, commits, release notes, or demos.
+- Clear the tag field if you do not want to expose an internal shorthand.
+
 ## Quick Start
 
 Use Node `22.13.0` or newer.
