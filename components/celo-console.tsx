@@ -495,7 +495,6 @@ export function CeloConsole() {
             className="icon-button"
             onClick={() => void loadLogs()}
             disabled={isRefreshing}
-            aria-label={isRefreshing ? "Refreshing Celo entries" : "Refresh Celo entries"}
             aria-busy={isRefreshing}
           >
             <span className="sr-only">Refresh Celo entries</span>

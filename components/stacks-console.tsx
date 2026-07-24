@@ -481,9 +481,6 @@ export function StacksConsole() {
             className="icon-button"
             onClick={() => void loadLogs()}
             disabled={isRefreshing}
-            aria-label={
-              isRefreshing ? "Refreshing Stacks entries" : "Refresh Stacks entries"
-            }
             aria-busy={isRefreshing}
           >
             <span className="sr-only">Refresh Stacks entries</span>
