@@ -63,18 +63,10 @@ export default function HomePage() {
             receipt people can verify, with no account required.
           </p>
           <nav aria-label="Choose a publishing network" className="hero-actions">
-            <Link
-              aria-label="Publish with Celo from the hero section"
-              className="primary-action"
-              href="/celo"
-            >
+            <Link className="primary-action" href="/celo">
               Publish with Celo <ArrowRight size={18} aria-hidden="true" />
             </Link>
-            <Link
-              aria-label="Publish with Stacks from the hero section"
-              className="primary-action alt"
-              href="/stacks"
-            >
+            <Link className="primary-action alt" href="/stacks">
               Publish with Stacks <ArrowRight size={18} aria-hidden="true" />
             </Link>
           </nav>
@@ -133,11 +125,7 @@ export default function HomePage() {
               public proof entries without creating an account.
             </p>
           </div>
-          <Link
-            aria-label="Publish with Celo from the network card"
-            className="primary-action"
-            href="/celo"
-          >
+          <Link className="primary-action" href="/celo">
             Publish with Celo <ArrowRight size={18} aria-hidden="true" />
           </Link>
         </article>
@@ -157,11 +145,7 @@ export default function HomePage() {
               shareable explorer receipts, and no account required.
             </p>
           </div>
-          <Link
-            aria-label="Publish with Stacks from the network card"
-            className="primary-action alt"
-            href="/stacks"
-          >
+          <Link className="primary-action alt" href="/stacks">
             Publish with Stacks <ArrowRight size={18} aria-hidden="true" />
           </Link>
         </article>

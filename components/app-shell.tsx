@@ -32,7 +32,7 @@ export function AppShell({ children }: AppShellProps) {
         Skip to main content
       </a>
       <header className="topbar">
-        <Link aria-label="ProofPort home" href="/" className="brand">
+        <Link href="/" className="brand">
           <span className="brand-mark" aria-hidden="true">
             <Anchor size={22} strokeWidth={2.2} />
           </span>
