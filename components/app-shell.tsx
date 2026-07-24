@@ -56,7 +56,7 @@ export function AppShell({ children }: AppShellProps) {
       <main id="main-content" tabIndex={-1}>
         {children}
       </main>
-      <footer aria-label="Site footer">
+      <footer aria-labelledby="footer-strip-title">
         <h2 className="sr-only" id="footer-strip-title">
           ProofPort publishing basics
         </h2>
