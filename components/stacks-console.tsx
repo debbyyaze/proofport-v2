@@ -378,7 +378,11 @@ export function StacksConsole() {
               autoCorrect="off"
               spellCheck={false}
               placeholder="https://github.com/you/proofport/commit/abc"
-              aria-describedby="stacks-proof-url-hint"
+              aria-describedby={
+                hasInvalidProofUrl
+                  ? "stacks-proof-url-hint stacks-proof-url-error"
+                  : "stacks-proof-url-hint"
+              }
               aria-errormessage={
                 hasInvalidProofUrl ? "stacks-proof-url-error" : undefined
               }

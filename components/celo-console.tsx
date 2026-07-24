@@ -392,7 +392,11 @@ export function CeloConsole() {
               autoCorrect="off"
               spellCheck={false}
               placeholder="https://github.com/you/proofport/pull/1"
-              aria-describedby="celo-proof-url-hint"
+              aria-describedby={
+                hasInvalidProofUrl
+                  ? "celo-proof-url-hint celo-proof-url-error"
+                  : "celo-proof-url-hint"
+              }
               aria-errormessage={
                 hasInvalidProofUrl ? "celo-proof-url-error" : undefined
               }
