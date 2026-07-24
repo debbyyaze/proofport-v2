@@ -113,7 +113,6 @@ export function Feed({
                   target="_blank"
                   rel="ugc nofollow noopener noreferrer"
                   title={log.proofUri}
-                  aria-label={`Open proof link for ${log.summary}`}
                 >
                   Open public proof link
                   <span className="sr-only"> (opens in a new tab)</span>
@@ -132,7 +131,6 @@ export function Feed({
                   target="_blank"
                   rel="noopener noreferrer"
                   title={log.txUrl}
-                  aria-label={`Open explorer receipt for ${log.summary}`}
                 >
                   Open explorer receipt
                   <span className="sr-only"> (opens in a new tab)</span>
