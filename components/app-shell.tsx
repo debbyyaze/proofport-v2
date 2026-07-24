@@ -68,7 +68,7 @@ export function AppShell({ children }: AppShellProps) {
             <Link2 size={16} aria-hidden="true" /> Optional public HTTPS proof links
           </li>
           <li>
-            <RadioTower size={16} aria-hidden="true" /> Shareable explorer receipts
+            <RadioTower size={16} aria-hidden="true" /> Shareable explorer receipts, no account required
           </li>
         </ul>
       </footer>
