@@ -155,7 +155,7 @@ a:focus-visible {
 }
 
 .nav-pills a {
-  min-height: 36px;
+  min-height: 44px;
   display: inline-flex;
   align-items: center;
   padding: 0 12px;
