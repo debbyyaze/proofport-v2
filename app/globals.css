@@ -838,6 +838,7 @@ main:focus-visible {
   font-size: 0.78rem;
   font-weight: 780;
   max-width: 100%;
+  white-space: normal;
   overflow-wrap: anywhere;
   text-align: right;
 }
