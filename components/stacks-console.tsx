@@ -423,7 +423,7 @@ export function StacksConsole() {
               aria-atomic="true"
             >
               {tag.length}/32 characters. Keep `stacks`, replace it, or clear it
-              to fall back to the default `proof` tag.
+              to fall back to the default `proof` tag. Tags are public too.
             </small>
           </label>
           <button
