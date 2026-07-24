@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     description:
       "Create public ProofPort entries on Stacks with Stacks Connect wallet signing, shareable explorer receipts, and no account required.",
     url: "/stacks",
+    siteName: "ProofPort",
+    type: "website",
     images: [
       {
         url: "/og.svg",

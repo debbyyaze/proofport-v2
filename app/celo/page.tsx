@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     description:
       "Create public ProofPort entries on Celo with MiniPay-compatible wallet handling, shareable explorer receipts, and no account required.",
     url: "/celo",
+    siteName: "ProofPort",
+    type: "website",
     images: [
       {
         url: "/og.svg",

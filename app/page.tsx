@@ -23,6 +23,8 @@ export const metadata: Metadata = {
     description:
       "Public proof logs for shipped work, wallet-signed proof entries, and shareable explorer receipts, with no account required.",
     url: "/",
+    siteName: "ProofPort",
+    type: "website",
     images: [
       {
         url: "/og.svg",
