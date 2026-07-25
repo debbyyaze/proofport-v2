@@ -154,7 +154,7 @@ export function Feed({
                   }
                 >
                   <Sparkles size={16} aria-hidden="true" />
-                  <span>{isPending ? "Sending..." : "Applaud"}</span>
+                  <span>{isPending ? "Sending applause..." : "Applaud"}</span>
                   {isPending ? (
                     <span className="sr-only" aria-live="polite">
                       Sending applause now
