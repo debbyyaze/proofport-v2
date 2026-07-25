@@ -43,7 +43,9 @@ The app boots locally with built-in testnet and localhost defaults. Only set
 `NEXT_PUBLIC_*` values when you want to point the UI at a specific live
 deployment. Set `NEXT_PUBLIC_APP_URL` before production builds so canonical
 URLs, `robots.txt`, and the sitemap point at the live HTTPS origin; see
-[docs/deploy.md](./docs/deploy.md) for the production values.
+[docs/deploy.md](./docs/deploy.md) for the production values. Leaving it unset
+during a production build will keep those generated URLs pointed at
+`http://localhost:3000`.
 
 Skip copying `.env.example` for ordinary local UI work unless you are preparing
 to deploy or run contract scripts with real keys.
