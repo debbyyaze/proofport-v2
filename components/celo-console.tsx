@@ -482,6 +482,8 @@ export function CeloConsole() {
             href={txUrl}
             target="_blank"
             rel="noopener noreferrer"
+            title={txUrl}
+            aria-label="Open the Celo explorer receipt for your published entry in a new tab"
           >
             Open Celo explorer receipt (new tab)
             <ExternalLink size={15} aria-hidden="true" />
