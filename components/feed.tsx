@@ -51,6 +51,7 @@ export function Feed({
         const titleId = `${articleId}-title`;
         const metaId = `${articleId}-meta`;
         const applauseId = `${articleId}-applause`;
+        const actionsLabelId = `${articleId}-actions-label`;
         const publishedDateTime = getPublishedDateTime(log);
         const applauseLabel = formatApplauseLabel(log.applause);
 
@@ -106,7 +107,14 @@ export function Feed({
                 </dd>
               </div>
             </dl>
-            <div className="log-actions">
+            <div
+              className="log-actions"
+              role="group"
+              aria-labelledby={actionsLabelId}
+            >
+              <span className="sr-only" id={actionsLabelId}>
+                Actions for {log.summary}
+              </span>
               {log.proofUri ? (
                 <a
                   href={log.proofUri}
