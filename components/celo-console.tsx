@@ -319,7 +319,8 @@ export function CeloConsole() {
         <h1 id="celo-title">Publish with Celo</h1>
         <p>
           Use MiniPay or any Celo wallet to write a public proof entry and share
-          its explorer receipt. No ProofPort account required.
+          its explorer receipt. No ProofPort account required. The summary,
+          tag, proof link, wallet address, and explorer receipt are all public.
         </p>
         <div className="wallet-strip">
           <span>{wallet.isMiniPay ? "MiniPay detected" : "Celo wallet"}</span>
