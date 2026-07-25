@@ -466,8 +466,7 @@ export function StacksConsole() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Open Stacks explorer receipt
-            <span className="sr-only"> (opens in a new tab)</span>
+            Open Stacks explorer receipt (new tab)
             <ExternalLink size={15} aria-hidden="true" />
           </a>
         ) : null}

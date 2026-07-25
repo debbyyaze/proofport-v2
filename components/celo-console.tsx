@@ -482,8 +482,7 @@ export function CeloConsole() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Open Celo explorer receipt
-            <span className="sr-only"> (opens in a new tab)</span>
+            Open Celo explorer receipt (new tab)
             <ExternalLink size={15} aria-hidden="true" />
           </a>
         ) : null}

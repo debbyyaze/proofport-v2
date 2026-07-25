@@ -115,8 +115,7 @@ export function Feed({
                   title={log.proofUri}
                   aria-label={`Open the public proof link for ${log.summary} in a new tab`}
                 >
-                  Open public proof link
-                  <span className="sr-only"> (opens in a new tab)</span>
+                  Open public proof link (new tab)
                   <ExternalLink size={15} aria-hidden="true" />
                 </a>
               ) : (
@@ -134,8 +133,7 @@ export function Feed({
                   title={log.txUrl}
                   aria-label={`Open the explorer receipt for ${log.summary} in a new tab`}
                 >
-                  Open explorer receipt
-                  <span className="sr-only"> (opens in a new tab)</span>
+                  Open explorer receipt (new tab)
                   <ExternalLink size={15} aria-hidden="true" />
                 </a>
               ) : null}
