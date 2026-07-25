@@ -10,9 +10,17 @@ type AppShellProps = {
 };
 
 const routes = [
-  { href: "/", label: "Home" },
-  { href: "/celo", label: "Celo" },
-  { href: "/stacks", label: "Stacks" }
+  { href: "/", label: "Home", ariaLabel: "Open the ProofPort homepage" },
+  {
+    href: "/celo",
+    label: "Celo",
+    ariaLabel: "Open the Celo publishing flow"
+  },
+  {
+    href: "/stacks",
+    label: "Stacks",
+    ariaLabel: "Open the Stacks publishing flow"
+  }
 ] as const;
 
 function isActiveRoute(pathname: string, href: (typeof routes)[number]["href"]) {
@@ -32,7 +40,11 @@ export function AppShell({ children }: AppShellProps) {
         Skip to main content
       </a>
       <header className="topbar">
-        <Link href="/" className="brand">
+        <Link
+          href="/"
+          className="brand"
+          aria-label="Open the ProofPort homepage"
+        >
           <span className="brand-mark" aria-hidden="true">
             <Anchor size={22} strokeWidth={2.2} />
           </span>
@@ -45,6 +57,7 @@ export function AppShell({ children }: AppShellProps) {
           {routes.map((route) => (
             <Link
               aria-current={isActiveRoute(pathname, route.href) ? "page" : undefined}
+              aria-label={route.ariaLabel}
               href={route.href}
               key={route.href}
             >
