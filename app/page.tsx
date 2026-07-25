@@ -78,6 +78,10 @@ export default function HomePage() {
               Publish with Stacks <ArrowRight size={18} aria-hidden="true" />
             </Link>
           </nav>
+          <p className="hero-note">
+            Everything you publish is public, including the summary, tag, proof
+            link, wallet address, and explorer receipt.
+          </p>
         </div>
         <section
           aria-describedby="proof-preview-description"

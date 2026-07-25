@@ -235,6 +235,13 @@ main:focus-visible {
   margin-top: 28px;
 }
 
+.hero-note {
+  margin-top: 14px;
+  max-width: 660px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .primary-action,
 .icon-text-button,
 .icon-button {
