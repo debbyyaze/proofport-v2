@@ -64,14 +64,14 @@ export default function HomePage() {
           </p>
           <nav aria-label="Choose a publishing network" className="hero-actions">
             <Link
-              aria-label="Publish with Celo from the quick start section"
+              aria-label="Start publishing with Celo"
               className="primary-action"
               href="/celo"
             >
               Publish with Celo <ArrowRight size={18} aria-hidden="true" />
             </Link>
             <Link
-              aria-label="Publish with Stacks from the quick start section"
+              aria-label="Start publishing with Stacks"
               className="primary-action alt"
               href="/stacks"
             >
@@ -139,7 +139,7 @@ export default function HomePage() {
             </p>
           </div>
           <Link
-            aria-label="Publish with Celo after reviewing network details"
+            aria-label="Open the Celo publishing flow"
             className="primary-action"
             href="/celo"
           >
@@ -163,7 +163,7 @@ export default function HomePage() {
             </p>
           </div>
           <Link
-            aria-label="Publish with Stacks after reviewing network details"
+            aria-label="Open the Stacks publishing flow"
             className="primary-action alt"
             href="/stacks"
           >
