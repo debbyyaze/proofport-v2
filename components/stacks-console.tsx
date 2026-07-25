@@ -85,6 +85,7 @@ export function StacksConsole() {
   const contract = configuredStacksContract;
   const isConfigured = Boolean(contract);
   const walletLabel = wallet.address ? shortAddress(wallet.address) : "Not connected";
+  const connectWalletLabel = "Connect Stacks wallet";
   const hasInvalidProofUrl = Boolean(proofUri.trim()) && !normalizeOptionalUrl(proofUri);
   const defaultNotice = getFeedNotice(isConfigured, "Stacks");
 
@@ -329,14 +330,14 @@ export function StacksConsole() {
             <button
               type="button"
               className="icon-text-button"
-              onClick={() => void connectWallet()}
-              aria-describedby={walletStatusId}
-              aria-label="Connect Stacks wallet"
-            >
-              Connect wallet
-            </button>
-          )}
-        </div>
+            onClick={() => void connectWallet()}
+            aria-describedby={walletStatusId}
+            aria-label="Connect Stacks wallet"
+          >
+            {connectWalletLabel}
+          </button>
+        )}
+      </div>
         <form
           className="ship-form"
           onSubmit={(event) => {
