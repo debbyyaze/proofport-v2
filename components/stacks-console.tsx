@@ -476,6 +476,9 @@ export function StacksConsole() {
           <div>
             <span className="panel-kicker">Public feed</span>
             <h2 id={feedHeadingId}>Latest Stacks entries</h2>
+            <p className="feed-note">
+              Applause opens your wallet and publishes a public reaction.
+            </p>
           </div>
           <button
             type="button"

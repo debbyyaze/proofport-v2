@@ -804,6 +804,13 @@ main:focus-visible {
   margin-bottom: 16px;
 }
 
+.feed-note {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
 .loading-line {
   color: var(--muted);
   margin: 0 0 12px;
