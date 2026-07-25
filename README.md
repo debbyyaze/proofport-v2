@@ -19,7 +19,7 @@ The app has no persistent backend, no database, and no indexer. It uses wallet c
 ## Publishing Hygiene
 
 Everything you publish through ProofPort is public, including the summary, tag,
-proof link, wallet address, and explorer receipt.
+wallet address, explorer receipt, and proof link when attached.
 
 - Keep secrets, internal URLs, and private ticket names out of entry summaries.
 - Use only public HTTPS proof links such as PRs, commits, release notes, or demos.

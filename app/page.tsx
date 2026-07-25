@@ -79,8 +79,9 @@ export default function HomePage() {
             </Link>
           </nav>
           <p className="hero-note">
-            Everything you publish is public, including the summary, tag, proof
-            link, wallet address, and explorer receipt.
+            Everything you publish is public, including the summary, tag,
+            wallet address, explorer receipt, and proof link when you attach
+            one.
           </p>
         </div>
         <section

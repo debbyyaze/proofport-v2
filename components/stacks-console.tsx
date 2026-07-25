@@ -300,7 +300,8 @@ export function StacksConsole() {
         <p>
           Use Stacks Connect to sign a public proof entry and keep an explorer
           receipt ready to share. No ProofPort account required. The summary,
-          tag, proof link, wallet address, and explorer receipt are all public.
+          tag, wallet address, explorer receipt, and proof link when attached
+          are all public.
         </p>
         <div className="wallet-strip">
           <span>Stacks wallet</span>
