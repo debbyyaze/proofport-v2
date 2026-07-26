@@ -44,11 +44,11 @@ script binds to `0.0.0.0`, so use it only on a trusted local network.
 The app boots locally with built-in testnet and localhost defaults. Only set
 `NEXT_PUBLIC_*` values when you want to point the UI at a specific live
 deployment. Set `NEXT_PUBLIC_APP_URL` before production builds to the final
-HTTPS site origin without a trailing slash so canonical URLs, `robots.txt`,
-and the sitemap point at production instead of a preview or localhost URL; see
-[docs/deploy.md](./docs/deploy.md) for the production values. Leaving it unset
-during a production build will keep those generated URLs pointed at
-`http://localhost:3000`.
+HTTPS site origin without a trailing slash so canonical URLs, manifest and
+social metadata, `robots.txt`, and the sitemap point at production instead of
+a preview or localhost URL; see [docs/deploy.md](./docs/deploy.md) for the
+production values. Leaving it unset during a production build will keep those
+generated URLs pointed at `http://localhost:3000`.
 
 Skip copying `.env.example` for ordinary local UI work unless you are preparing
 to deploy or run contract scripts with real keys.
