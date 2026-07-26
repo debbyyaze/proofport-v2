@@ -88,6 +88,13 @@ export function StacksConsole() {
   const connectWalletLabel = "Connect Stacks wallet";
   const hasInvalidProofUrl = Boolean(proofUri.trim()) && !normalizeOptionalUrl(proofUri);
   const defaultNotice = getFeedNotice(isConfigured, "Stacks");
+  const publishHint = !isConfigured
+    ? "Live Stacks publishing stays disabled until a contract address is configured."
+    : !summary.trim()
+      ? "Add a short public summary to enable publishing."
+      : hasInvalidProofUrl
+        ? "Use a full HTTPS proof URL or clear the field to enable publishing."
+        : "Ready to publish from your connected wallet.";
 
   const canSubmit = useMemo(() => {
     return Boolean(summary.trim()) && !hasInvalidProofUrl && !isSubmitting;
@@ -440,9 +447,7 @@ export function StacksConsole() {
             {isSubmitting ? "Publishing..." : "Publish Stacks entry"}
           </button>
           <small className="field-hint" id={publishHintId}>
-            {isConfigured
-              ? "Add a summary and keep the proof URL valid to enable publishing."
-              : "Live Stacks publishing stays disabled until a contract address is configured."}
+            {publishHint}
           </small>
         </form>
         {message ? (

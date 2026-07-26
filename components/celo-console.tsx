@@ -113,6 +113,13 @@ export function CeloConsole() {
     : "Connect Celo wallet";
   const hasInvalidProofUrl = Boolean(proofUri.trim()) && !normalizeOptionalUrl(proofUri);
   const defaultNotice = getFeedNotice(isConfigured, "Celo");
+  const publishHint = !isConfigured
+    ? "Live Celo publishing stays disabled until a contract address is configured."
+    : !summary.trim()
+      ? "Add a short public summary to enable publishing."
+      : hasInvalidProofUrl
+        ? "Use a full HTTPS proof URL or clear the field to enable publishing."
+        : "Ready to publish from your connected wallet.";
 
   const canSubmit = useMemo(() => {
     return Boolean(summary.trim()) && !hasInvalidProofUrl && !isSubmitting;
@@ -456,9 +463,7 @@ export function CeloConsole() {
             {isSubmitting ? "Publishing..." : "Publish Celo entry"}
           </button>
           <small className="field-hint" id={publishHintId}>
-            {isConfigured
-              ? "Add a summary and keep the proof URL valid to enable publishing."
-              : "Live Celo publishing stays disabled until a contract address is configured."}
+            {publishHint}
           </small>
         </form>
         {message ? (
