@@ -496,7 +496,7 @@ export function CeloConsole() {
             <span className="panel-kicker">Public feed</span>
             <h2 id={feedHeadingId}>Latest Celo entries</h2>
             <p className="feed-note">
-              Applause opens your wallet and publishes a public reaction.
+              Applause uses your connected wallet and publishes a public reaction.
             </p>
           </div>
           <button
