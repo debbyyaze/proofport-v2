@@ -780,6 +780,8 @@ main:focus-visible {
   color: #5a42c5;
   font-weight: 740;
   border-radius: 4px;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }
 
 .tx-link:hover,
@@ -904,6 +906,8 @@ main:focus-visible {
 
 .log-actions a {
   border-radius: 4px;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }
 
 .muted-link {
