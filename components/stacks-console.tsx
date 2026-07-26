@@ -339,14 +339,22 @@ export function StacksConsole() {
             <button
               type="button"
               className="icon-text-button"
-            onClick={() => void connectWallet()}
-            aria-describedby={walletStatusId}
-            aria-label="Connect Stacks wallet"
-          >
-            {connectWalletLabel}
-          </button>
-        )}
-      </div>
+              onClick={() => {
+                void connectWallet().catch((error) => {
+                  setMessage(
+                    error instanceof Error
+                      ? error.message
+                      : "Could not connect Stacks wallet."
+                  );
+                });
+              }}
+              aria-describedby={walletStatusId}
+              aria-label="Connect Stacks wallet"
+            >
+              {connectWalletLabel}
+            </button>
+          )}
+        </div>
         <form
           className="ship-form"
           onSubmit={(event) => {

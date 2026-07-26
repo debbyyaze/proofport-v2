@@ -349,7 +349,15 @@ export function CeloConsole() {
             <button
               type="button"
               className="icon-text-button"
-              onClick={connect}
+              onClick={() => {
+                void connect().catch((error) => {
+                  setMessage(
+                    error instanceof Error
+                      ? error.message
+                      : "Could not connect Celo wallet."
+                  );
+                });
+              }}
               aria-describedby={walletStatusId}
               aria-label={
                 wallet.account
