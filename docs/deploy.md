@@ -105,4 +105,4 @@ Open the deployed HTTPS origin and confirm `/manifest.webmanifest`, `/robots.txt
 
 Share the deployed homepage URL in a social preview debugger and confirm the production title, description, and preview image all match the live release.
 
-Create one live entry from `/celo` and one live entry from `/stacks`, then save both explorer receipts with the release notes.
+Create one live entry from `/celo` and one live entry from `/stacks`, then save both explorer receipts with the release notes. Confirm at least one saved receipt includes a public proof link and at least one omits it so both public states are verified before launch.
