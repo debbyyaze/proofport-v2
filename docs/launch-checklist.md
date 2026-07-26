@@ -5,7 +5,7 @@
 - Deploy `proofport-log.clar` on Stacks mainnet.
 - Save the Stacks contract id, deployment transaction id, and explorer URL.
 - Set the production `NEXT_PUBLIC_*` app URL, network, contract, and RPC/API values before building the website.
-- Confirm `NEXT_PUBLIC_APP_URL` matches the deployed HTTPS origin so canonical, robots, and sitemap metadata point to production.
+- Confirm `NEXT_PUBLIC_APP_URL` matches the deployed HTTPS origin so canonical, manifest and social preview metadata, `robots.txt`, and `sitemap.xml` all point to production.
 - Run `npm run lint`, `npm run typecheck`, `npm test`, `npm run check:stacks`, and `npm run build`.
 - Open `/`, `/celo`, and `/stacks` on the deployed HTTPS origin.
 - Confirm keyboard-only navigation reaches the primary actions on `/`, `/celo`, and `/stacks`, and that the skip link moves focus to the main content.
