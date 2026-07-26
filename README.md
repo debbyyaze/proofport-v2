@@ -24,6 +24,7 @@ wallet address, explorer receipt, and proof link when attached.
 - Keep secrets, internal URLs, and private ticket names out of entry summaries.
 - Use only public HTTPS proof links such as PRs, commits, release notes, or demos.
 - Clear the tag field if you do not want to expose an internal shorthand.
+- Applause reactions are public wallet actions too, so only applaud from an address you are comfortable exposing.
 
 ## Quick Start
 
