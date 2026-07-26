@@ -100,4 +100,7 @@ announcing the release.
 Check `/`, `/celo`, and `/stacks` with keyboard-only navigation and confirm
 the skip link moves focus to the main content on each route.
 
-For production launch, create and save one live Celo mainnet entry transaction and one live Stacks mainnet entry transaction.
+For production launch, create and save one live Celo mainnet entry transaction
+and one live Stacks mainnet entry transaction. Confirm at least one saved
+receipt includes a public proof link and at least one omits it so both public
+states are verified before release notes go out.
