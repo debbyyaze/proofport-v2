@@ -717,6 +717,16 @@ main:focus-visible {
   resize: vertical;
 }
 
+.ship-form textarea {
+  min-height: 7rem;
+  line-height: 1.5;
+}
+
+.ship-form input::placeholder,
+.ship-form textarea::placeholder {
+  color: #6b756f;
+}
+
 .ship-form input:focus-visible,
 .ship-form textarea:focus-visible {
   outline: 2px solid rgba(111, 89, 217, 0.35);
