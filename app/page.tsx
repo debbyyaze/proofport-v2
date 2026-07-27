@@ -87,7 +87,7 @@ export default function HomePage() {
           <p className="hero-note">
             Everything you publish is public, including the summary, tag,
             wallet address, explorer receipt, and proof link when you attach
-            one.
+            one, plus any applause you send from your wallet.
           </p>
         </div>
         <section
