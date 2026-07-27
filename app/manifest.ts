@@ -3,10 +3,10 @@ import type { MetadataRoute } from "next";
 export default function manifest(): MetadataRoute.Manifest {
   return {
     id: "/",
-    name: "ProofPort Wallet-Signed Proof Logs",
+    name: "ProofPort Public Proof Logs",
     short_name: "ProofPort",
     description:
-      "Public proof logs for shipped work, wallet-signed proof entries, and shareable explorer receipts, with no account required.",
+      "Publish wallet-signed proof logs for shipped work, add optional public HTTPS proof links, and share explorer receipts with no account required.",
     start_url: "/",
     scope: "/",
     display: "standalone",
