@@ -157,7 +157,7 @@ export default function HomePage() {
             </p>
           </div>
           <Link
-            aria-label="Open the Celo publishing flow"
+            aria-describedby="network-celo-description"
             className="primary-action"
             href="/celo"
           >
@@ -181,7 +181,7 @@ export default function HomePage() {
             </p>
           </div>
           <Link
-            aria-label="Open the Stacks publishing flow"
+            aria-describedby="network-stacks-description"
             className="primary-action alt"
             href="/stacks"
           >
