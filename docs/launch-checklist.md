@@ -10,6 +10,7 @@
 - Open `/`, `/celo`, and `/stacks` on the deployed HTTPS origin.
 - Confirm keyboard-only navigation reaches the primary actions on `/`, `/celo`, and `/stacks`, and that the skip link moves focus to the main content.
 - Open `/manifest.webmanifest`, `/robots.txt`, and `/sitemap.xml` on the deployed HTTPS origin to confirm generated metadata points to production.
+- If you install the site from a supported browser, open the installed app shortcuts for `Home`, `Celo`, and `Stacks` and confirm each one lands on the correct route.
 - Share the deployed homepage URL in a social preview debugger and confirm the title, description, and preview image match production.
 - Create one live Celo entry from `/celo` and save the explorer receipt.
 - Create one live Stacks entry from `/stacks` and save the explorer receipt.

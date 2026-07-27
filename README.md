@@ -97,6 +97,10 @@ Open the deployed HTTPS origin and verify `/manifest.webmanifest`,
 `/robots.txt`, and `/sitemap.xml` all resolve with production URLs before
 announcing the release.
 
+If you install the site from a supported browser, open the installed app
+shortcuts for `Home`, `Celo`, and `Stacks` once to confirm each one lands on
+the correct ProofPort route.
+
 Check `/`, `/celo`, and `/stacks` with keyboard-only navigation and confirm
 the skip link moves focus to the main content on each route.
 
