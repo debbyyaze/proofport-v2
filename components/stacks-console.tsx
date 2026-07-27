@@ -25,6 +25,12 @@ const emptyWallet: StacksWalletState = {
   connected: false
 };
 
+function isAlertMessage(message: string) {
+  return /could not|rejected|before publishing|before submitting|must be https|not connected|install/i.test(
+    message
+  );
+}
+
 type StacksLogsResponse = {
   configured: boolean;
   logs: ShipLog[];
@@ -87,6 +93,7 @@ export function StacksConsole() {
   const walletLabel = wallet.address ? shortAddress(wallet.address) : "Not connected";
   const connectWalletLabel = "Connect Stacks wallet";
   const hasInvalidProofUrl = Boolean(proofUri.trim()) && !normalizeOptionalUrl(proofUri);
+  const hasAlertStatus = isAlertMessage(message);
   const defaultNotice = getFeedNotice(isConfigured, "Stacks");
   const publishHint = !isConfigured
     ? "Live Stacks publishing stays disabled until a contract address is configured."
@@ -458,8 +465,8 @@ export function StacksConsole() {
           <div
             id={publishNoticeId}
             className="message-line"
-            role="status"
-            aria-live="polite"
+            role={hasAlertStatus ? "alert" : "status"}
+            aria-live={hasAlertStatus ? "assertive" : "polite"}
             aria-atomic="true"
           >
             {message}

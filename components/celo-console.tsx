@@ -37,6 +37,12 @@ const emptyWalletState: WalletState = {
   hasProvider: false
 };
 
+function isAlertMessage(message: string) {
+  return /could not|rejected|before publishing|before submitting|must be https|not connected|no injected|install/i.test(
+    message
+  );
+}
+
 function mapRawLog(raw: Record<string, unknown>): ShipLog {
   return {
     id: Number(raw.id),
@@ -112,6 +118,7 @@ export function CeloConsole() {
     ? "Connect MiniPay wallet"
     : "Connect Celo wallet";
   const hasInvalidProofUrl = Boolean(proofUri.trim()) && !normalizeOptionalUrl(proofUri);
+  const hasAlertStatus = isAlertMessage(message);
   const defaultNotice = getFeedNotice(isConfigured, "Celo");
   const publishHint = !isConfigured
     ? "Live Celo publishing stays disabled until a contract address is configured."
@@ -474,8 +481,8 @@ export function CeloConsole() {
           <div
             id={publishNoticeId}
             className="message-line"
-            role="status"
-            aria-live="polite"
+            role={hasAlertStatus ? "alert" : "status"}
+            aria-live={hasAlertStatus ? "assertive" : "polite"}
             aria-atomic="true"
           >
             {message}
