@@ -13,6 +13,7 @@
 - Share the deployed homepage URL in a social preview debugger and confirm the title, description, and preview image match production.
 - Create one live Celo entry from `/celo` and save the explorer receipt.
 - Create one live Stacks entry from `/stacks` and save the explorer receipt.
+- Submit at least one live applause reaction from a public wallet you are comfortable exposing, then save that explorer receipt too.
 - Confirm at least one saved live receipt includes a public proof link and at least one omits it, so both public states are verified before release notes go out.
 - Verify the public project website points to the deployed production origin.
 - Keep the website, both publishing paths, both contract identifiers, and both saved explorer receipts with the release notes.
