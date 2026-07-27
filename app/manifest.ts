@@ -34,7 +34,7 @@ export default function manifest(): MetadataRoute.Manifest {
         name: "Publish with Celo",
         short_name: "Celo",
         description:
-          "Open the Celo wallet flow to publish a wallet-signed proof entry with an optional public proof link.",
+          "Open the Celo wallet flow to publish a wallet-signed proof entry with an optional public HTTPS proof link.",
         url: "/celo",
         icons: [
           {
@@ -48,7 +48,7 @@ export default function manifest(): MetadataRoute.Manifest {
         name: "Publish with Stacks",
         short_name: "Stacks",
         description:
-          "Open the Stacks wallet flow to publish a wallet-signed proof entry with an optional public proof link.",
+          "Open the Stacks wallet flow to publish a wallet-signed proof entry with an optional public HTTPS proof link.",
         url: "/stacks",
         icons: [
           {

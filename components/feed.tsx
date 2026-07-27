@@ -121,16 +121,16 @@ export function Feed({
                   target="_blank"
                   rel="ugc nofollow noopener noreferrer"
                   title={log.proofUri}
-                  aria-label={`Open the public proof link for ${log.summary} in a new tab`}
+                  aria-label={`Open the public HTTPS proof link for ${log.summary} in a new tab`}
                 >
-                  Open public proof link (new tab)
+                  Open public HTTPS proof link (new tab)
                   <ExternalLink size={15} aria-hidden="true" />
                 </a>
               ) : (
                 <span className="muted-link">
                   {log.txUrl
-                    ? "No public proof link attached. Use the explorer receipt to verify."
-                    : "No public proof link or explorer receipt attached to this entry yet."}
+                    ? "No public HTTPS proof link attached. Use the explorer receipt to verify."
+                    : "No public HTTPS proof link or explorer receipt attached to this entry yet."}
                 </span>
               )}
               {log.txUrl ? (
