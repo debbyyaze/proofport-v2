@@ -488,7 +488,13 @@ export function CeloConsole() {
             {message}
           </div>
         ) : (
-          <p className="message-line" id={publishNoticeId}>
+          <p
+            className="message-line"
+            id={publishNoticeId}
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+          >
             {defaultNotice}
           </p>
         )}
