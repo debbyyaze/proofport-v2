@@ -17,6 +17,7 @@
   "bugs": {
     "url": "https://github.com/debbyyaze/proofport-v2/issues"
   },
+  "license": "UNLICENSED",
   "private": true,
   "type": "module",
   "engines": {
