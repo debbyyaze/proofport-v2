@@ -88,7 +88,7 @@ export default function HomePage() {
               Publish with Stacks <ArrowRight size={18} aria-hidden="true" />
             </Link>
             <a className="secondary-action" href="#network-title">
-              Compare networks first
+              Compare Celo and Stacks first
             </a>
           </nav>
           <p className="hero-note" id="publish-visibility-note">
@@ -130,7 +130,7 @@ export default function HomePage() {
       <section className="network-selector" aria-labelledby="network-title">
         <div className="section-heading">
           <span className="panel-kicker">Choose a network</span>
-          <h2 id="network-title">Publish with the wallet you already use.</h2>
+          <h2 id="network-title">Choose the wallet path you already use.</h2>
         </div>
         <article
           aria-describedby="network-celo-description"
