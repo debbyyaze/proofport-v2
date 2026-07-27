@@ -195,6 +195,10 @@ main:focus {
   gap: 22px;
 }
 
+.network-selector {
+  scroll-margin-top: 24px;
+}
+
 .hero-workbench {
   min-height: min(68vh, 680px);
   display: grid;
