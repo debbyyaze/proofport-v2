@@ -103,4 +103,6 @@ the skip link moves focus to the main content on each route.
 For production launch, create and save one live Celo mainnet entry transaction
 and one live Stacks mainnet entry transaction. Confirm at least one saved
 receipt includes a public proof link and at least one omits it so both public
-states are verified before release notes go out.
+states are verified before release notes go out. Submit at least one live
+applause reaction from a public wallet you are comfortable exposing and save
+that explorer receipt with the release notes too.
