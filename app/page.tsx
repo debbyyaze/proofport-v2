@@ -66,7 +66,7 @@ export default function HomePage() {
           <p>
             Capture what shipped, optionally attach a public HTTPS proof link,
             and publish a wallet-signed record with a shareable explorer
-            receipt people can verify, with no account required.
+            receipt anyone can verify. No account required.
           </p>
           <nav
             aria-describedby="publish-visibility-note"
@@ -89,9 +89,9 @@ export default function HomePage() {
             </Link>
           </nav>
           <p className="hero-note" id="publish-visibility-note">
-            Everything you publish is public, including the summary, tag,
-            wallet address, explorer receipt, and proof link when you attach
-            one, plus any applause you send from your wallet.
+            Everything you publish is public: the summary, tag, wallet
+            address, explorer receipt, proof link when attached, and any
+            applause sent from your wallet.
           </p>
         </div>
         <section
