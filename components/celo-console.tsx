@@ -422,7 +422,8 @@ export function CeloConsole() {
             />
             {hasInvalidProofUrl ? (
               <small className="field-hint" id="celo-proof-url-error" role="alert">
-                Enter a full HTTPS URL or leave this field empty.
+                Enter a public HTTPS URL starting with https:// or leave this field
+                empty.
               </small>
             ) : null}
             <small
