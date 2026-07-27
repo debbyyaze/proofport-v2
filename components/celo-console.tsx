@@ -513,8 +513,12 @@ export function CeloConsole() {
             onClick={() => void loadLogs()}
             disabled={isRefreshing}
             aria-busy={isRefreshing}
+            aria-label={isRefreshing ? "Refreshing Celo entries" : "Refresh Celo entries"}
+            title={isRefreshing ? "Refreshing Celo entries" : "Refresh Celo entries"}
           >
-            <span className="sr-only">Refresh Celo entries</span>
+            <span className="sr-only">
+              {isRefreshing ? "Refreshing Celo entries" : "Refresh Celo entries"}
+            </span>
             <RefreshCcw size={18} aria-hidden="true" />
           </button>
         </div>

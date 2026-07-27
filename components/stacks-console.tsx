@@ -497,8 +497,14 @@ export function StacksConsole() {
             onClick={() => void loadLogs()}
             disabled={isRefreshing}
             aria-busy={isRefreshing}
+            aria-label={
+              isRefreshing ? "Refreshing Stacks entries" : "Refresh Stacks entries"
+            }
+            title={isRefreshing ? "Refreshing Stacks entries" : "Refresh Stacks entries"}
           >
-            <span className="sr-only">Refresh Stacks entries</span>
+            <span className="sr-only">
+              {isRefreshing ? "Refreshing Stacks entries" : "Refresh Stacks entries"}
+            </span>
             <RefreshCcw size={18} aria-hidden="true" />
           </button>
         </div>
