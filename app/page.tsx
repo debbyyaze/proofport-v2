@@ -87,6 +87,9 @@ export default function HomePage() {
             >
               Publish with Stacks <ArrowRight size={18} aria-hidden="true" />
             </Link>
+            <a className="secondary-action" href="#network-title">
+              Compare networks first
+            </a>
           </nav>
           <p className="hero-note" id="publish-visibility-note">
             Everything you publish is public: the summary, tag, wallet
