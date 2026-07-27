@@ -50,8 +50,8 @@ a preview or localhost URL; see [docs/deploy.md](./docs/deploy.md) for the
 production values. Leaving it unset during a production build will keep those
 generated URLs pointed at `http://localhost:3000`.
 
-Skip copying `.env.example` for ordinary local UI work unless you are preparing
-to deploy or run contract scripts with real keys.
+Skip creating a local `.env` for ordinary UI work unless you are preparing to
+deploy or run contract scripts with real keys.
 
 Local routes:
 

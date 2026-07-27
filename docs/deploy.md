@@ -9,11 +9,11 @@ node -v
 npm install
 ```
 
-Only copy `.env.example` to `.env` when you are preparing to deploy contracts or
-run scripts that need real keys:
+Create a local `.env` only when you are preparing to deploy contracts or run
+scripts that need real keys:
 
 ```bash
-cp .env.example .env
+touch .env
 ```
 
 The local `.env` file will hold deployer keys. Keep it out of version control
