@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og.svg",
+        type: "image/svg+xml",
+        width: 1200,
+        height: 630,
         alt: "ProofPort preview of the Stacks publishing flow"
       }
     ]
@@ -30,6 +33,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og.svg",
+        type: "image/svg+xml",
+        width: 1200,
+        height: 630,
         alt: "ProofPort preview of the Stacks publishing flow"
       }
     ]
