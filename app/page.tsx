@@ -68,7 +68,11 @@ export default function HomePage() {
             and publish a wallet-signed record with a shareable explorer
             receipt people can verify, with no account required.
           </p>
-          <nav aria-label="Choose a publishing network" className="hero-actions">
+          <nav
+            aria-describedby="publish-visibility-note"
+            aria-label="Choose a publishing network"
+            className="hero-actions"
+          >
             <Link
               aria-label="Start publishing with Celo"
               className="primary-action"
@@ -84,7 +88,7 @@ export default function HomePage() {
               Publish with Stacks <ArrowRight size={18} aria-hidden="true" />
             </Link>
           </nav>
-          <p className="hero-note">
+          <p className="hero-note" id="publish-visibility-note">
             Everything you publish is public, including the summary, tag,
             wallet address, explorer receipt, and proof link when you attach
             one, plus any applause you send from your wallet.
