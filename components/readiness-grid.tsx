@@ -17,6 +17,7 @@ export function ReadinessGrid({ items }: { items: ReadinessItem[] }) {
           .replace(/[^a-z0-9]+/g, "-")
           .replace(/(^-|-$)/g, "");
         const statusLabel = item.ready ? "Ready" : "Pending";
+        const statusAriaLabel = `${item.label}: ${statusLabel}`;
         const labelId = `${itemId}-label`;
         const detailId = `${itemId}-detail`;
         const statusId = `${itemId}-status`;
@@ -35,6 +36,7 @@ export function ReadinessGrid({ items }: { items: ReadinessItem[] }) {
               <p id={detailId}>{item.detail}</p>
             </div>
             <span
+              aria-label={statusAriaLabel}
               className={item.ready ? "status-badge ready" : "status-badge pending"}
               id={statusId}
             >
