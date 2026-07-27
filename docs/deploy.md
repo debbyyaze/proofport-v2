@@ -88,6 +88,7 @@ NEXT_PUBLIC_STACKS_API_MAINNET=https://api.hiro.so
 ```
 
 Set `NEXT_PUBLIC_APP_URL` to the canonical production HTTPS origin, not a preview deployment URL, so canonical tags, manifest and social preview metadata, `robots.txt`, and `sitemap.xml` all point at the released site.
+Leaving it unset during a production build keeps those generated URLs pointed at `http://localhost:3000`, which breaks release metadata and crawler hints.
 
 Do not put deployer private keys in Vercel for normal app hosting.
 
