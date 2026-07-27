@@ -427,11 +427,15 @@ main:focus-visible {
   position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   gap: 12px;
   color: var(--muted);
 }
 
-.proof-preview-head strong {
+.proof-preview-head h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
   color: #238c54;
 }
 

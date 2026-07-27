@@ -99,15 +99,12 @@ export default function HomePage() {
           aria-labelledby="proof-preview-title"
           className="signal-board proof-preview"
         >
-          <h2 className="sr-only" id="proof-preview-title">
-            Example explorer receipt preview
-          </h2>
           <p className="sr-only" id="proof-preview-description">
             Preview of an example published proof entry and its shareable explorer receipt.
           </p>
           <div className="proof-preview-head">
             <span>Example proof</span>
-            <strong>Explorer receipt preview</strong>
+            <h2 id="proof-preview-title">Explorer receipt preview</h2>
           </div>
           <div className="ledger-preview">
             <span className="ledger-dot" aria-hidden="true" />
