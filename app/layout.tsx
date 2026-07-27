@@ -29,6 +29,7 @@ export const metadata: Metadata = {
   applicationName: "ProofPort",
   creator: "ProofPort",
   publisher: "ProofPort",
+  referrer: "strict-origin-when-cross-origin",
   appleWebApp: {
     capable: true,
     title: "ProofPort",
