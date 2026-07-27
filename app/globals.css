@@ -1038,6 +1038,15 @@ main:focus-visible {
     grid-template-columns: 1fr;
   }
 
+  .log-head {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .log-tag {
+    text-align: left;
+  }
+
   .footer-strip {
     flex-direction: column;
     gap: 8px;
