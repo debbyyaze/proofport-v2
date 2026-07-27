@@ -113,4 +113,8 @@ Open the deployed HTTPS origin and confirm `/manifest.webmanifest`, `/robots.txt
 
 Share the deployed homepage URL in a social preview debugger and confirm the production title, description, and preview image all match the live release.
 
+Check `/`, `/celo`, and `/stacks` with keyboard-only navigation and confirm the skip link moves focus to the main content on each route.
+
+If you install the site from a supported browser, open the installed app shortcuts for `Home`, `Celo`, and `Stacks` once to confirm each one lands on the correct ProofPort route.
+
 Create one live entry from `/celo` and one live entry from `/stacks`, then save both explorer receipts with the release notes. Submit at least one live applause reaction from a public wallet you are comfortable exposing and save that explorer receipt too. Confirm at least one saved receipt includes a public proof link and at least one omits it so both public states are verified before launch.
