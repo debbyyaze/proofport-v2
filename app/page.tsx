@@ -90,9 +90,9 @@ export default function HomePage() {
             <a
               className="secondary-action"
               href="#choose-network"
-              aria-label="Jump to the network comparison section"
+              aria-label="Jump to the Celo and Stacks comparison section"
             >
-              Compare networks first
+              Compare Celo and Stacks first
             </a>
           </nav>
           <p className="hero-note" id="publish-visibility-note">
