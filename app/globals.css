@@ -21,6 +21,7 @@ html {
   background: var(--paper);
   color: var(--ink);
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
