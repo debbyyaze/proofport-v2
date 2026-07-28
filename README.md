@@ -104,6 +104,10 @@ the correct ProofPort route.
 Check `/`, `/celo`, and `/stacks` with keyboard-only navigation and confirm
 the skip link moves focus to the main content on each route.
 
+On `/celo` and `/stacks`, try an `http://` proof link and confirm both browser
+validation and the inline guidance block publishing until the URL is corrected
+to `https://` or cleared.
+
 For production launch, create and save one live Celo mainnet entry transaction
 and one live Stacks mainnet entry transaction. Confirm at least one saved
 receipt includes a public proof link and at least one omits it so both public

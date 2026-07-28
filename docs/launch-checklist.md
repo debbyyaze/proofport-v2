@@ -10,7 +10,7 @@
 - Run `npm run lint`, `npm run typecheck`, `npm test`, `npm run check:stacks`, and `npm run build`.
 - Open `/`, `/celo`, and `/stacks` on the deployed HTTPS origin.
 - Confirm keyboard-only navigation reaches the primary actions on `/`, `/celo`, and `/stacks`, and that the skip link moves focus to the main content.
-- On `/celo` and `/stacks`, try a non-HTTPS proof link and confirm the inline guidance blocks publishing until the URL is corrected or cleared.
+- On `/celo` and `/stacks`, try an `http://` proof link and confirm both browser validation and the inline guidance block publishing until the URL is corrected to `https://` or cleared.
 - Open `/manifest.webmanifest`, `/robots.txt`, and `/sitemap.xml` on the deployed HTTPS origin to confirm generated metadata points to production.
 - If you install the site from a supported browser, confirm the installed app keeps the ProofPort name and icon, then open the `Home`, `Celo`, and `Stacks` shortcuts and confirm each one lands on the correct route.
 - Share the deployed homepage URL in a social preview debugger and confirm the title, description, and preview image match production.
