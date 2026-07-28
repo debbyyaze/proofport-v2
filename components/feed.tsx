@@ -28,6 +28,14 @@ function formatApplauseLabel(applause: number) {
   return `${applause} applause reactions received`;
 }
 
+function getProofLinkFallbackCopy(log: ShipLog) {
+  if (log.txUrl) {
+    return "No public HTTPS proof link attached. Use the explorer receipt below to verify this wallet-signed entry.";
+  }
+
+  return "No public HTTPS proof link or explorer receipt attached yet.";
+}
+
 export function Feed({
   id,
   logs,
@@ -134,11 +142,7 @@ export function Feed({
                   <ExternalLink size={15} aria-hidden="true" />
                 </a>
               ) : (
-                <span className="muted-link">
-                  {log.txUrl
-                    ? "No public HTTPS proof link attached. Open the explorer receipt below to verify this entry."
-                    : "No public HTTPS proof link or explorer receipt is attached to this entry yet."}
-                </span>
+                <span className="muted-link">{getProofLinkFallbackCopy(log)}</span>
               )}
               {log.txUrl ? (
                 <a
