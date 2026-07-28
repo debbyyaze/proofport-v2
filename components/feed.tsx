@@ -65,14 +65,16 @@ export function Feed({
         const articleId = `${log.network}-log-${log.id}`;
         const titleId = `${articleId}-title`;
         const metaId = `${articleId}-meta`;
+        const proofStatusId = `${articleId}-proof-status`;
         const applauseId = `${articleId}-applause`;
         const actionsLabelId = `${articleId}-actions-label`;
         const publishedDateTime = getPublishedDateTime(log);
         const applauseLabel = formatApplauseLabel(log.applause);
+        const describedBy = log.proofUri ? metaId : `${metaId} ${proofStatusId}`;
 
         return (
           <article
-            aria-describedby={metaId}
+            aria-describedby={describedBy}
             aria-labelledby={titleId}
             className="log-card"
             key={`${log.network}-${log.id}`}
@@ -142,7 +144,7 @@ export function Feed({
                   <ExternalLink size={15} aria-hidden="true" />
                 </a>
               ) : (
-                <p className="muted-link" role="note">
+                <p className="muted-link" id={proofStatusId} role="note">
                   {getProofLinkFallbackCopy(log)}
                 </p>
               )}
