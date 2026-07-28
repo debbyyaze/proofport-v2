@@ -36,6 +36,14 @@ function getProofLinkFallbackCopy(log: ShipLog) {
   return "No public HTTPS proof link or explorer receipt attached yet.";
 }
 
+function getReceiptFallbackCopy(log: ShipLog) {
+  if (log.proofUri) {
+    return "Explorer receipt not attached yet. Open the public HTTPS proof link above while the wallet-signed receipt is unavailable.";
+  }
+
+  return "Explorer receipt not attached yet.";
+}
+
 export function Feed({
   id,
   logs,
@@ -66,11 +74,18 @@ export function Feed({
         const titleId = `${articleId}-title`;
         const metaId = `${articleId}-meta`;
         const proofStatusId = `${articleId}-proof-status`;
+        const receiptStatusId = `${articleId}-receipt-status`;
         const applauseId = `${articleId}-applause`;
         const actionsLabelId = `${articleId}-actions-label`;
         const publishedDateTime = getPublishedDateTime(log);
         const applauseLabel = formatApplauseLabel(log.applause);
-        const describedBy = log.proofUri ? metaId : `${metaId} ${proofStatusId}`;
+        const describedBy = [
+          metaId,
+          log.proofUri ? null : proofStatusId,
+          log.txUrl ? null : receiptStatusId
+        ]
+          .filter(Boolean)
+          .join(" ");
 
         return (
           <article
@@ -159,7 +174,11 @@ export function Feed({
                   Open explorer receipt (new tab)
                   <ExternalLink size={15} aria-hidden="true" />
                 </a>
-              ) : null}
+              ) : (
+                <p className="muted-link" id={receiptStatusId} role="note">
+                  {getReceiptFallbackCopy(log)}
+                </p>
+              )}
               {onApplaud ? (
                 <button
                   type="button"
