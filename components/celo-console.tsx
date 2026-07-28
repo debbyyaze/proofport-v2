@@ -440,7 +440,8 @@ export function CeloConsole() {
             >
               Optional. Leave this empty to publish without a public proof
               link, or add a public PR, commit, release note, or live demo
-              link. Anyone viewing the feed can open it. HTTPS only.
+              link. Only paste a URL you are comfortable exposing to everyone
+              who opens the feed. HTTPS only.
             </small>
           </label>
           <label>
