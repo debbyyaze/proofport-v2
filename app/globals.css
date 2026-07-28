@@ -840,6 +840,7 @@ main:focus {
   border-radius: 4px;
   text-decoration: underline;
   text-underline-offset: 0.18em;
+  overflow-wrap: anywhere;
 }
 
 .tx-link:hover,
@@ -959,6 +960,7 @@ main:focus {
   color: #5a42c5;
   font-weight: 720;
   font-size: 0.9rem;
+  overflow-wrap: anywhere;
 }
 
 .log-actions a {
@@ -972,6 +974,7 @@ main:focus {
   color: var(--muted);
   font-size: 0.9rem;
   line-height: 1.45;
+  overflow-wrap: anywhere;
 }
 
 .empty-state {
