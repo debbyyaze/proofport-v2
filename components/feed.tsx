@@ -142,7 +142,9 @@ export function Feed({
                   <ExternalLink size={15} aria-hidden="true" />
                 </a>
               ) : (
-                <span className="muted-link">{getProofLinkFallbackCopy(log)}</span>
+                <p className="muted-link" role="note">
+                  {getProofLinkFallbackCopy(log)}
+                </p>
               )}
               {log.txUrl ? (
                 <a
