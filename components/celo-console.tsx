@@ -475,7 +475,12 @@ export function CeloConsole() {
             <Send size={18} aria-hidden="true" />
             {isSubmitting ? "Publishing..." : "Publish Celo entry"}
           </button>
-          <small className="field-hint" id={publishHintId}>
+          <small
+            className="field-hint"
+            id={publishHintId}
+            aria-live="polite"
+            aria-atomic="true"
+          >
             {publishHint}
           </small>
         </form>
