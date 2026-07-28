@@ -96,9 +96,9 @@ export default function HomePage() {
             </a>
           </nav>
           <p className="hero-note" id="publish-visibility-note">
-            Everything you publish is public: the summary, tag, wallet
-            address, explorer receipt, proof link when attached, and any
-            applause sent from your wallet.
+            <strong>Public by default.</strong> Every proof entry exposes the
+            summary, tag, wallet address, explorer receipt, proof link when
+            attached, and any applause sent from your wallet.
           </p>
         </div>
         <section
