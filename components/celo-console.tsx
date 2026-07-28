@@ -210,7 +210,7 @@ export function CeloConsole() {
   const submitLog = useCallback(async () => {
     const cleanSummary = safeTrim(summary, 160);
     const cleanProofUri = normalizeOptionalUrl(proofUri);
-    const cleanTag = safeTrim(tag || "proof", 32).toLowerCase();
+    const cleanTag = safeTrim(tag, 32).toLowerCase() || "proof";
 
     if (!cleanSummary) {
       setMessage("Add a short summary before submitting.");
