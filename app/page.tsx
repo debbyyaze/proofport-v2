@@ -113,6 +113,10 @@ export default function HomePage() {
             <span>Example proof</span>
             <h2 id="proof-preview-title">Explorer receipt preview</h2>
           </div>
+          <p className="preview-caption">
+            Illustrative preview only. Live explorer receipts open from each
+            published entry.
+          </p>
           <div className="ledger-preview">
             <span className="ledger-dot" aria-hidden="true" />
             <div>
