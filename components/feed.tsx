@@ -8,6 +8,7 @@ import {
 } from "@/lib/proofport";
 
 type FeedProps = {
+  id?: string;
   logs: ShipLog[];
   emptyLabel: string;
   labelledBy?: string;
@@ -28,6 +29,7 @@ function formatApplauseLabel(applause: number) {
 }
 
 export function Feed({
+  id,
   logs,
   emptyLabel,
   labelledBy,
@@ -44,7 +46,12 @@ export function Feed({
   }
 
   return (
-    <div className="feed-list" role="list" aria-labelledby={labelledBy}>
+    <div
+      className="feed-list"
+      id={id}
+      role="list"
+      aria-labelledby={labelledBy}
+    >
       {logs.map((log) => {
         const isPending = pendingApplauseId === log.id;
         const articleId = `${log.network}-log-${log.id}`;

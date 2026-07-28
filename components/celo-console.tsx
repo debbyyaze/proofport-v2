@@ -97,6 +97,7 @@ async function ensureCeloChain() {
 
 export function CeloConsole() {
   const feedHeadingId = "celo-feed-title";
+  const feedListId = "celo-feed-list";
   const publishNoticeId = "celo-publish-notice";
   const publishHintId = "celo-publish-hint";
   const walletStatusId = "celo-wallet-status";
@@ -527,6 +528,7 @@ export function CeloConsole() {
             onClick={() => void loadLogs()}
             disabled={isRefreshing}
             aria-busy={isRefreshing}
+            aria-controls={feedListId}
             aria-label={isRefreshing ? "Refreshing Celo entries" : "Refresh Celo entries"}
             title={isRefreshing ? "Refreshing Celo entries" : "Refresh Celo entries"}
           >
@@ -542,6 +544,7 @@ export function CeloConsole() {
           </p>
         ) : null}
         <Feed
+          id={feedListId}
           logs={logs}
           emptyLabel="No Celo entries yet. Publish the first proof entry to generate a shareable explorer receipt."
           labelledBy={feedHeadingId}

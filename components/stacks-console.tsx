@@ -74,6 +74,7 @@ async function getConnectedAddress() {
 
 export function StacksConsole() {
   const feedHeadingId = "stacks-feed-title";
+  const feedListId = "stacks-feed-list";
   const publishNoticeId = "stacks-publish-notice";
   const publishHintId = "stacks-publish-hint";
   const walletStatusId = "stacks-wallet-status";
@@ -511,6 +512,7 @@ export function StacksConsole() {
             onClick={() => void loadLogs()}
             disabled={isRefreshing}
             aria-busy={isRefreshing}
+            aria-controls={feedListId}
             aria-label={
               isRefreshing ? "Refreshing Stacks entries" : "Refresh Stacks entries"
             }
@@ -528,6 +530,7 @@ export function StacksConsole() {
           </p>
         ) : null}
         <Feed
+          id={feedListId}
           logs={logs}
           emptyLabel="No Stacks entries yet. Publish the first proof entry to generate a shareable explorer receipt."
           labelledBy={feedHeadingId}
