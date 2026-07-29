@@ -39,7 +39,9 @@ npm run dev
 
 Use `npm run dev:mobile` when you need the Next dev server reachable from a
 phone on the same network, such as testing the Celo flow in MiniPay. That
-script binds to `0.0.0.0`, so use it only on a trusted local network.
+script binds to `0.0.0.0` and uses polling-based file watching, so keep it to
+device testing on a trusted local network and prefer plain `npm run dev` for
+ordinary local work.
 
 The app boots locally with built-in testnet and localhost defaults. Only set
 `NEXT_PUBLIC_*` values when you want to point the UI at a specific live
