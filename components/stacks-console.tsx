@@ -375,6 +375,8 @@ export function StacksConsole() {
           <label>
             <span>Summary (required)</span>
             <textarea
+              id="stacks-summary"
+              name="summary"
               value={summary}
               onChange={(event) => setSummary(event.target.value)}
               maxLength={160}
@@ -396,6 +398,8 @@ export function StacksConsole() {
           <label>
             <span>Public HTTPS proof URL (optional)</span>
             <input
+              id="stacks-proof-url"
+              name="proofUrl"
               type="url"
               value={proofUri}
               onChange={(event) => setProofUri(event.target.value)}
@@ -435,6 +439,8 @@ export function StacksConsole() {
           <label>
             <span>Tag (optional)</span>
             <input
+              id="stacks-tag"
+              name="tag"
               value={tag}
               onChange={(event) => setTag(event.target.value)}
               maxLength={32}

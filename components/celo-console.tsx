@@ -391,6 +391,8 @@ export function CeloConsole() {
           <label>
             <span>Summary (required)</span>
             <textarea
+              id="celo-summary"
+              name="summary"
               value={summary}
               onChange={(event) => setSummary(event.target.value)}
               maxLength={160}
@@ -412,6 +414,8 @@ export function CeloConsole() {
           <label>
             <span>Public HTTPS proof URL (optional)</span>
             <input
+              id="celo-proof-url"
+              name="proofUrl"
               type="url"
               value={proofUri}
               onChange={(event) => setProofUri(event.target.value)}
@@ -451,6 +455,8 @@ export function CeloConsole() {
           <label>
             <span>Tag (optional)</span>
             <input
+              id="celo-tag"
+              name="tag"
               value={tag}
               onChange={(event) => setTag(event.target.value)}
               maxLength={32}
