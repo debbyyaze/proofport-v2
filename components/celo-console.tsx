@@ -524,9 +524,9 @@ export function CeloConsole() {
             target="_blank"
             rel="noopener noreferrer"
             title={txUrl}
-            aria-label="Open the Celo explorer receipt for your published entry in a new tab"
+            aria-label="Open the latest Celo explorer receipt for your wallet action in a new tab"
           >
-            Open Celo explorer receipt (new tab)
+            Open latest Celo explorer receipt (new tab)
             <ExternalLink size={15} aria-hidden="true" />
           </a>
         ) : null}
