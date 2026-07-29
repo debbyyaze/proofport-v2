@@ -142,7 +142,7 @@ export default function HomePage() {
       >
         <div className="section-heading">
           <span className="panel-kicker">Choose a network</span>
-          <h2 id="network-title">Choose the wallet path you already use.</h2>
+          <h2 id="network-title">Choose the wallet flow you already use.</h2>
         </div>
         <article
           aria-describedby="network-celo-description"
@@ -216,8 +216,8 @@ export default function HomePage() {
         </article>
         <article>
           <BadgeCheck size={20} aria-hidden="true" />
-          <h3>Keep a feed</h3>
-          <p>Recent entries stay visible in a public proof log.</p>
+          <h3>Keep a public feed</h3>
+          <p>Recent entries stay visible in a proof log others can review.</p>
         </article>
       </section>
     </div>
