@@ -48,9 +48,10 @@ The app boots locally with built-in testnet and localhost defaults. Only set
 deployment. Set `NEXT_PUBLIC_APP_URL` before production builds to the final
 HTTPS site origin without a trailing slash so canonical URLs, manifest and
 social metadata, `robots.txt`, and the sitemap point at production instead of
-a preview or localhost URL; see [docs/deploy.md](./docs/deploy.md) for the
-production values. Leaving it unset during a production build will keep those
-generated URLs pointed at `http://localhost:3000`.
+a preview URL; see [docs/deploy.md](./docs/deploy.md) for the production
+values. Leaving it unset during a production build now leaves crawler hints and
+absolute site-origin metadata incomplete, so release builds should always set
+it explicitly.
 
 Skip creating a local `.env` for ordinary UI work unless you are preparing to
 deploy or run contract scripts with real keys.
