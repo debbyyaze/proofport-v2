@@ -1,10 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const appUrl = (process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000").replace(
-    /\/$/,
-    ""
-  );
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL?.trim().replace(/\/$/, "");
 
   return {
     rules: {
@@ -12,7 +9,11 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/api/"
     },
-    host: appUrl,
-    sitemap: `${appUrl}/sitemap.xml`
+    ...(appUrl
+      ? {
+          host: appUrl,
+          sitemap: `${appUrl}/sitemap.xml`
+        }
+      : {})
   };
 }
