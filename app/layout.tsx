@@ -2,10 +2,10 @@ import type { Metadata, Viewport } from "next";
 import { AppShell } from "@/components/app-shell";
 import "./globals.css";
 
+const appUrl = process.env.NEXT_PUBLIC_APP_URL?.trim().replace(/\/$/, "");
+
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"
-  ),
+  ...(appUrl ? { metadataBase: new URL(appUrl) } : {}),
   manifest: "/manifest.webmanifest",
   alternates: {
     canonical: "/"
