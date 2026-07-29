@@ -425,7 +425,7 @@ export function CeloConsole() {
               autoCapitalize="off"
               autoCorrect="off"
               spellCheck={false}
-              placeholder="https://github.com/you/proofport/pull/1"
+              placeholder="https://example.com/releases/mobile-1-2"
               aria-describedby={
                 hasInvalidProofUrl
                   ? "celo-proof-url-hint celo-proof-url-error"

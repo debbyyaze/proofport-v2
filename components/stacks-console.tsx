@@ -409,7 +409,7 @@ export function StacksConsole() {
               autoCapitalize="off"
               autoCorrect="off"
               spellCheck={false}
-              placeholder="https://github.com/you/proofport/commit/abc"
+              placeholder="https://example.com/posts/ship-log-proof"
               aria-describedby={
                 hasInvalidProofUrl
                   ? "stacks-proof-url-hint stacks-proof-url-error"
