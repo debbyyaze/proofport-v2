@@ -406,7 +406,7 @@ export function StacksConsole() {
               pattern="https://.*"
               autoComplete="url"
               inputMode="url"
-              autoCapitalize="off"
+              autoCapitalize="none"
               autoCorrect="off"
               spellCheck={false}
               placeholder="https://example.com/posts/ship-log-proof"
@@ -445,7 +445,7 @@ export function StacksConsole() {
               onChange={(event) => setTag(event.target.value)}
               maxLength={32}
               autoComplete="off"
-              autoCapitalize="off"
+              autoCapitalize="none"
               autoCorrect="off"
               spellCheck={false}
               placeholder="clarity"

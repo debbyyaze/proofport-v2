@@ -422,7 +422,7 @@ export function CeloConsole() {
               pattern="https://.*"
               autoComplete="url"
               inputMode="url"
-              autoCapitalize="off"
+              autoCapitalize="none"
               autoCorrect="off"
               spellCheck={false}
               placeholder="https://example.com/releases/mobile-1-2"
@@ -461,7 +461,7 @@ export function CeloConsole() {
               onChange={(event) => setTag(event.target.value)}
               maxLength={32}
               autoComplete="off"
-              autoCapitalize="off"
+              autoCapitalize="none"
               autoCorrect="off"
               spellCheck={false}
               placeholder="minipay"
