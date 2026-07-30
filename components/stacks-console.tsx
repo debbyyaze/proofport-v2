@@ -503,17 +503,20 @@ export function StacksConsole() {
           </p>
         )}
         {txUrl ? (
-          <a
-            className="tx-link"
-            href={txUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            title={txUrl}
-            aria-label="Open the latest Stacks explorer receipt for your wallet action in a new tab"
-          >
-            Open latest Stacks explorer receipt (new tab)
-            <ExternalLink size={15} aria-hidden="true" />
-          </a>
+          <p className="message-line" role="status" aria-live="polite" aria-atomic="true">
+            Latest Stacks explorer receipt ready:{" "}
+            <a
+              className="tx-link"
+              href={txUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={txUrl}
+              aria-label="Open the latest Stacks explorer receipt for your wallet action in a new tab"
+            >
+              Open latest Stacks explorer receipt (new tab)
+              <ExternalLink size={15} aria-hidden="true" />
+            </a>
+          </p>
         ) : null}
       </div>
       <div className="chain-panel feed-panel">
