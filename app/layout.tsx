@@ -27,6 +27,7 @@ export const metadata: Metadata = {
   description:
     "Publish wallet-signed proof logs for shipped work, add optional public HTTPS proof links, and share explorer receipts with no account required.",
   applicationName: "ProofPort",
+  authors: [{ name: "ProofPort" }],
   creator: "ProofPort",
   publisher: "ProofPort",
   referrer: "strict-origin-when-cross-origin",
