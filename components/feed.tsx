@@ -57,6 +57,9 @@ export function Feed({
   if (logs.length === 0) {
     return (
       <div className="empty-state" role="status" aria-live="polite">
+        <p className="sr-only" aria-atomic="true">
+          {countLabel}
+        </p>
         <Sparkles size={24} aria-hidden="true" />
         <p>{emptyLabel}</p>
       </div>
