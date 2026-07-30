@@ -34,7 +34,7 @@ export default function manifest(): MetadataRoute.Manifest {
         name: "Publish with Celo",
         short_name: "Celo",
         description:
-          "Open the MiniPay-ready Celo wallet flow to publish a wallet-signed proof entry with an optional public HTTPS proof link.",
+          "Open the MiniPay-ready Celo publishing path to publish a wallet-signed proof entry with an optional public HTTPS proof link.",
         url: "/celo",
         icons: [
           {
@@ -48,7 +48,7 @@ export default function manifest(): MetadataRoute.Manifest {
         name: "Publish with Stacks",
         short_name: "Stacks",
         description:
-          "Open the Bitcoin-linked Stacks wallet flow to publish a wallet-signed proof entry with an optional public HTTPS proof link.",
+          "Open the Bitcoin-linked Stacks publishing path to publish a wallet-signed proof entry with an optional public HTTPS proof link.",
         url: "/stacks",
         icons: [
           {
