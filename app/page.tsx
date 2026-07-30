@@ -142,7 +142,7 @@ export default function HomePage() {
       >
         <div className="section-heading">
           <span className="panel-kicker">Choose a network</span>
-          <h2 id="network-title">Choose the wallet flow you already use.</h2>
+          <h2 id="network-title">Choose the wallet network you already use.</h2>
         </div>
         <article
           aria-describedby="network-celo-description"
