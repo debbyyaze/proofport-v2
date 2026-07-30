@@ -382,6 +382,7 @@ export function StacksConsole() {
               maxLength={160}
               rows={4}
               required
+              autoCapitalize="sentences"
               placeholder="Shipped the wallet connect fallback fix."
               aria-describedby="stacks-summary-hint"
             />

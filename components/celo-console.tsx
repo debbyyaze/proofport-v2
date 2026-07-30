@@ -398,6 +398,7 @@ export function CeloConsole() {
               maxLength={160}
               rows={4}
               required
+              autoCapitalize="sentences"
               placeholder="Shipped the mobile wallet handoff fix."
               aria-describedby="celo-summary-hint"
             />
