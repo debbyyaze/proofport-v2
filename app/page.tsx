@@ -156,8 +156,8 @@ export default function HomePage() {
             <span>{getCeloChainLabel()}</span>
             <h3 id="network-celo-title">Celo</h3>
             <p id="network-celo-description">
-              A mobile-friendly path for MiniPay and Celo wallets, built for quick
-              public proof entries without creating an account.
+              A mobile-friendly path for MiniPay and Celo wallets, with public
+              proof entries, shareable explorer receipts, and no account required.
             </p>
           </div>
           <Link
