@@ -522,8 +522,8 @@ export function StacksConsole() {
             <span className="panel-kicker">Public feed</span>
             <h2 id={feedHeadingId}>Latest Stacks entries</h2>
             <p className="feed-note">
-              Each applause click uses your connected wallet and creates a separate
-              public reaction.
+              Each applause click is a separate public wallet action tied to your
+              connected address.
             </p>
           </div>
           <button
