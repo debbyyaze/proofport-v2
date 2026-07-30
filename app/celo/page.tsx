@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         type: "image/svg+xml",
         width: 1200,
         height: 630,
-        alt: "ProofPort preview of the Celo publishing flow"
+        alt: "ProofPort preview of the Celo publishing path"
       }
     ]
   },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         type: "image/svg+xml",
         width: 1200,
         height: 630,
-        alt: "ProofPort preview of the Celo publishing flow"
+        alt: "ProofPort preview of the Celo publishing path"
       }
     ]
   }

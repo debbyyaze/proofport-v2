@@ -14,12 +14,12 @@ const routes = [
   {
     href: "/celo",
     label: "Celo",
-    ariaLabel: "Open the Celo publishing flow"
+    ariaLabel: "Open the Celo publishing path"
   },
   {
     href: "/stacks",
     label: "Stacks",
-    ariaLabel: "Open the Stacks publishing flow"
+    ariaLabel: "Open the Stacks publishing path"
   }
 ] as const;
 
