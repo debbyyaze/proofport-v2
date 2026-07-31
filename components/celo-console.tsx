@@ -449,7 +449,8 @@ export function CeloConsole() {
               id="celo-proof-url-hint"
             >
               Optional. Leave this empty to publish without a proof link, or
-              add a public HTTPS PR, commit, release note, or live demo URL.
+              add a public HTTPS pull request, commit, release note, or live demo
+              URL.
               Anyone opening the feed can see this link.
             </small>
           </label>
