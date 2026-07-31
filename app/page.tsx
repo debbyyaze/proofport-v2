@@ -139,6 +139,11 @@ export default function HomePage() {
         <div className="section-heading">
           <span className="panel-kicker">Choose a network</span>
           <h2 id="network-title">Start on the wallet network you already use.</h2>
+          <p>
+            Both paths publish public proof entries and shareable explorer
+            receipts. The difference is which wallet ecosystem you want to use
+            to sign and publish them.
+          </p>
         </div>
         <article
           aria-describedby="network-celo-description"
