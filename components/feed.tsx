@@ -85,6 +85,7 @@ export function Feed({
           const proofStatusId = `${articleId}-proof-status`;
           const receiptStatusId = `${articleId}-receipt-status`;
           const applauseId = `${articleId}-applause`;
+          const applauseStatusId = `${articleId}-applause-status`;
           const actionsLabelId = `${articleId}-actions-label`;
           const publishedDateTime = getPublishedDateTime(log);
           const applauseLabel = formatApplauseLabel(log.applause);
@@ -189,27 +190,32 @@ export function Feed({
                   </p>
                 )}
                 {onApplaud ? (
-                  <button
-                    type="button"
-                    className="icon-text-button secondary"
-                    onClick={() => onApplaud(log.id)}
-                    disabled={isPending}
-                    aria-busy={isPending}
-                    aria-describedby={applauseId}
-                    aria-label={
-                      isPending
-                        ? `Sending applause for ${log.summary}. ${applauseLabel}.`
-                        : `Applaud ${log.summary}. ${applauseLabel}.`
-                    }
-                  >
-                    <Sparkles size={16} aria-hidden="true" />
-                    <span>{isPending ? "Sending applause..." : "Applaud"}</span>
-                    {isPending ? (
-                      <span className="sr-only" aria-live="polite">
-                        Sending applause now
-                      </span>
-                    ) : null}
-                  </button>
+                  <>
+                    <button
+                      type="button"
+                      className="icon-text-button secondary"
+                      onClick={() => onApplaud(log.id)}
+                      disabled={isPending}
+                      aria-busy={isPending}
+                      aria-describedby={`${applauseId} ${applauseStatusId}`}
+                      aria-label={
+                        isPending
+                          ? `Sending applause for ${log.summary}. ${applauseLabel}.`
+                          : `Applaud ${log.summary}. ${applauseLabel}.`
+                      }
+                    >
+                      <Sparkles size={16} aria-hidden="true" />
+                      <span>{isPending ? "Sending applause..." : "Applaud"}</span>
+                    </button>
+                    <span
+                      id={applauseStatusId}
+                      className="sr-only"
+                      aria-live="polite"
+                      aria-atomic="true"
+                    >
+                      {isPending ? `Sending applause for ${log.summary}.` : ""}
+                    </span>
+                  </>
                 ) : null}
               </div>
             </article>
