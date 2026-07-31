@@ -9,7 +9,7 @@ type ReadinessItem = {
 
 export function ReadinessGrid({ items }: { items: ReadinessItem[] }) {
   return (
-    <section className="readiness-grid" aria-label="Project readiness">
+    <section className="readiness-grid" aria-label="Project readiness" role="list">
       {items.map((item) => {
         const Icon = item.icon;
         const itemId = item.label
@@ -27,6 +27,7 @@ export function ReadinessGrid({ items }: { items: ReadinessItem[] }) {
             aria-labelledby={labelId}
             className="readiness-card"
             key={item.label}
+            role="listitem"
           >
             <div className="readiness-icon">
               <Icon size={20} aria-hidden="true" />
