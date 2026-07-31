@@ -49,7 +49,7 @@ deployment. Set `NEXT_PUBLIC_APP_URL` before production builds to the final
 HTTPS site origin without a trailing slash so canonical URLs, manifest and
 social metadata, `robots.txt`, and the sitemap point at production instead of
 a preview URL; see [docs/deploy.md](./docs/deploy.md) for the production
-values. Leaving it unset during a production build now leaves crawler hints and
+values. Leaving it unset during a production build leaves crawler hints and
 absolute site-origin metadata incomplete, so release builds should always set
 it explicitly.
 

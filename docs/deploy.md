@@ -99,7 +99,7 @@ only. ProofPort combines that principal with
 `NEXT_PUBLIC_STACKS_CONTRACT_NAME` to read the full contract id in the UI.
 
 Set `NEXT_PUBLIC_APP_URL` to the canonical production HTTPS origin without a trailing slash, not a preview deployment URL, so canonical tags, manifest and social preview metadata, `robots.txt`, and `sitemap.xml` all point at the released site.
-Leaving it unset during a production build leaves crawler hints and absolute site-origin metadata incomplete, which weakens release metadata and discovery.
+Leaving it unset during a production build leaves crawler hints and absolute site-origin metadata incomplete, which weakens release metadata and search discovery.
 After changing `NEXT_PUBLIC_APP_URL` or any other `NEXT_PUBLIC_*` value that affects release metadata, trigger a fresh production deployment before re-checking those generated endpoints.
 
 Do not put deployer private keys in Vercel for normal app hosting.
