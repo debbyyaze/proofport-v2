@@ -371,13 +371,13 @@ export function CeloConsole() {
               aria-describedby={walletStatusId}
               aria-label={
                 wallet.account
-                  ? "Switch connected Celo wallet"
+                  ? "Reconnect Celo wallet"
                   : wallet.isMiniPay
                     ? "Connect MiniPay wallet"
                     : "Connect Celo wallet"
               }
             >
-              {wallet.account ? "Switch wallet" : connectWalletLabel}
+              {wallet.account ? "Reconnect wallet" : connectWalletLabel}
             </button>
           ) : null}
         </div>
