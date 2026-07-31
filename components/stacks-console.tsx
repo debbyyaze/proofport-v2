@@ -432,10 +432,9 @@ export function StacksConsole() {
               className="field-hint"
               id="stacks-proof-url-hint"
             >
-              Optional. Leave this empty to publish without a proof link, or
-              add a public HTTPS pull request, commit, release note, or live demo
-              URL.
-              Anyone opening the feed can see this link.
+              Optional. Leave this empty to publish without a proof link, or add a
+              public HTTPS pull request, commit, release note, or live demo URL.
+              Anyone viewing the feed can open this link.
             </small>
           </label>
           <label>
