@@ -3,7 +3,7 @@
 ProofPort is a compact public proof log for shipped work. Builders can publish concise wallet-signed entries on Celo or Stacks, attach optional public HTTPS proof links, keep a public feed, and share explorer receipts.
 
 Proof links are optional. When included, the UI accepts HTTPS URLs only for
-PRs, commits, release notes, demos, or similar public evidence.
+pull requests, commits, release notes, demos, or similar public evidence.
 
 Tags are optional too. The Celo and Stacks forms start with network-specific
 defaults, and clearing the field falls back to the shared `proof` tag.
@@ -22,7 +22,7 @@ Everything you publish through ProofPort is public, including the summary, tag,
 wallet address, explorer receipt, and proof link when attached.
 
 - Keep secrets, internal URLs, and private ticket names out of entry summaries.
-- Use only public HTTPS proof links such as PRs, commits, release notes, or demos.
+- Use only public HTTPS proof links such as pull requests, commits, release notes, or demos.
 - Clear the tag field if you do not want to expose an internal shorthand.
 - Applause reactions are public wallet actions too, so only applaud from an address you are comfortable exposing.
 
