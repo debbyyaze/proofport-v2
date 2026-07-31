@@ -103,7 +103,7 @@ export function StacksConsole() {
       : hasInvalidProofUrl
         ? "Use a full HTTPS proof URL or clear the field to enable publishing."
         : !wallet.connected
-          ? "Connect a Stacks wallet to enable publishing."
+          ? "A Stacks wallet connection will be requested when you publish."
         : "Ready to publish from your connected wallet.";
 
   const canSubmit = useMemo(() => {

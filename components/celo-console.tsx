@@ -128,7 +128,7 @@ export function CeloConsole() {
       : hasInvalidProofUrl
         ? "Use a full HTTPS proof URL or clear the field to enable publishing."
         : !wallet.account
-          ? "Connect a Celo wallet to enable publishing."
+          ? "A Celo wallet connection will be requested when you publish."
         : "Ready to publish from your connected wallet.";
 
   const canSubmit = useMemo(() => {
