@@ -80,6 +80,11 @@ npm run test:stacks
 npm run deploy:stacks:mainnet
 ```
 
+When you configure live Stacks reads, set
+`NEXT_PUBLIC_STACKS_CONTRACT_ADDRESS` to the deployer address only.
+ProofPort combines that principal with
+`NEXT_PUBLIC_STACKS_CONTRACT_NAME` to resolve the full contract id in the UI.
+
 `npm run check:stacks` uses the Clarinet SDK bundled through npm, so the
 standalone Clarinet CLI is optional. Install it only when you want to run
 `npm run check:stacks:clarinet`.
