@@ -140,9 +140,9 @@ export default function HomePage() {
           <span className="panel-kicker">Choose a network</span>
           <h2 id="network-title">Start on the wallet network you already use.</h2>
           <p>
-            Both paths publish public proof entries and shareable explorer
-            receipts. The difference is which wallet ecosystem you want to use
-            to sign and publish them.
+            Both paths publish public proof entries, optional public HTTPS
+            proof links, and shareable explorer receipts. The difference is
+            which wallet ecosystem you want to use to sign and publish them.
           </p>
         </div>
         <article
@@ -158,7 +158,8 @@ export default function HomePage() {
             <h3 id="network-celo-title">Celo</h3>
             <p id="network-celo-description">
               A mobile-friendly path for MiniPay and Celo wallets, with public
-              proof entries, shareable explorer receipts, and no account required.
+              proof entries, optional public HTTPS proof links, shareable
+              explorer receipts, and no account required.
             </p>
           </div>
           <Link
