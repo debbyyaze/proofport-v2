@@ -62,7 +62,8 @@ export default function HomePage() {
           <p>
             Capture what shipped, optionally attach a public HTTPS proof link,
             and publish a wallet-signed record with a shareable explorer
-            receipt anyone can verify. No account required.
+            receipt anyone can verify. Proof links must open without login,
+            paywall, or VPN. No account required.
           </p>
           <nav
             aria-describedby="publish-visibility-note"
@@ -120,8 +121,8 @@ export default function HomePage() {
             <div>
               <strong>Published mobile release notes</strong>
               <p>
-                Public HTTPS proof link attached when available. Explorer
-                receipt ready to share either way.
+                Public HTTPS proof link attached when it opens without login,
+                paywall, or VPN. Explorer receipt ready to share either way.
               </p>
             </div>
           </div>
@@ -207,7 +208,10 @@ export default function HomePage() {
         <article>
           <FileText size={20} aria-hidden="true" />
           <h3>Write the entry</h3>
-          <p>Summarize what changed and add a public HTTPS proof link when you have one.</p>
+          <p>
+            Summarize what changed and add a public HTTPS proof link when it
+            opens without login, paywall, or VPN.
+          </p>
         </article>
         <article>
           <ShieldCheck size={20} aria-hidden="true" />
