@@ -50,7 +50,7 @@ export function AppShell({ children }: AppShellProps) {
           </span>
           <span>
             <strong>ProofPort</strong>
-            <small>Wallet-signed proof logs</small>
+            <small>Public wallet-signed proof logs</small>
           </span>
         </Link>
         <nav className="nav-pills" aria-label="Primary navigation">
@@ -75,7 +75,7 @@ export function AppShell({ children }: AppShellProps) {
         </h2>
         <ul className="footer-strip" aria-labelledby="footer-strip-title">
           <li>
-            <BadgeCheck size={16} aria-hidden="true" /> Wallet-signed proof entries
+            <BadgeCheck size={16} aria-hidden="true" /> Public wallet-signed proof entries
           </li>
           <li>
             <Link2 size={16} aria-hidden="true" /> Optional public HTTPS proof links
