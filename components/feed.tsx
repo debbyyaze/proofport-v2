@@ -56,7 +56,12 @@ export function Feed({
 
   if (logs.length === 0) {
     return (
-      <div className="empty-state" role="status" aria-live="polite">
+      <div
+        className="empty-state"
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+      >
         <p className="sr-only" aria-atomic="true">
           {countLabel}
         </p>

@@ -549,7 +549,12 @@ export function StacksConsole() {
           </button>
         </div>
         {isRefreshing ? (
-          <p className="loading-line" role="status" aria-live="polite">
+          <p
+            className="loading-line"
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+          >
             Refreshing Stacks entries...
           </p>
         ) : null}
