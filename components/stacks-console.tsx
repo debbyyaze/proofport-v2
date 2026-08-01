@@ -433,8 +433,9 @@ export function StacksConsole() {
               id="stacks-proof-url-hint"
             >
               Optional. Leave this empty to publish without a proof link, or add a
-              public HTTPS pull request, commit, release note, or live demo URL.
-              Anyone viewing the feed can open this link.
+              public HTTPS pull request, commit, release note, or live demo URL
+              that opens without login, paywall, or VPN. Anyone viewing the feed
+              can open this link.
             </small>
           </label>
           <label>
