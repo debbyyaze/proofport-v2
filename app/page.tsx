@@ -101,7 +101,7 @@ export default function HomePage() {
           </p>
         </div>
         <section
-          aria-describedby="proof-preview-description"
+          aria-describedby="proof-preview-description proof-preview-caption"
           aria-labelledby="proof-preview-title"
           className="signal-board proof-preview"
         >
@@ -112,7 +112,7 @@ export default function HomePage() {
             <span>Example proof</span>
             <h2 id="proof-preview-title">Explorer receipt preview</h2>
           </div>
-          <p className="preview-caption">
+          <p className="preview-caption" id="proof-preview-caption">
             Illustrative preview only. Live explorer receipts open from each
             published entry.
           </p>
