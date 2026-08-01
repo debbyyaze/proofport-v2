@@ -1092,6 +1092,10 @@ main:focus {
     align-items: start;
   }
 
+  .wallet-strip .icon-text-button {
+    width: 100%;
+  }
+
   .log-meta {
     grid-template-columns: 1fr;
   }
