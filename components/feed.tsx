@@ -41,7 +41,7 @@ function getReceiptFallbackCopy(log: ShipLog) {
     return "Explorer receipt is not available yet. Share the public HTTPS proof link above while the wallet-signed receipt is still pending.";
   }
 
-  return "Explorer receipt is not available yet, so this feed entry is the only public share link for now.";
+  return "Explorer receipt is not available yet, so share this ProofPort feed page for now.";
 }
 
 export function Feed({
