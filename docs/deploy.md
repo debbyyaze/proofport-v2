@@ -122,6 +122,8 @@ Check `/`, `/celo`, and `/stacks` with keyboard-only navigation and confirm the 
 
 On `/celo` and `/stacks`, try an `http://` proof link and confirm both browser validation and that the inline guidance blocks publishing until the URL is corrected to `https://` or cleared.
 
+Try one valid `https://` proof link too and confirm it opens publicly in a fresh browser session without login, paywall, or VPN prompts before you publish it in a live entry.
+
 If you install the site from a supported browser, confirm the installed app keeps the ProofPort name and icon, then open the `Home`, `Celo`, and `Stacks` shortcuts once to confirm each one lands on the correct ProofPort route.
 
 Create one live entry from `/celo` and one live entry from `/stacks`, then save both explorer receipts with the release notes. Submit at least one live applause reaction from a public wallet you are comfortable exposing and save that explorer receipt too. Confirm at least one saved receipt includes a public proof link and at least one omits it so both public states are verified before launch.

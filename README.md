@@ -22,7 +22,7 @@ Everything you publish through ProofPort is public, including the summary, tag,
 wallet address, explorer receipt, and proof link when attached.
 
 - Keep secrets, internal URLs, and private ticket names out of entry summaries.
-- Use only public HTTPS proof links such as pull requests, commits, release notes, or demos.
+- Use only public HTTPS proof links that open without login, paywall, or VPN prompts, such as pull requests, commits, release notes, or demos.
 - Clear the tag field if you do not want to expose an internal shorthand.
 - Applause reactions are public wallet actions too, so only applaud from an address you are comfortable exposing.
 
