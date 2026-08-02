@@ -116,7 +116,10 @@ npm run check:stacks
 
 Open the deployed HTTPS origin and confirm `/manifest.webmanifest`, `/robots.txt`, and `/sitemap.xml` all resolve with production URLs before announcing the release.
 
-Share the deployed homepage URL in a social preview debugger and confirm the production title, description, and preview image all match the live release.
+Share the deployed homepage URL in a social preview debugger and confirm the
+production title, description, and preview image all match the live release.
+Repeat that check for `/celo` and `/stacks` so their route-specific canonical
+URLs and social preview copy also match the released metadata.
 
 Check `/`, `/celo`, and `/stacks` with keyboard-only navigation and confirm the skip link moves focus to the main content on each route.
 
