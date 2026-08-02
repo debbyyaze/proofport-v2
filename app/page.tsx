@@ -71,7 +71,6 @@ export default function HomePage() {
             className="hero-actions"
           >
             <Link
-              aria-describedby="publish-visibility-note"
               aria-label="Start publishing with Celo"
               className="primary-action"
               href="/celo"
@@ -79,7 +78,6 @@ export default function HomePage() {
               Publish with Celo <ArrowRight size={18} aria-hidden="true" />
             </Link>
             <Link
-              aria-describedby="publish-visibility-note"
               aria-label="Start publishing with Stacks"
               className="primary-action alt"
               href="/stacks"
