@@ -16,6 +16,7 @@
 - Open `/manifest.webmanifest`, `/robots.txt`, and `/sitemap.xml` on the deployed HTTPS origin to confirm generated metadata points to production.
 - If you install the site from a supported browser, confirm the installed app keeps the ProofPort name and icon, then open the `Home`, `Celo`, and `Stacks` shortcuts and confirm each one lands on the correct route.
 - Share the deployed homepage URL in a social preview debugger and confirm the title, description, and preview image match production.
+- Repeat that social preview check for `/celo` and `/stacks` so their route-specific canonical URLs and preview copy also match production.
 - Create one live Celo entry from `/celo` and save the explorer receipt.
 - Create one live Stacks entry from `/stacks` and save the explorer receipt.
 - Submit at least one live applause reaction from a public wallet you are comfortable exposing, then save that explorer receipt too.
