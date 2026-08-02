@@ -50,7 +50,7 @@ export function AppShell({ children }: AppShellProps) {
           </span>
           <span>
             <strong>ProofPort</strong>
-            <small>Public wallet-signed proof logs</small>
+            <small>Public proof logs for shipped work</small>
           </span>
         </Link>
         <nav className="nav-pills" aria-label="Primary navigation">
