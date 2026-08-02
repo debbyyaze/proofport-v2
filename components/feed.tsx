@@ -93,6 +93,8 @@ export function Feed({
           const applauseStatusId = `${articleId}-applause-status`;
           const actionsLabelId = `${articleId}-actions-label`;
           const publishedDateTime = getPublishedDateTime(log);
+          const publishedLabel =
+            log.network === "stacks" ? "Anchor block" : "Published";
           const applauseLabel = formatApplauseLabel(log.applause);
           const describedBy = [
             metaId,
@@ -130,7 +132,7 @@ export function Feed({
                   </dd>
                 </div>
                 <div>
-                  <dt>Published</dt>
+                  <dt>{publishedLabel}</dt>
                   <dd title={describePublished(log)}>
                     {publishedDateTime ? (
                       <time
