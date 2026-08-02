@@ -94,7 +94,7 @@ export default function HomePage() {
           </nav>
           <p className="hero-note" id="publish-visibility-note">
             <strong>Public by default.</strong> Every proof entry exposes the
-            summary, tag, wallet address, explorer receipt, proof link when
+            summary, tag, wallet address, explorer receipt, proof link if
             attached, and any applause sent from your wallet.
           </p>
         </div>
