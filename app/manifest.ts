@@ -24,8 +24,8 @@ export default function manifest(): MetadataRoute.Manifest {
         url: "/",
         icons: [
           {
-            src: "/icon.svg",
-            sizes: "any",
+            src: "/logo.svg",
+            sizes: "1024x1024",
             type: "image/svg+xml"
           }
         ]
@@ -38,8 +38,8 @@ export default function manifest(): MetadataRoute.Manifest {
         url: "/celo",
         icons: [
           {
-            src: "/icon.svg",
-            sizes: "any",
+            src: "/logo.svg",
+            sizes: "1024x1024",
             type: "image/svg+xml"
           }
         ]
@@ -52,8 +52,8 @@ export default function manifest(): MetadataRoute.Manifest {
         url: "/stacks",
         icons: [
           {
-            src: "/icon.svg",
-            sizes: "any",
+            src: "/logo.svg",
+            sizes: "1024x1024",
             type: "image/svg+xml"
           }
         ]
@@ -61,8 +61,8 @@ export default function manifest(): MetadataRoute.Manifest {
     ],
     icons: [
       {
-        src: "/icon.svg",
-        sizes: "any",
+        src: "/logo.svg",
+        sizes: "1024x1024",
         type: "image/svg+xml",
         purpose: "any"
       },
