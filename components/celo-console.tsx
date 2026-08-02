@@ -114,7 +114,9 @@ export function CeloConsole() {
 
   const contractAddress = publicEnv.celoContractAddress;
   const isConfigured = Boolean(contractAddress);
-  const walletLabel = wallet.account ? shortAddress(wallet.account) : "Not connected";
+  const walletLabel = wallet.account
+    ? shortAddress(wallet.account)
+    : "Wallet not connected";
   const connectWalletLabel = wallet.isMiniPay
     ? "Connect MiniPay wallet"
     : "Connect Celo wallet";

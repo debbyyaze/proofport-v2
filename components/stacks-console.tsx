@@ -91,7 +91,9 @@ export function StacksConsole() {
 
   const contract = configuredStacksContract;
   const isConfigured = Boolean(contract);
-  const walletLabel = wallet.address ? shortAddress(wallet.address) : "Not connected";
+  const walletLabel = wallet.address
+    ? shortAddress(wallet.address)
+    : "Wallet not connected";
   const connectWalletLabel = "Connect Stacks wallet";
   const hasInvalidProofUrl = Boolean(proofUri.trim()) && !normalizeOptionalUrl(proofUri);
   const hasAlertStatus = isAlertMessage(message);
