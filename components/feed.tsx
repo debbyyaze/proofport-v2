@@ -30,7 +30,7 @@ function formatApplauseLabel(applause: number) {
 
 function getProofLinkFallbackCopy(log: ShipLog) {
   if (log.txUrl) {
-    return "No public HTTPS proof link was added. Share the explorer receipt below as the wallet-signed receipt for this public entry.";
+    return "No public HTTPS proof link was attached. Share the explorer receipt below as the public proof for this entry.";
   }
 
   return "No public HTTPS proof link or explorer receipt is available yet. Share this public feed entry until a receipt is ready.";
@@ -38,10 +38,10 @@ function getProofLinkFallbackCopy(log: ShipLog) {
 
 function getReceiptFallbackCopy(log: ShipLog) {
   if (log.proofUri) {
-    return "Explorer receipt is not available yet. Share the public HTTPS proof link above while the wallet-signed receipt is still pending.";
+    return "Explorer receipt is still pending. Share the public HTTPS proof link above until the wallet-signed receipt is available.";
   }
 
-  return "Explorer receipt is not available yet, so share this ProofPort feed page for now.";
+  return "Explorer receipt is still pending, so share this ProofPort feed entry for now.";
 }
 
 export function Feed({
