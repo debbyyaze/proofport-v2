@@ -14,14 +14,14 @@ import { getCeloChainLabel, getStacksChainLabel } from "@/lib/env";
 export const metadata: Metadata = {
   title: "Public proof logs for shipped work",
   description:
-    "Publish wallet-signed proof logs for shipped work, add optional public HTTPS proof links, and share explorer receipts with no account required.",
+    "Publish wallet-signed ship logs, optionally attach a public proof link, and share explorer receipts anyone can verify.",
   alternates: {
     canonical: "/"
   },
   openGraph: {
     title: "Public proof logs for shipped work | ProofPort",
     description:
-      "Publish wallet-signed proof logs for shipped work, add optional public HTTPS proof links, and share explorer receipts with no account required.",
+      "Publish wallet-signed ship logs, optionally attach a public proof link, and share explorer receipts anyone can verify.",
     url: "/",
     siteName: "ProofPort",
     type: "website",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Public proof logs for shipped work | ProofPort",
     description:
-      "Publish wallet-signed proof logs for shipped work, add optional public HTTPS proof links, and share explorer receipts with no account required.",
+      "Publish wallet-signed ship logs, optionally attach a public proof link, and share explorer receipts anyone can verify.",
     images: [
       {
         url: "/og.svg",
@@ -63,7 +63,7 @@ export default function HomePage() {
             Capture what shipped, optionally attach a public HTTPS proof link,
             and publish a wallet-signed record with a shareable explorer
             receipt anyone can verify. Proof links must open without login,
-            paywall, or VPN. No account required.
+            paywall, or VPN. No ProofPort account required.
           </p>
           <nav
             aria-describedby="publish-visibility-note"
