@@ -7,24 +7,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return [];
   }
 
-  const lastModified = new Date();
-
   return [
     {
       url: appUrl,
-      lastModified,
       changeFrequency: "weekly",
       priority: 1
     },
     {
       url: `${appUrl}/celo`,
-      lastModified,
       changeFrequency: "weekly",
       priority: 0.8
     },
     {
       url: `${appUrl}/stacks`,
-      lastModified,
       changeFrequency: "weekly",
       priority: 0.8
     }
