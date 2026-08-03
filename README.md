@@ -53,6 +53,11 @@ values. Leaving it unset during local UI work is fine, but production builds
 should always set it explicitly so crawler hints and absolute site-origin
 metadata stay complete.
 
+When `NEXT_PUBLIC_APP_URL` is unset, `/sitemap.xml` intentionally returns no
+URLs and `/robots.txt` omits the `Host` and `Sitemap` hints. That keeps local
+and preview environments from advertising incomplete or non-production origins
+to crawlers.
+
 Skip creating a local `.env` for ordinary UI work unless you are preparing to
 deploy or run contract scripts with real keys.
 
