@@ -78,7 +78,7 @@ export function AppShell({ children }: AppShellProps) {
             <BadgeCheck size={16} aria-hidden="true" /> Public wallet-signed proof entries
           </li>
           <li>
-            <Link2 size={16} aria-hidden="true" /> Optional public HTTPS proof links that open without login
+            <Link2 size={16} aria-hidden="true" /> Optional public HTTPS proof links that open without login, paywall, or VPN
           </li>
           <li>
             <RadioTower size={16} aria-hidden="true" /> Shareable explorer receipts with no ProofPort account required
