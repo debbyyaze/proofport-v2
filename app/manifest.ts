@@ -27,7 +27,7 @@ export default function manifest(): MetadataRoute.Manifest {
             src: "/icon.svg",
             sizes: "any",
             type: "image/svg+xml",
-            purpose: "maskable"
+            purpose: "any maskable"
           }
         ]
       },
@@ -42,7 +42,7 @@ export default function manifest(): MetadataRoute.Manifest {
             src: "/icon.svg",
             sizes: "any",
             type: "image/svg+xml",
-            purpose: "maskable"
+            purpose: "any maskable"
           }
         ]
       },
@@ -57,7 +57,7 @@ export default function manifest(): MetadataRoute.Manifest {
             src: "/icon.svg",
             sizes: "any",
             type: "image/svg+xml",
-            purpose: "maskable"
+            purpose: "any maskable"
           }
         ]
       }
@@ -65,7 +65,7 @@ export default function manifest(): MetadataRoute.Manifest {
     icons: [
       {
         src: "/logo.svg",
-        sizes: "1024x1024",
+        sizes: "any",
         type: "image/svg+xml",
         purpose: "any"
       },
@@ -73,7 +73,7 @@ export default function manifest(): MetadataRoute.Manifest {
         src: "/icon.svg",
         sizes: "any",
         type: "image/svg+xml",
-        purpose: "maskable"
+        purpose: "any maskable"
       }
     ]
   };
