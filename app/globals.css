@@ -297,6 +297,7 @@ main:focus {
   background: rgba(255, 250, 240, 0.82);
   color: #33403a;
   font-weight: 650;
+  box-shadow: 0 10px 24px rgba(23, 33, 29, 0.08);
 }
 
 .primary-action.alt {
@@ -314,6 +315,12 @@ main:focus {
 .icon-button:hover,
 .icon-button:focus-visible {
   transform: translateY(-1px);
+}
+
+.secondary-action:hover,
+.secondary-action:focus-visible {
+  background: var(--surface-strong);
+  border-color: rgba(23, 33, 29, 0.22);
 }
 
 .primary-action:focus-visible,
